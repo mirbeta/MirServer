@@ -1,0 +1,39 @@
+[@main]
+亲爱的玩家：<$USERNAME>，欢迎来到[<$SERVERNAME>]\
+我将为您提供城市之间的传送服务\ \
+<进入[庄园]/@zhuangyuan>                      <挑战[幻境]/@huanjing>\
+<回到[土城]/@goMZS>\ \
+<离 开/@exit>
+
+[@goMZS]
+#IF
+#ACT
+mapmove 3 330 330
+break
+
+[@zhuangyuan]
+#if
+checklevel 11
+#ACT
+set [168] 0
+mapmove GA0 69 71
+#elseACT
+messagebox 等级达到11级才可以进入庄园
+break
+
+[@huanjing]
+　\
+<幻境地图设置>：无双倍[经验+爆率]、BOSS随机刷新\ \
+<幻境进入条件>：10万金币\ \
+<10万金币进入[幻境]/@gohj2>\ \
+<返 回/@main>
+
+[@gohj2]
+#if
+checkgold 100000
+#ACT
+take 金币 100000
+mapmove h001 74 69
+#elseact
+messagebox 幻境进入条件：10万金币
+break

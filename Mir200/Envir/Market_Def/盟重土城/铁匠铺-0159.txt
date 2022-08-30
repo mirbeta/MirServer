@@ -1,0 +1,208 @@
+(@buy @sell @repair @s_repair)
+%100
++5
++6
++43
+[@main]
+#IF
+CHECKDURAEVA 银矿 10
+checkitem 铁匠的工钱 1
+#say
+欢迎光临。请问有什么事情帮忙吗？\ \
+<买/@buy>武器\
+<卖/@sell>武器\
+<修理/@repair>武器\
+<特殊修理/@s_repair>\
+<矿石冶炼/@rw01>\ \
+<关 闭/@exit>
+#elsesay
+欢迎光临。请问有什么事情帮忙吗？\ \
+<买/@buy>武器\
+<卖/@sell>武器\
+<修理/@repair>武器\
+<特殊修理/@s_repair>\ \
+<关 闭/@exit>
+
+[@rw01]
+#if
+CHECKDURAEVA 银矿 10
+checkitem 铁匠的工钱 1
+#ACT
+Take 银矿 40
+take 铁匠的工钱 40
+DelayCall 1000 @lian1
+break
+#say
+　\
+银矿冶炼中……\ \
+□□□□□□□□□□□□□□□□□□□□□□□□□□□□
+
+[@lian1]
+#if
+#ACT
+DelayCall 1000 @lian2
+break
+#say
+　\
+银矿冶炼中……\ \
+██□□□□□□□□□□□□□□□□□□□□□□□□□□
+
+[@lian2]
+#if
+#ACT
+DelayCall 1000 @lian3
+break
+#say
+　\
+银矿冶炼中……\ \
+████□□□□□□□□□□□□□□□□□□□□□□□□
+
+[@lian3]
+#if
+#ACT
+DelayCall 1000 @lian4
+break
+#say
+　\
+银矿冶炼中……\ \
+██████□□□□□□□□□□□□□□□□□□□□□□
+
+[@lian4]
+#if
+#ACT
+DelayCall 1000 @lian5
+break
+#say
+　\
+银矿冶炼中……\ \
+████████□□□□□□□□□□□□□□□□□□□□
+
+[@lian5]
+#if
+#ACT
+DelayCall 1000 @lian6
+break
+#say
+　\
+银矿冶炼中……\ \
+██████████□□□□□□□□□□□□□□□□□□
+
+[@lian6]
+#if
+#ACT
+DelayCall 1000 @lian7
+break
+#say
+　\
+银矿冶炼中……\ \
+████████████□□□□□□□□□□□□□□□□
+
+[@lian7]
+#if
+#ACT
+DelayCall 1000 @lian8
+break
+#say
+　\
+银矿冶炼中……\ \
+██████████████□□□□□□□□□□□□□□
+
+[@lian8]
+#if
+#ACT
+DelayCall 1000 @lian9
+break
+#say
+　\
+银矿冶炼中……\ \
+████████████████□□□□□□□□□□□□
+
+[@lian9]
+#if
+#ACT
+DelayCall 1000 @lian10
+break
+#say
+　\
+银矿冶炼中……\ \
+██████████████████□□□□□□□□□□
+
+[@lian10]
+#if
+#ACT
+DelayCall 1000 @lian11
+break
+#say
+　\
+银矿冶炼中……\ \
+████████████████████□□□□□□□□
+
+[@lian11]
+#if
+#ACT
+DelayCall 1000 @lian12
+break
+#say
+　\
+银矿冶炼中……\ \
+██████████████████████□□□□□□
+
+[@lian12]
+#if
+#ACT
+DelayCall 1000 @lian13
+break
+#say
+　\
+银矿冶炼中……\ \
+████████████████████████□□□□
+
+[@lian13]
+#if
+#ACT
+DelayCall 1000 @lian14
+break
+#say
+　\
+银矿冶炼中……\ \
+██████████████████████████□□
+
+[@lian14]
+#if
+#ACT
+DelayCall 1000 @lian15
+break
+#say
+　\
+银矿冶炼中……\ \
+████████████████████████████
+
+[@lian15]
+#if
+#act
+give 纯银 1
+set [103] 0
+close
+break
+
+[@buy]
+请挑选要购买的物品。\ \ \
+<返 回/@main>
+[@sell]
+请放上去要卖的武器。\ \ \
+<返 回/@main>
+[@repair]
+要修理武器吗？\ \
+<返 回/@main>
+[~@repair]
+已经修好了。\ \
+<返 回/@main>
+
+[goods]
+木剑	10	10
+匕首	10	10
+青铜剑	10	10
+鹤嘴锄	20	10
+短剑	10	10
+铁剑	10	10
+青铜斧	10	10

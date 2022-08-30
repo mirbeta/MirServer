@@ -1,0 +1,138 @@
+(@@InPutString @@InPutInteger @storage @getback @getnextpage @getPreviouspage)
+[@main]
+　\
+内部脚本测试NPC\ \
+<给装备/@AA>   <加持久/@BB>   <测试/@re2>  \ \
+<回城/@hui>   <保管/@storage>东西   <找回/@getback>东西\ \
+<COLOR=clRed ■红> <COLOR=clLime ■绿> <COLOR=clYellow ■黄> <COLOR=clBlue ■蓝> <COLOR=clFuchsia ■紫> <COLOR=clAqua ■浅绿> <COLOR=clSkyBlue ■天蓝>\ \
+
+[@storage]
+需要保管什么东西？\ \ \
+<返 回/@Main>
+[@getback]
+请看目录决定找什么东西。\ \ \
+<返 回/@Main>
+
+[@Re2]
+#if
+#ACT
+BREAK
+
+[@BB]
+#act
+QUERYITEMDLG 增加持久 @UPGRADEDLGITEM 0
+BREAK
+
+[@UPGRADEDLGITEM]
+#act
+UPGRADEDLGITEM 14 100 0 0
+close
+sendmsg 6 成功
+break
+
+[@hui]
+#if
+#ACT
+mapmove 3 330 330
+break
+
+[@AA]
+#if
+CheckJob Warrior
+#act
+Gmexecute 取消禁言 self
+CHANGELEVEL = 41
+give 100元宝 1
+give 金币 500000
+give 炼狱 1
+give 死神手套 2
+give 龙之戒指 2
+give 珊瑚戒指 2
+give 道士头盔 1
+give 幽灵项链 1
+give 战神盔甲(男) 1
+give 战神盔甲(女) 1
+give 攻击神水 1
+give 强效太阳包 10
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+break
+
+#if
+CheckJob Taoist
+#act
+Gmexecute 取消禁言 self
+CHANGELEVEL = 41
+give 100元宝 1
+give 金币 500000
+give 银蛇 1
+give 道士手镯 2
+give 铂金戒指 2
+give 降妖除魔戒指 2
+give 道士头盔 1
+give 竹笛 1
+give 天珠项链 1
+give 灵魂战衣(男) 1
+give 灵魂战衣(女) 1
+give 幽灵战衣(男) 1
+give 幽灵战衣(女) 1
+give 道力神水 1
+give 强效太阳包 10
+give 护身符 5
+give 灰色药粉 1
+give 黄色药粉 1
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3
+ADDSKILL 灵魂火符 3
+ADDSKILL 召唤骷髅 3
+ADDSKILL 隐身术 3
+ADDSKILL 集体隐身术 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 心灵启示 3
+ADDSKILL 困魔咒 3
+ADDSKILL 群体治疗术 3
+ADDSKILL 召唤神兽 3
+break
+
+#if
+CheckJob Wizard
+#act
+Gmexecute 取消禁言 self
+CHANGELEVEL = 41
+give 100元宝 1
+give 金币 500000
+give 魔杖 1
+give 黑檀手镯 2
+give 魔法手镯 2
+give 降妖除魔戒指 2
+give 红宝石戒指 2
+give 道士头盔 1
+give 放大镜 1
+give 生命项链 1
+give 魔法长袍(男) 1
+give 魔法长袍(女) 1
+give 恶魔长袍(男) 1
+give 恶魔长袍(女) 1
+give 魔力神水 1
+give 强效太阳包 10
+ADDSKILL 火球术 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 地狱火 3
+ADDSKILL 雷电术 3
+ADDSKILL 瞬息移动 3
+ADDSKILL 大火球 3
+ADDSKILL 爆裂火焰 3
+ADDSKILL 疾光电影 3
+ADDSKILL 火墙 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 魔法盾 3
+ADDSKILL 圣言术 3
+ADDSKILL 冰咆哮 3
+break

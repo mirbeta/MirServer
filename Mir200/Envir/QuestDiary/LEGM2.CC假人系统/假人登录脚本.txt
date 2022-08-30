@@ -1,0 +1,401 @@
+[@假人登陆脚本]
+{
+[@假人设置页面]
+<color=clFuchsia 假人设置总参数：>当前假人版本V3.0 <color=clFuchsia 作者：WWW.LEGM2.CC> <下一页/@下一页>\
+<color=clOlive --------------------------------------------------------->\
+<color=clLime 开启一键加载：><color=clOlive 注释：1=开启0=关闭 ><开启一键加载/@开启一键加载> | 当前值[ <$GLOBAL(开一键加载)> ]\
+<color=clLime 是否允许泡点：><color=clOlive 注释：5=开启6=关闭 ><修改泡点类型/@修改泡点类型> | 当前值[ <$GLOBAL(是否允许泡点)> ]\
+<color=clLime 设置每秒经验：><color=clOlive 注释：默认3000经验> <修改每秒经验/@修改每秒经验> | 当前值[ <$GLOBAL(每秒经验数)> ]\
+<color=clLime 假人回城血量：><color=clOlive 注释：默认值只 30  ><修改回城血量/@修改回城血量> | 当前值[ <$GLOBAL(假人回城血)> ]\
+<color=clLime 假人随机血量：><color=clOlive 注释：默认值只150  ><修改随机血量/@修改随机血量> | 当前值[ <$GLOBAL(假人随机血)> ]\
+<color=clLime 主号每秒回血：><color=clOlive 主号：每秒回血数量 ><修改主号回血/@修改主号回血> | 当前值[ <$GLOBAL(主号回血数)> ]\
+<color=clLime 英雄每秒回血：><color=clOlive 英雄：每秒回血数量 ><修改英雄回血/@修改英雄回血> | 当前值[ <$GLOBAL(英雄回血数)> ]\
+
+[@下一页]
+<color=clFuchsia 假人设置总参数：>当前假人版本V3.0 <color=clFuchsia 作者：WWW.LEGM2.CC> <上一页/@假人设置页面>\
+<color=clOlive --------------------------------------------------------->\
+<color=clLime 所有假人回家：><color=clOlive 注释：回到假人地图 ><设置假人回家/@设置假人回家> | 当前值[ 无参 ]\
+<color=clLime 所有假人外出：><color=clOlive 注释：正常打怪模式 ><设置假人外出/@设置假人外出> | 当前值[ 无参 ]\
+<color=clLime 假人在线时长：><color=clOlive 注释：默认300分钟  ><设置假人时长/@设置假人时长> | 当前值[ <$GLOBAL(假人挂机时长)> ]\
+<color=clLime 土城挂机人数：><color=clOlive 注释：默认5个假人  ><土城挂机人数/@土城挂机人数> | 当前值[ <$GLOBAL(土城挂机数)> ]\ \
+<color=clOlive --------------------------------------------------------->\
+<踢出所有假人/@踢出所有假人>   <假人到指定地图/@假人到指定地图>
+
+[@假人到指定地图]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 0 7 @假人到指定地图A 注释：设置地图编号后，所有假人5秒内传送指定地图编号。\ NPC
+BREAK
+
+[@假人到指定地图A]
+#IF
+#ACT
+CALCVAR GLOBAL 新手等级 = 1
+SAVEVAR GLOBAL 新手等级 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+CALCVAR GLOBAL 新手地图 = <$STR(S4)>
+SAVEVAR GLOBAL 新手地图 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+messagebox [提示]：指定地图已经设置成功，5秒后所有假人到达指定地图:<$STR(S4)>
+GMEXECUTE 开始提问 @假人指哪打哪
+BREAK
+
+
+
+[@踢出所有假人]
+#IF
+#ACT
+CALCVAR GLOBAL 踢出所有假人 = 1
+SAVEVAR GLOBAL 踢出所有假人 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+DelayCall 10000 @改变踢出
+BREAK
+
+[@改变踢出]
+#IF
+#ACT
+CALCVAR GLOBAL 踢出所有假人 = 0
+SAVEVAR GLOBAL 踢出所有假人 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+BREAK
+
+[@土城挂机人数]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @土城挂机人数A 注释：假人挂机时间，建议设置60-360分钟,最好直接在初始化设置中修改。\ NPC
+BREAK
+
+[@土城挂机人数A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 土城挂机数 = <$STR(M4)>
+SAVEVAR GLOBAL 土城挂机数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+
+[@设置假人时长]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @设置假人时长A 注释：假人挂机时间，建议设置60-360分钟,最好直接在初始化设置中修改。\ NPC
+BREAK
+
+[@设置假人时长A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 假人挂机时长 = <$STR(M4)>
+SAVEVAR GLOBAL 假人挂机时长 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+[@设置假人回家]
+#ACT
+CALCVAR GLOBAL 假人回家 = 1
+SAVEVAR GLOBAL 假人回家 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+SENDMSG 7 请耐心等待5秒，假人都回来了！
+BREAK
+
+
+[@设置假人外出]
+#ACT
+CALCVAR GLOBAL 假人外出 = 1
+SAVEVAR GLOBAL 假人外出 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+SENDMSG 7 请耐心等待5秒，假人都出去了！
+BREAK
+
+
+[@修改英雄回血]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改英雄回血A 注释：设置每秒回血数量，建议30-60。\ NPC
+BREAK
+
+[@修改英雄回血A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 英雄回血数 = <$STR(M4)>
+SAVEVAR GLOBAL 英雄回血数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+[@修改主号回血]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改主号回血A 注释：设置每秒回血数量，建议30-60。\ NPC
+BREAK
+
+[@修改主号回血A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 主号回血数 = <$STR(M4)>
+SAVEVAR GLOBAL 主号回血数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+[@开启一键加载]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @开启一键加载A 注释：需要修改数值为1才能自动挂载假人\ NPC
+BREAK
+
+[@开启一键加载A]
+#IF
+#ACT
+CALCVAR GLOBAL 开一键加载 = <$STR(M4)>
+SAVEVAR GLOBAL 开一键加载 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+[@修改行会类型]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改行会类型A 注释：未完成\ NPC
+BREAK
+
+[@修改行会类型A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 是否加入行会 = <$STR(M4)>
+SAVEVAR GLOBAL 是否加入行会 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+[@修改泡点类型]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改泡点类型A 注释：设置每秒在线泡点的经验，需要先开启泡点。\ NPC
+BREAK
+
+[@修改泡点类型A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 是否允许泡点 = <$STR(M4)>
+SAVEVAR GLOBAL 是否允许泡点 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+
+[@修改每秒经验]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改每秒经验A 注释：设置每秒在线泡点的经验，需要先开启泡点。\ NPC
+BREAK
+
+[@修改每秒经验A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 每秒经验数 = <$STR(M4)>
+SAVEVAR GLOBAL 每秒经验数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+
+[@修改回城血量]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改回城血量A 注意：法师血量较低请设置低于150\ NPC
+BREAK
+
+[@修改回城血量A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 假人回城血 = <$STR(M4)>
+SAVEVAR GLOBAL 假人回城血 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+
+[@修改随机血量]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改随机血量A 注意：法师血量较低请设置低于150\ NPC
+BREAK
+
+[@修改随机血量A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 假人随机血 = <$STR(M4)>
+SAVEVAR GLOBAL 假人随机血 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+[@修改回收时间]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改回收时间A 注释：时间毫秒计算1000毫秒=1秒\ NPC
+BREAK
+
+[@修改回收时间A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 回起始时间 = <$STR(M4)>
+SAVEVAR GLOBAL 回起始时间 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。\　\　\　\　\　　　　　　　　　作者：WWW.LEGM2.CC
+
+
+[@修改充值时间]
+#If
+CHECKLEVELEX > 0
+#ACT
+QUERYVALUE 4 1 7 @修改充值时间A 注释：时间毫秒计算1000毫秒=1秒\ NPC
+BREAK
+
+[@修改充值时间A]
+#IF
+LARGE M4 0
+#ACT
+CALCVAR GLOBAL 充起始时间 = <$STR(M4)>
+SAVEVAR GLOBAL 充起始时间 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+GOTO @假人设置页面
+#ELSEACT
+messagebox 你没有输入任何数字。
+BREAK
+
+
+[@假人执行]
+#IF
+SMALL I40 958632615
+#ACT
+MOV I40 958632615
+VAR String GLOBAL 假人上线提示
+VAR Integer GLOBAL 版本类型
+VAR Integer GLOBAL 是否加入行会
+VAR Integer GLOBAL 是否允许泡点
+VAR String GLOBAL 新手地图
+VAR Integer GLOBAL 新手等级
+VAR Integer GLOBAL 主号回血数
+VAR Integer GLOBAL 英雄回血数
+VAR Integer GLOBAL 假人回城血
+VAR Integer GLOBAL 假人随机血
+VAR Integer GLOBAL 每秒经验数
+VAR Integer GLOBAL 土城挂机数
+VAR Integer GLOBAL 回起始时间
+VAR Integer GLOBAL 充起始时间
+VAR Integer GLOBAL 开一键加载
+VAR Integer GLOBAL 是否已充值
+VAR Integer GLOBAL 假人回家
+VAR Integer GLOBAL 假人挂机时长
+VAR Integer GLOBAL 假人外出
+VAR Integer GLOBAL 踢出所有假人
+LOADVAR GLOBAL 踢出所有假人 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 假人挂机时长 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 假人外出 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 假人回家 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 是否已充值 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 开一键加载 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 充起始时间 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 回起始时间 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 土城挂机数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 每秒经验数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 假人随机血 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 假人回城血 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 英雄回血数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 主号回血数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 新手地图 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 新手等级 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 是否允许泡点 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 是否加入行会 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 假人上线提示 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+LOADVAR GLOBAL 版本类型 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+#CALL [\LEGM2.CC假人系统\假人初始化设置.txt] @假人初始化
+
+
+[@假人主号登录]
+#IF
+CHECKVAR GLOBAL 开一键加载 = 1
+#ACT
+MAPMOVE jiaren
+RecallHero
+CHANGEATTACKMODE 1
+#CALL [\LEGM2.CC假人系统\假人登录脚本.txt] @OFFLINEPLAYEX
+BREAK
+
+#IF
+#Act
+MAPMOVE jiaren
+RecallHero
+CHANGEATTACKMODE 1
+
+;=====================
+[@OFFLINEPLAYEX]
+#If
+checknamelist ..\QuestDiary\LEGM2.CC假人系统\假人名单列表.txt
+#Act
+SetScTimer 9 1
+#CALL [\\LEGM2.CC假人系统\假人回盟重省.txt] @回来了
+OFFLINEPLAYEX <$GLOBAL(假人挂机时长)>
+DelayCall 5000 @假人延时下地图
+ReadRandomLine .\QuestDiary\LEGM2.CC假人系统\假人回收公式.txt S21
+DelayCall <$STR(S21)> @假人回收
+ReadRandomLine .\QuestDiary\LEGM2.CC假人系统\假人充值公式.txt S23
+DelayCall <$STR(S23)> @假人充值公式
+BREAK
+
+
+
+[@假人延时下地图]
+#IF
+#ACT
+Gmexecute 改变忠诚 250
+CHANGEPKPOINT - 110
+RepairAll
+H.RepairAll
+HUMANHP = 10000
+HUMANMP = 10000
+#CALL [\\LEGM2.CC假人系统\假人随机地图.txt] @随机地图选择
+
+[@假人充值公式]
+#If
+#Act
+#CALL [\\LEGM2.CC假人系统\假人随机充值.txt] @假人充值显示
+ReadRandomLine .\QuestDiary\LEGM2.CC假人系统\假人充值公式.txt S23
+DelayCall <$STR(S23)> @假人充值公式
+
+
+[@假人回收]
+#If
+checknamelist ..\QuestDiary\LEGM2.CC假人系统\假人名单列表.txt
+#Act
+#CALL [\\LEGM2.CC假人系统\假人随机回收.txt] @假人随机回收
+ReadRandomLine .\QuestDiary\LEGM2.CC假人系统\假人回收公式.txt S21
+DelayCall <$STR(S21)> @假人回收
+BREAK
+
+}

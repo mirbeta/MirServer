@@ -1,0 +1,5 @@
+[@main]
+#if
+#act
+sendmsg 6 提示：为防止挂机挖矿，仅限本地图出矿！
+break

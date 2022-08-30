@@ -1,0 +1,18 @@
+[@MAIN]
+　\
+记忆传奇-官方免费担保\ \
+请按照要求操作，操作完成后即可返回游戏\ \
+<确认完毕-返回游戏/@hui>
+
+[@hui]
+#if
+EQUAL M88 0
+#ACT
+INC M88 1
+give 回城卷 1
+close
+sendmsg 6 [提示]：回城卷发放完毕！
+break
+#elseACT
+kick
+break

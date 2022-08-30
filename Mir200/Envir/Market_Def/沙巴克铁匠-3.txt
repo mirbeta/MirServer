@@ -1,0 +1,155 @@
+(@upgradenow @getbackupgnow )
+[@main]
+为大家服务是我的荣幸\
+所以我从遥远的<沙巴克>搬到了这里...\ \
+<开始武器升级/@upgrade>\
+<取回升级武器/@getbackupgnow>\ \
+<听更多的歌/@ge>\ \
+<离 开/@tuichu>
+
+[@ge]
+　\
+如果你能支付我3万金币，我会考虑告诉你一些秘密\ \
+<支付3万金币/@3wan>\ \
+<返 回/@main>
+
+[@3wan]
+#IF 
+checkgold 30000
+#ACT
+take 金币 30000
+#say
+其实我还有更高级的炼武器方法：[<免费升级，无须元宝>]\ \
+1、一秒钟就可以完成升级，短时内就可打造出一把高属性武器\
+2、即使升级失败，武器也<不会破碎>\
+3、突破最高７点限制，最高升级点数可达<１０点>\ \
+升级条件：每次升级消耗1张<COLOR=clFuchsia 灵符>\ \
+<[开始升级]/@start_levelup>                   <[放弃升级]/@exit>
+#elseACT
+close
+messagebox 没有钱我是不会透漏半点秘密给你的
+break
+
+[@start_levelup]
+#if
+CHECKUSEITEM 1
+#say
+　\
+你要给你手中的「<$USERWEAPON>」升级哪种属性呢？\
+由于还处于研究阶段，成功率有点低，你要必须要有足够的运气！\
+不过，即使失败了武器也不会破碎！\ \
+╔┄┄┄┄╦┄┄┄┄╦┄┄┄┄╗\
+┆<升级攻击/@gjgj>┆<升级魔法/@mo>┆<升级道术/@dao>┆\
+╚┄┄┄┄╩┄┄┄┄╩┄┄┄┄╝
+#elsesay
+你的手上没拿任何武器\ \
+<返 回/@main>
+
+[@gjgj]
+#IF
+CheckItemAddValue 1 0 > 9
+#ACT
+messagebox 您的武器攻击属性已经已超过10点，不能再进行提升
+break
+
+#IF
+CHECKGAMEGIRD > 0
+#ACT
+GAMEGIRD - 1
+UPGRADEITEMEX 1 0 100 1 0
+goto @start_levelup
+#ELSEACT
+goto @Upmiss
+break
+
+[@dao]
+#IF
+CheckItemAddValue 1 2 > 9
+#ACT
+messagebox 您的武器道术属性已经已超过10点，不能再进行提升
+break
+
+#IF
+CHECKGAMEGIRD > 0
+#ACT
+GAMEGIRD - 1
+UPGRADEITEMEX 1 2 100 1 0
+goto @start_levelup
+#ELSEACT
+goto @Upmiss
+break
+
+[@mo]
+#IF
+CheckItemAddValue 1 1 > 9
+#ACT
+messagebox 您的武器魔法属性已经已超过10点，不能再进行提升
+break
+
+#IF
+CHECKGAMEGIRD > 0
+#ACT
+GAMEGIRD - 1
+UPGRADEITEMEX 1 1 100 1 0
+goto @start_levelup
+#ELSEACT
+goto @Upmiss
+break
+
+[@Upmiss]
+#ACT
+MESSAGEBOX 升级需要消耗1张灵符\ \
+break
+
+[@upgrade]
+你像是想要升级你的武器。给我看你的武器，\
+升级价格是<$UPGRADEWEAPONFEE>金币。\
+修炼这个武器需要原料<黑铁矿石>，<饰品>，<武器>和<金币>\
+每把武器最多可以修炼7点，超过7点必碎无疑！\
+你确定将你的武器放入修炼系统吗？\ \
+<确认修炼/@confirmupgrade>\ \
+<取 消/@main>
+
+[@confirmupgrade]
+#if
+CHECKUSEITEM 1
+#say
+你当前想要修炼的是你手中的那把「<$USERWEAPON>」吗？\
+我想从你的包里取得更多的饰品和黑铁矿石。\
+如果你有重要的物品，在你寄存在仓库后请回来。\ \
+<请求修炼/@upgradenow>「<$USERWEAPON>」\ \
+<在安排好以后再回来/@exit>
+#elsesay
+你的手上没拿任何武器\ \
+<返 回/@main>
+
+[~@upgradenow_ok]
+请--<十分钟后>--再回来。\ \
+我会把它弄得像新的一样，\ \
+<返 回/@Main>
+
+[~@upgradenow_ing]
+我们工作的规则是一个人只能进行一个项目。\
+请下次再来...\ \
+<返 回/@Main>
+
+[~@upgradenow_fail]
+材料不够。请你下次来的时候，\
+准备好所有的矿石，武器和饰品。\ \
+<返 回/@Main>
+
+[~@getbackupgnow_ok]
+就这样了，我尽我最大努力精炼了你的武器，结果是否<成功>\
+只有在你使用过一次后才知道，出去试试吧。\ \
+<退 出/@exit>
+
+[~@getbackupgnow_ing]
+这个工作正忙着呢，请稍等片刻...\ \
+<返 回/@Main>
+
+[~@getbackupgnow_fail]
+以前你是不是寄存了很多东西？\
+如果你找我是为了取回你很久前寄存在这里的物品，\
+那你还是回去吧，我可记不起来了。\
+这也过去太长时间了...\ \
+<返 回/@Main>

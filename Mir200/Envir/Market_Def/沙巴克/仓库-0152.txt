@@ -1,0 +1,277 @@
+(@storage @getback @getnextpage @getPreviouspage)
+[@main]
+需要帮什么忙吗？\
+目前不收保管费，请多利用。\ \
+<保管/@storage>东西\
+<找回/@getback>东西\
+<捆/@mbind>金条和各种卷轴、药品\ \
+<关 闭/@exit>\
+
+[@storage]
+需要保管什么东西？\ \ \
+<返 回/@Main>
+[@getback]
+请看目录决定找什么东西。\ \ \
+<返 回/@Main>
+ 
+[@Mbind]
+#IF
+#SAY
+我这里专门帮人保管东西 \ 
+你需要在我这里存放点什么东西吗？\ \
+用金币<交换/@changeGold>金条 \
+用金条<交换/@changeMoney>金砖 \
+<捆/@z_bind>卷轴\
+<捆/@H_@bind>药品\ \
+<离 开/@exit>
+
+[@changeGold]
+#IF 
+checkgold 1002000
+#ACT
+take 金币 1002000
+give 金条 1
+MESSAGEBOX 金条已经为你换好了
+#elseact
+MESSAGEBOX 交换失败
+break
+
+[@changeMoney]
+#IF 
+checkitem 金条 5
+checkgold 2000
+#ACT
+take 金条 5
+give 金砖 1
+take 金币 2000
+MESSAGEBOX 金砖已经为你换好了
+#elseact
+MESSAGEBOX 交换失败
+break
+
+[@z_bind]
+<捆/@zum_bind1>地牢逃脱卷\
+<捆/@zum_bind2>随机传送卷\
+<捆/@zum_bind3>回城卷\
+<捆/@zum_bind4>行会回城卷\ \
+<返 回/@Mbind>
+
+[@zum_bind1]
+#IF
+checkitem 地牢逃脱卷 6
+#ACT
+goto @zum_bind1_1
+#ELSESAY
+你都没有可以捆的卷书，还捆什么? \
+等准备好之后，再来找我吧.. \ \
+<离 开/@exit>
+[@zum_bind1_1]
+#IF 
+checkgold 100
+checkitem 地牢逃脱卷 6
+#ACT
+take 金币 100
+take 地牢逃脱卷 6
+give 地牢逃脱卷包 1
+#SAY
+已经捆好了... 我的技术不错吧.. \
+以后还有要捆的，就来找我吧.. \ \
+<继续捆/@z_bind> \
+<离 开/@exit>
+#ELSESAY
+你都没有钱捆东西，\
+还捆什么? \
+快走吧.... \ \
+<离 开/@exit>
+[@zum_bind2]
+#IF
+checkitem 随机传送卷 6
+#ACT
+goto @zum_bind2_1
+#ELSESAY
+你都没有可以捆的卷书，还捆什么? \
+等准备好之后，再来找我吧.. \ \
+<离 开/@exit>
+[@zum_bind2_1]
+#IF 
+checkgold 100
+checkitem 随机传送卷 6
+#ACT
+take 金币 100
+take 随机传送卷 6
+give 随机传送卷包 1
+#SAY
+已经捆好了... 我的技术不错吧.. \
+以后还有要捆的，就来找我吧.. \ \
+<继续捆/@z_bind> \
+<离 开/@exit>
+#ELSESAY
+你都没有钱捆东西，\
+还捆什么? \
+快走吧.... \ \
+<离 开/@exit>
+[@zum_bind3]
+#IF
+checkitem 回城卷 6
+#ACT
+goto @zum_bind3_1
+#ELSESAY
+你都没有可以捆的卷书，还捆什么? \
+等准备好之后，再来找我吧.. \ \
+<离 开/@exit>
+[@zum_bind3_1]
+#IF 
+checkgold 100
+checkitem 回城卷 6
+#ACT
+take 金币 100
+take 回城卷 6
+give 回城卷包 1
+#SAY
+已经捆好了... 我的技术不错吧.. \
+以后还有要捆的，就来找我吧.. \ \
+<继续捆/@z_bind> \
+<离 开/@exit>
+#ELSESAY
+你都没有钱捆东西，\
+还捆什么? \
+快走吧.... \ \
+<离 开/@exit>
+[@zum_bind4]
+#IF
+checkitem 行会回城卷 6
+#ACT
+goto @zum_bind4_1
+#ELSESAY
+你都没有可以捆的卷书，还捆什么? \
+等准备好之后，再来找我吧.. \ \
+<离 开/@exit>
+[@zum_bind4_1]
+#IF 
+checkgold 100
+checkitem 行会回城卷 6
+#ACT
+take 金币 100
+take 行会回城卷 6
+give 行会回城卷包 1
+#SAY
+已经捆好了... 我的技术不错吧.. \
+以后还有要捆的，就来找我吧.. \ \
+<继续捆/@z_bind> \
+<离 开/@exit>
+#ELSESAY
+你都没有钱捆东西，\
+还捆什么? \
+快走吧.... \ \
+<离 开/@exit>
+
+[@H_@BIND]
+ <捆/@XH_@BIND> 金创药(小量)\
+ <捆/@XM_@BIND> 魔法药(小量)\
+ <捆/@ZH_@BIND> 金创药(中量)\
+ <捆/@ZM_@BIND> 魔法药(中量)\
+ <捆/@QH_@BIND> 强效金创药\
+ <捆/@QM_@BIND> 强效魔法药\ 
+ <返回/@Mbind>
+
+[@QH_@BIND]
+#IF
+  checkitem 强效金创药 6
+#ACT
+ take 金币 100
+ take 强效金创药 6
+ give 超级金创药 1
+#SAY
+已经捆好了... 我的技术不错吧..\
+还有要捆的就拿给我吧..\ \
+ <继续捆/@H_@BIND> \
+ <退出/@exit>
+#ELSESAY
+你都没有要捆的药水，还捆什么？\
+等准备好药水之后，再来找我吧..\ \
+ <退出/@exit>
+
+[@QM_@BIND]
+#IF
+  checkitem 强效魔法药 6
+#ACT
+ take 金币 100
+ take 强效魔法药 6
+ give 超级魔法药 1
+#SAY
+已经捆好了... 我的技术不错吧..\
+还有要捆的就拿给我吧..\ \
+ <继续捆/@H_@BIND> \
+ <退出/@exit>
+#ELSESAY
+你都没有要捆的药水，还捆什么？\
+等准备好药水之后，再来找我吧..\ \
+ <退出/@exit>
+
+[@ZH_@BIND]
+#IF
+  checkitem 金创药(中量) 6
+#ACT
+ take 金币 100
+ take 金创药(中量) 6
+ give 金创药(中)包 1
+#SAY
+已经捆好了... 我的技术不错吧..\
+还有要捆的就拿给我吧..\ \
+ <继续捆/@H_@BIND> \
+ <退出/@exit>
+#ELSESAY
+你都没有要捆的药水，还捆什么？\
+等准备好药水之后，再来找我吧..\ \
+ <退出/@exit>
+
+[@ZM_@BIND]
+#IF
+  checkitem 魔法药(中量) 6
+#ACT
+ take 金币 100
+ take 魔法药(中量) 6
+ give 魔法药(中)包 1
+#SAY
+已经捆好了... 我的技术不错吧..\
+还有要捆的就拿给我吧..\ \
+ <继续捆/@H_@BIND> \
+ <退出/@exit>
+#ELSESAY
+你都没有要捆的药水，还捆什么？\
+等准备好药水之后，再来找我吧..\ \
+ <退出/@exit>
+
+[@XH_@BIND]
+#IF
+  checkitem 金创药(小量) 6
+#ACT
+ take 金币 100
+ take 金创药(小量) 6
+ give 金创药(小)包 1
+#SAY
+已经捆好了... 我的技术不错吧..\
+还有要捆的就拿给我吧..\ \
+ <继续捆/@H_@BIND> \
+ <退出/@exit>
+#ELSESAY
+你都没有要捆的药水，还捆什么？\
+等准备好药水之后，再来找我吧..\ \
+ <退出/@exit>
+
+[@XM_@BIND]
+#IF
+  checkitem 魔法药(小量) 6
+#ACT
+ take 金币 100
+ take 魔法药(小量) 6
+ give 魔法药(小)包 1
+#SAY
+已经捆好了... 我的技术不错吧..\
+还有要捆的就拿给我吧..\ \
+ <继续捆/@H_@BIND> \
+ <退出/@exit>
+#ELSESAY
+你都没有要捆的药水，还捆什么？\
+等准备好药水之后，再来找我吧..\ \
+ <退出/@exit>

@@ -1,0 +1,130 @@
+(@buy @sell @repair @s_repair)
+%100
++20
++19
++21
+[@main]
+#if
+check [102] 1
+#say
+<$USERNAME>. 你能帮我个忙吗?\ \
+<购买/@buy>项链\
+<出售/@sell>项链\
+<修理/@repair>项链\
+<特殊修理/@s_repair>\ \
+<项链店老板的请求/@rw01>                          <关闭/@exit>
+#elsesay
+欢迎. 我可以帮你什么吗?\ \
+<购买/@buy>项链\
+<出售/@sell>项链\
+<修理/@repair>项链\
+<特殊修理/@s_repair>\ \
+<关闭/@exit>
+
+[@rw01]
+#IF
+checkitem 纯银 1
+#act
+take 纯银 1
+goto @0
+break
+
+#IF
+check [103] 1
+#say
+　\
+赶紧把<银矿>和<工钱>交给土城的铁匠啊！！！
+#elsesay
+　\
+我准备做一条项链，为比奇国王祈福，但没有品质好的材料\
+你能帮我找一块<纯度10以上的银矿>吗？\ \
+<我这正好有一块/@rw02>\ \
+<我现在就去找/@exit>
+
+[@rw02]
+#IF
+CHECKDURAEVA 银矿 10
+#ACT
+give 铁匠的工钱 1
+set [103] 1
+break
+#SAY
+　\
+麻烦你跑一趟<土城武器店>，将银矿交给〈铁匠〉冶炼一下\
+提取高纯度的白银我好制作项链！\
+这是给<铁匠的工钱>，拿好！千万别丢了啊！
+#ELSESAY
+　\
+哪呢？
+
+[@0]
+#IF
+#act
+INC M1 1
+DelayCall 100 @1
+break
+#say
+#say
+　\
+　 ◆\
+◇ ╀ ◇    <祈福项链>正在打造中，请稍等……\
+　 ◇
+[@1]
+#IF
+#act
+DelayCall 100 @2
+break
+#say
+　\
+　 ◇\
+◇ ┾ ◆    <祈福项链>正在打造中，请稍等…\
+　 ◇
+[@2]
+#IF
+#act
+DelayCall 100 @3
+break
+#say
+　\
+　 ◇\
+◇ ╁ ◇    <祈福项链>正在打造中，请稍等……\
+　 ◆
+
+[@3]
+#IF
+small M1 30
+#act
+DelayCall 100 @0
+break
+#say
+　\
+　 ◇\
+◆ ┽ ◇    <祈福项链>正在打造中，请稍等…\
+　 ◇
+#elseact
+MOV M1 0
+ClearDelayGoto
+close
+GIVE 祈福项链 1
+set [102] 0
+messagebox <祈福项链>已经打造完成，请将它亲手献给〈比奇国王〉
+break
+
+[@buy]
+您要买项链吗?\ \ \
+<返 回/@Main>
+[@sell]
+您出售哪种项链?\ \ \
+<返 回/@Main>
+[@repair]
+您要修理项链吗?\ \ \
+<返 回/@Main>
+[~@repair]
+看上去修好了.\ \
+<返 回/@Main>
+[goods]
+金项链          10      10
+传统项链        10      10
+黑檀项链        10      10
+黄色水晶项链    10      10
+黑色水晶项链	10	10

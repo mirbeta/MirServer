@@ -1,0 +1,14 @@
+[@假人充值显示]
+{
+#IF
+random 30
+#ACT
+ReadRandomLine .\QuestDiary\LEGM2.CC假人系统\假人充值金额.txt S24
+MOV M25 <$STR(S24)>
+MUL M25 200
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统，购买<$STR(M25)>个元宝
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统，获得<$STR(S24)>个积分
+
+#IF
+#ACT
+}

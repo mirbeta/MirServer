@@ -1,0 +1,456 @@
+[2022-08-30 15:08:51.8517] | Debug | DBSvr is starting. 
+[2022-08-30 15:08:51.9628] | Info | 数据库配置文件读取完成... 
+[2022-08-30 15:09:02.2349] | Debug | 重新链接账号服务器[]. 
+[2022-08-30 15:09:17.5087] | Debug | DBSvr is starting. 
+[2022-08-30 15:09:17.5933] | Info | 数据库配置文件读取完成... 
+[2022-08-30 17:26:41.4090] | Debug | DBSvr is starting. 
+[2022-08-30 17:26:41.5252] | Info | 数据库配置文件读取完成... 
+[2022-08-30 17:26:41.5361] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 17:26:41.5363] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 17:26:41.8972] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 17:26:41.9765] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 17:26:57.4232] | Info | 角色网关[0](10.10.0.102:62813)已打开... 
+[2022-08-30 17:26:57.4297] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:27:07.4259] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:27:16.9066] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 17:27:17.4273] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:27:27.4279] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:27:37.4296] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:27:47.4307] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:27:57.4326] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:28:03.9609] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 17:28:04.4385] | Debug | [QueryChr] Success ml=zmn?`b? 
+[2022-08-30 17:28:07.4346] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:28:10.8747] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 17:28:17.4364] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:28:27.4371] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:28:37.4383] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:28:47.4393] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:28:57.4396] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:29:07.4414] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:29:17.4420] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:29:27.4428] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:29:37.4439] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:29:47.4459] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:29:57.4470] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:30:07.4478] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:30:17.4500] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:30:27.4514] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:30:37.4520] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:30:47.4534] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:30:57.4545] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:31:07.4550] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:31:17.4565] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:31:27.4573] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:31:37.4584] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:31:47.4590] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:31:57.4597] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:32:07.4605] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:32:17.4617] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:32:27.4627] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:32:37.4647] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:32:47.4666] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:32:57.4678] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:33:07.4690] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:33:17.4697] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:33:27.4710] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:33:37.4722] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:33:47.4733] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:33:57.4737] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:34:07.4748] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:34:17.4762] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:34:20.2077] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 17:34:20.6811] | Debug | [QueryChr] Success ml=zmn?`c? 
+[2022-08-30 17:34:27.4774] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:34:35.2510] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 17:34:37.4785] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:34:47.4800] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:34:57.4810] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:35:07.4824] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:35:17.4827] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:35:27.4837] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:35:37.4848] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:35:47.4864] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:35:57.4867] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:36:07.4876] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:36:17.4897] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:36:27.4913] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:36:37.4915] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:36:47.4935] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:36:57.4945] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:37:07.4946] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:37:17.4962] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:37:27.4972] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:37:37.4977] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:37:47.4989] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:37:57.5001] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:38:07.5013] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:38:17.5018] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:38:27.5033] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:38:37.5039] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:38:47.5051] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:38:57.5064] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:39:07.5068] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:39:17.5076] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:39:27.5086] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:39:37.5103] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:39:47.5112] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:39:57.5120] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:40:07.5128] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:40:17.5135] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:40:27.5151] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:40:37.5156] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:40:47.5170] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:40:57.5177] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:41:07.5185] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:41:17.5201] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:41:27.5216] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:41:37.5233] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:41:47.5239] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:41:57.5253] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:42:07.5255] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:42:17.5277] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:42:27.5296] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:42:37.5311] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:42:47.5320] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:42:57.5331] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:43:07.5338] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:43:17.5356] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:43:27.5373] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:43:37.5378] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:43:47.5399] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:43:57.5411] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:44:07.5426] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:44:17.5440] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:44:27.5457] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:44:37.5471] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:44:47.5486] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:44:57.5507] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:45:07.5520] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:45:17.5530] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:45:27.5537] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:45:37.5555] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:45:47.5567] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:45:57.5575] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:46:07.5585] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:46:17.5597] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:46:27.5614] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:46:33.9079] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 17:46:34.3837] | Debug | [QueryChr] Success ml=zmn?``> 
+[2022-08-30 17:46:37.5618] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:46:40.1616] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 17:46:47.5634] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:46:57.5644] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:47:07.5648] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:47:17.5658] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:47:27.5668] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:47:37.5686] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:47:47.5695] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:47:57.5714] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:48:07.5717] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:48:17.5728] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:48:27.5745] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:48:37.5760] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:48:47.5775] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:48:57.5786] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:49:07.5797] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:49:17.5808] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:49:27.5820] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:49:37.5828] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:49:47.5836] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:49:57.5854] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:50:07.5855] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:50:17.5870] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:50:27.5887] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:50:37.5900] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:50:47.5915] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:50:57.5916] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:51:07.5937] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:51:17.5950] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:51:27.5963] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:51:37.5972] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:51:47.5975] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:51:57.5989] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:52:07.6001] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:52:17.6010] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:52:27.6019] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:52:37.6025] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:52:47.6041] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:52:57.6047] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:53:07.6056] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:53:17.6075] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:53:18.6891] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 17:53:19.1600] | Debug | [QueryChr] Success ml=zmn?`a> 
+[2022-08-30 17:53:24.0364] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 17:53:27.6079] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:53:37.6093] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:53:47.6103] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:53:57.6114] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:54:07.6122] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:54:17.6132] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:54:27.6140] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:54:37.6156] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:54:47.6164] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:54:57.6175] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 17:55:07.6191] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:07:35.9351] | Debug | DBSvr is starting. 
+[2022-08-30 18:07:36.0295] | Info | 数据库配置文件读取完成... 
+[2022-08-30 18:07:36.0315] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 18:07:36.0315] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 18:07:36.2816] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 18:07:36.3650] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 18:07:38.6643] | Info | 角色网关[0](10.10.0.102:64053)已打开... 
+[2022-08-30 18:07:38.6712] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:07:43.8803] | Debug | DBSvr is starting. 
+[2022-08-30 18:07:43.9711] | Info | 数据库配置文件读取完成... 
+[2022-08-30 18:07:43.9730] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 18:07:43.9730] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 18:07:44.2410] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 18:07:44.3233] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 18:07:47.1672] | Info | 角色网关[0](10.10.0.102:64063)已打开... 
+[2022-08-30 18:07:47.1733] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:07:57.1695] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:07:57.3436] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 18:08:07.1872] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:08:17.1883] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:08:22.9746] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:08:23.4317] | Debug | [QueryChr] Success ml=zmn?`b? 
+[2022-08-30 18:08:27.1887] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:08:27.8596] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:08:37.1897] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:08:47.1910] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:08:57.1923] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:09:07.1937] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:09:17.1954] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:09:27.1968] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:09:37.1982] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:09:47.1993] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:09:57.1996] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:10:07.2008] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:10:17.2023] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:10:27.2038] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:10:37.2058] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:10:47.2068] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:10:57.2079] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:11:07.2097] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:11:17.2107] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:11:27.2122] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:11:37.2133] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:11:47.2149] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:11:57.2160] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:12:07.2180] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:12:17.2195] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:12:27.2208] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:12:37.2221] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:12:47.2227] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:12:57.2241] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:13:07.2247] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:13:17.2263] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:13:20.4079] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:13:20.8508] | Debug | [QueryChr] Success ml=zmn?`c? 
+[2022-08-30 18:13:25.9572] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:13:27.2269] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:13:37.2284] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:13:47.2288] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:13:57.2306] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:14:07.2305] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:14:17.2322] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:14:27.2328] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:14:37.2341] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:14:47.2353] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:14:57.2361] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:07.2369] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:17.2380] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:27.2390] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:37.2395] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:47.2408] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:55.2467] | Error | 账号服务器[10.10.0.102:5600]断开链接. 
+[2022-08-30 18:15:56.6374] | Debug | 重新链接账号服务器[10.10.0.102:5600]. 
+[2022-08-30 18:15:57.2420] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:15:57.3410] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 18:16:04.6547] | Debug | DBSvr is starting. 
+[2022-08-30 18:16:04.7592] | Info | 数据库配置文件读取完成... 
+[2022-08-30 18:16:04.7626] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 18:16:04.7626] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 18:16:05.0362] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 18:16:05.1189] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 18:16:08.5416] | Info | 角色网关[0](10.10.0.102:64348)已打开... 
+[2022-08-30 18:16:08.5474] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:16:11.7392] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 18:16:18.5447] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:16:28.5464] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:16:31.3192] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:16:31.7858] | Debug | [QueryChr] Success ml=zmn?`b? 
+[2022-08-30 18:16:36.8413] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:16:38.5473] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:16:48.5482] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:16:58.5490] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:17:08.5500] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:17:18.5514] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:17:28.5525] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:17:38.5533] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:17:48.5539] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:17:58.5551] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:18:08.5556] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:18:18.5575] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:18:28.5580] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:18:30.7734] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:18:31.2275] | Debug | [QueryChr] Success ml=zmn?`c? 
+[2022-08-30 18:18:38.4080] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:18:38.5588] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:18:48.5604] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:18:58.5609] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:19:08.5622] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:19:18.5636] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:19:28.5647] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:19:38.5663] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:19:48.5676] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:19:58.5682] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:20:08.5691] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:20:18.5700] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:20:28.5710] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:20:38.5716] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:20:48.5737] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:20:58.5752] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:21:08.5756] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:21:18.5776] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:21:28.5791] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:21:38.5796] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:21:48.5812] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:21:58.5815] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:22:08.5833] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:22:18.5841] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:22:28.5853] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:22:38.5857] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:22:48.5867] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:22:58.5886] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:23:08.5899] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:23:18.5907] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:23:28.5922] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:23:38.5929] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:23:48.5971] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:27:56.0382] | Debug | DBSvr is starting. 
+[2022-08-30 18:27:56.1507] | Info | 数据库配置文件读取完成... 
+[2022-08-30 18:27:56.1529] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 18:27:56.1529] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 18:27:56.4221] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 18:27:56.5035] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 18:27:59.9855] | Info | 角色网关[0](10.10.0.102:64764)已打开... 
+[2022-08-30 18:27:59.9913] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:28:09.9870] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:28:19.9885] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:28:26.2468] | Debug | 重新链接账号服务器[10.10.0.102:5600]. 
+[2022-08-30 18:28:29.9893] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:28:39.9902] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:28:45.7549] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 18:28:49.9912] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:28:59.9919] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:29:05.0867] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:29:05.5545] | Debug | [QueryChr] Success ml=zmn?`b? 
+[2022-08-30 18:29:09.9937] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:29:10.1229] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:29:19.9942] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:29:29.9949] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:29:39.9957] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:29:49.9977] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:29:59.9983] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:30:09.9987] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:30:20.0003] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:30:27.1111] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:30:27.5577] | Debug | [QueryChr] Success ml=zmn?`c? 
+[2022-08-30 18:30:30.0007] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:30:31.4161] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:30:40.0023] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:30:50.0029] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:31:00.0039] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:31:10.0056] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:31:20.0067] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:31:30.0083] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:31:40.0097] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:31:50.0099] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:32:00.0108] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:32:10.0119] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:32:20.0132] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:32:30.0142] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:32:40.0147] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:32:50.0167] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:33:00.0180] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:33:10.0188] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:33:20.0205] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:33:30.0216] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:48:02.3570] | Debug | DBSvr is starting. 
+[2022-08-30 18:48:02.4473] | Info | 数据库配置文件读取完成... 
+[2022-08-30 18:48:02.4493] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 18:48:02.4494] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 18:48:02.7063] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 18:48:02.7867] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 18:48:05.3201] | Info | 角色网关[0](10.10.0.102:65439)已打开... 
+[2022-08-30 18:48:05.3259] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:48:09.4137] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 18:48:15.3219] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:48:25.3233] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:48:35.3238] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:48:39.0869] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 18:48:39.5758] | Debug | [QueryChr] Success ml=zmn?`b? 
+[2022-08-30 18:48:41.9065] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 18:48:45.3248] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:48:55.3259] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:49:05.3274] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:49:15.3292] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:49:25.3308] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:49:35.3326] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:49:45.3327] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:49:55.3340] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:50:05.3351] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:50:15.3365] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:50:25.3372] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:50:35.3383] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:50:45.3391] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:50:55.3408] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:51:05.3429] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:51:15.3442] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:51:25.3455] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:51:35.3474] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:51:45.3484] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:51:55.3488] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 18:52:05.3508] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:02:12.7063] | Debug | DBSvr is starting. 
+[2022-08-30 19:02:12.8137] | Info | 数据库配置文件读取完成... 
+[2022-08-30 19:02:12.8157] | Info | 读取网关配置信息.GameGateIP:[10.10.0.102:7200] 
+[2022-08-30 19:02:12.8157] | Info | 读取网关配置信息成功.[1] 
+[2022-08-30 19:02:13.0974] | Info | 数据库服务[10.10.0.102:5100]已启动.等待链接... 
+[2022-08-30 19:02:13.1915] | Info | 数据库角色服务[10.10.0.102:6000]已启动.等待链接... 
+[2022-08-30 19:02:16.5790] | Info | 角色网关[0](10.10.0.102:49499)已打开... 
+[2022-08-30 19:02:16.5862] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:02:26.2041] | Info | 账号服务器[10.10.0.102:5600]链接成功. 
+[2022-08-30 19:02:26.5821] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:02:36.5831] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:02:46.5850] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:02:55.4274] | Debug | 收到账号中心同步会话消息. 
+[2022-08-30 19:02:55.9174] | Debug | [QueryChr] Success ml=zmn?`b? 
+[2022-08-30 19:02:56.5859] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:02:58.4916] | Debug | 发送游戏网关信息: GameRun:10.10.0.102 Port:7200 
+[2022-08-30 19:03:06.5875] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:03:16.5884] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:03:26.5895] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:03:36.5897] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:03:46.5906] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:03:56.5924] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:04:06.5930] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:04:16.5941] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:04:26.5962] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:04:36.5974] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:04:46.5985] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:04:56.5995] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:05:06.6001] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:05:16.6010] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:05:26.6026] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:05:36.6047] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:05:46.6067] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:05:56.6082] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:06:06.6086] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:06:16.6104] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:06:26.6107] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:06:36.6128] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:06:46.6131] | Debug | Received SelGate Heartbeat. 
+[2022-08-30 19:06:56.6144] | Debug | Received SelGate Heartbeat. 

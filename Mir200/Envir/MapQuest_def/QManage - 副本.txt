@@ -1,0 +1,36 @@
+[@Resume]
+#IF
+CHECKLEVELEX > 0
+#ACT
+SENDMSG 5 ╭──────────────────────────────╮
+SENDMSG 5 │╭────────────记忆传奇────────────╮│
+SENDMSG 5 ││　　　　　　　　　　　　　　　　　　　　　　　　　　　　││
+SENDMSG 5 ││　　　　　　　　　　　　　　　　　　　　　　　　　　　　││
+SENDMSG 5 ││　　　由于上次下线使用了离线功能　请小退后重新登陆　　　││
+SENDMSG 5 ││　　　　　　　　　　　　　　　　　　　　　　　　　　　　││
+SENDMSG 5 ││　　　　　　　　　　　　　　　　　　　　　　　　　　　　││
+SENDMSG 5 │╰──────────-Jiyi.eeepk.Com-──────────╯│
+SENDMSG 5 ╰──────────────────────────────╯
+kick
+break
+
+[@Login]
+#if
+CHECKLEVELEX > 0
+#act
+SETOFFLINEPLAY ON
+VAR INTEGER HUMAN 时长
+VAR INTEGER HUMAN 标识
+LOADVAR HUMAN  时长 ..\QuestDiary\代练系统\代练数据.txt
+LOADVAR HUMAN  标识 ..\QuestDiary\代练系统\代练数据.txt
+#CALL [\月卡\月卡系统.txt] @月卡
+#CALL [\游戏登陆\登陆脚本.txt] @登陆设置
+break
+
+[@Member]
+#IF
+ISADMIN
+#act
+mapmove N109 40 40
+SENDMSG 7 当前在线人数:<$USERCOUNT>人.
+BREAK

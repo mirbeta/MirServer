@@ -1,0 +1,9 @@
+[@main]
+　\ \
+还记得当年的 "<COLOR=clYellow 飞火流星>" 吗?\ \
+<进入[玛法足球场]/@qiu>
+
+[@qiu]
+#act
+map G003
+BREAK

@@ -1,0 +1,60 @@
+(@buy @sell @repair @s_repair)
+%100
++5
++6
++43
+[@main]
+#if
+check [105] 1
+#say
+欢迎光临。请问有什么事情帮忙吗？\ \
+<买/@buy>武器\
+<卖/@sell>武器\
+<修理/@repair>武器\
+<特殊修理/@s_repair>\
+<赊帐/@rw01>\ \
+<关 闭/@exit>
+#elsesay
+欢迎光临。请问有什么事情帮忙吗？\ \
+<买/@buy>武器\
+<卖/@sell>武器\
+<修理/@repair>武器\
+<特殊修理/@s_repair>\ \
+<关 闭/@exit>
+
+[@rw01]
+#IF
+CHECKDURAEVA 金矿 10
+#ACT
+Take 金矿 1
+give 寒铁戒指 1
+break
+#say
+　\
+我把金矿拿走了，你只需把<寒铁戒指>交给〈土城戒指店老板〉\
+咱就消帐
+#elseACT
+messagebox 本店从来不赊帐！
+break
+
+[@buy]
+请挑选要购买的物品。\ \ \
+<返 回/@main>
+[@sell]
+请放上去要卖的武器。\ \ \
+<返 回/@main>
+[@repair]
+要修理武器吗？\ \
+<返 回/@main>
+[~@repair]
+已经修好了。\ \
+<返 回/@main>
+
+[goods]
+木剑	10	10
+匕首	10	10
+青铜剑	10	10
+鹤嘴锄	20	10
+短剑	10	10
+铁剑	10	10
+青铜斧	10	10

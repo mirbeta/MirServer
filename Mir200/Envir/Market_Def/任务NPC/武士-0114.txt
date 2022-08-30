@@ -1,0 +1,155 @@
+[@main]
+#IF
+CHECKNAMELIST ..\QuestDiary\命运之刃名单.txt
+#ACT
+MESSAGEBOX 每天只有一次机会
+break
+
+#if
+checkitem 佛牌 1
+checklevel 43
+#say
+　\
+你是怎么找到我的？比奇城的铁匠？你怎么知道他是我的徒弟的？\
+你想和我说话就要和我玩石头剪子布的游戏，实际上是很难的，\
+同时需要运气，而猜错只能从头开始这个任务了！\ \
+<玩石头剪子布/@rw01>\ \
+<离 开/@exit>
+#elsesay
+　\
+你叫什么？\
+<$USERNAME>？\
+好名字！
+
+[@rw01]
+#if
+#act
+movr M3 3
+BREAK
+#SAY
+　\
+高级武士：“准备好了吗？3 2 1 开始！”\ \
+<石头/@st>\ \
+<剪子/@jz>\ \
+<布/@bu>
+
+[@st]
+#if
+equal M3 0
+#act
+take 佛牌 1
+set [105] 0
+addnamelist ..\QuestDiary\命运之刃名单.txt
+break
+#SAY
+　\
+高级武士：“我出的是<布> 你输了！”\ \
+<我明天再来/@exit>
+
+#if
+equal M3 1
+#SAY
+　\
+高级武士：“我出的是<石头> 平局！”\ \
+<再来/@rw01>
+
+#if
+equal M3 2
+#SAY
+　\
+高级武士：“我出的是<剪子> 你赢了！”\ \
+<打听[命运之刃]的下落/@rw02>
+
+[@jz]
+#if
+equal M3 0
+#act
+take 佛牌 1
+set [105] 0
+addnamelist ..\QuestDiary\命运之刃名单.txt
+break
+#SAY
+　\
+高级武士：“我出的是<石头> 你输了！”\ \
+<我明天再来/@exit>
+
+#if
+equal M3 1
+#SAY
+　\
+高级武士：“我出的是<剪子> 平局！”\ \
+<再来/@rw01>
+
+#if
+equal M3 2
+#SAY
+　\
+高级武士：“我出的是<布> 你赢了！”\ \
+<打听[命运之刃]的下落/@rw02>
+
+[@bu]
+#if
+equal M3 0
+#act
+take 佛牌 1
+set [105] 0
+addnamelist ..\QuestDiary\命运之刃名单.txt
+break
+#SAY
+　\
+高级武士：“我出的是<剪子> 你输了！”\ \
+<我明天再来/@exit>
+
+#if
+equal M3 1
+#SAY
+　\
+高级武士：“我出的是<布> 平局！”\ \
+<再来/@rw01>
+
+#if
+equal M3 2
+#SAY
+　\
+高级武士：“我出的是<石头> 你赢了！”\ \
+<打听[命运之刃]的下落/@rw02>
+
+[@rw02]
+有一本《<命运之书>》，记载了命运之刃的全部铸造工艺！\
+拿到《<命运之书>》就可以直接去找我的那个铁匠徒弟，他会\
+帮你重新打造一把你想要的<命运之刃>！\
+不过，这本书被"命运教主"抢走，而它被我关在<命运囚笼>里\
+你想挑战"命运教主"抢回<命运之书>吗？\ \
+<挑战命运教主/@rw03> <限时180秒>\ \
+<放弃任务/@exit>
+
+[@rw03]
+#IF
+CHECKNAMELIST ..\QuestDiary\命运之刃名单.txt
+#ACT
+MESSAGEBOX 每天只有一次挑战机会
+break
+
+#if
+checkhum T118 1
+#ACT
+MESSAGEBOX 有人正在挑战，请稍候……
+break
+
+#if
+checkitem 佛牌 1
+#act
+take 佛牌 1
+set [105] 0
+addnamelist ..\QuestDiary\命运之刃名单.txt
+CLEARMAPMON T118
+MONGENEX T118 14 17 命运教主 2 1 1
+map T118
+SENDMSG 5 限时挑战180秒…剩余：%t 251 0 180 @出来
+break
+
+[@出来]
+#if
+#act
+map 0114
+break

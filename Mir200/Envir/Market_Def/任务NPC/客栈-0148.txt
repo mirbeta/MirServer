@@ -1,0 +1,117 @@
+[@main]
+#if
+checkitem 精灵头盔 1
+#say
+　\
+这是我父亲丢失的<精灵头盔>，怎么会在你这儿？\ \
+<归还精灵头盔/@rw01>\ \
+<精灵头盔怎么没属性？/@rw02>
+#elsesay
+　\
+本客栈新开赌场一间，有时间来捧场啊！！！
+
+[@rw02]
+　\
+这精灵头盔是由精灵森林里灵鹿的鹿皮、鹿角、鹿骨制作而成\
+原始状态下属性是隐藏的，要用<鹿血>洗后才会显现 <最高7点整体属性>\ \
+<清洗[精灵头盔]的属性/@rw02A>\ \
+<返回/@main>
+
+[@rw02A]
+#if
+checkitem 精灵头盔 1
+#act
+QUERYITEMDLG 清洗精灵头盔 @UPGRADEDLGITEM 0
+break
+
+[@UPGRADEDLGITEM]
+#if
+CHECKDLGITEMNAME 精灵头盔
+CHECKDLGITEMADDVALUE 10 = 1
+#act
+close
+messagebox 这个精灵头盔已经清洗过了
+break
+
+#if
+CHECKDLGITEMNAME 精灵头盔
+checkitem 鹿血 1
+#act
+take 鹿血 1
+movr M11 2
+movr M12 5
+UPGRADEDLGITEM 10 100 0 0 0
+UPGRADEDLGITEM <$STR(M11)> 100 4 0 0
+UPGRADEDLGITEM <$STR(M12)> 10 5 0 0
+close
+sendmsg 6 提示：精灵头盔清洗完毕!!!
+#elseact
+close
+messagebox 鹿血只能清洗精灵头盔
+break
+
+[@rw01]
+#IF
+CHECKNAMELIST ..\QuestDiary\黑铁手套名单.txt
+#ACT
+MESSAGEBOX 今天你已经完成此任务
+break
+
+#if
+checkitem 精灵头盔 1
+checkitem 鹿茸 1
+#act
+take 精灵头盔 1
+take 鹿茸 1
+set [101] 0
+addnamelist ..\QuestDiary\黑铁手套名单.txt
+break
+#say
+　\
+真不知道该如何感谢你，我这有一只<黑铁手套>你喜欢不？\
+喜欢的话可以送你，不喜欢就送你点别的！\ \
+<喜欢/@rw03>\ \
+<不喜欢/@rw04>
+
+#if
+checkitem 精灵头盔 1
+#say
+　\
+这精灵头盔已经破损了，找些新鲜<鹿茸>来我修补一下吧！
+
+[@rw03]
+　\
+想要<黑铁手套>没问题，先回答我几个问题吧！\ \
+<好的/@rw05>\ \
+<真罗嗦/@rw04>
+
+[@rw05]
+　\
+风风雨雨十几载，你是否依然热爱着这片曾经另你热血沸腾\
+的玛法大陆？\ \
+<是的 从未改变/@rw04>\ \
+<不 她伤了我的心/@rw06>
+
+[@rw06]
+　\
+时光已经倒流，你又回到了原点，此刻的你还是当年的你吗？\ \
+<是的 从未改变/@rw07>\ \
+<不 我已凋零/@rw04>
+
+[@rw07]
+　\
+是什么让你再次踏上传奇之路，此刻站在我的面前？\ \
+<传奇是我一生无法割舍的爱/@rw08>\ \
+<传奇是我一生铭刻于心的痛/@rw04>
+
+[@rw08]
+#act
+give 黑铁手套 1
+close
+break
+
+[@rw04]
+#act
+give 祝福油 1
+close
+break

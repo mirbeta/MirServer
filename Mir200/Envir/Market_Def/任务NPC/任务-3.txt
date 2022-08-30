@@ -1,0 +1,149 @@
+[@main]
+<任务名称>          <任务要求等级>          <任务可接次数>\ \
+<[神秘商店]/@rw01>            35级                  一次\
+<[黑铁手套]/@rw02>            37级                每天一次\
+<[神秘商店]/@rw03>            40级                  不限\
+<[祈福项链]/@rw04>            42级                  不限\
+<[命运之刃]/@rw05>            43级                每天一次\
+<[神秘洞口]/@rw06>            45级                每天一次
+
+[@rw06]
+#IF
+CHECKNAMELIST ..\QuestDiary\神秘洞口名单.txt
+#ACT
+MESSAGEBOX 今天你已经完成此任务
+break
+
+#if
+check [107] 1
+#act
+messagebox 苍月岛的首饰店老板正在找你
+break
+
+#if
+checklevel 45
+#say
+　\ \
+确定开始[神秘洞口]任务吗？\ \
+<[确定]/@06rw>        <[取消]/@exit>
+#elsesay
+45级才可接此任务
+
+[@06rw]
+#act
+set [107] 1
+close
+messagebox 苍月岛的首饰店老板正在找人帮忙
+break
+
+[@rw05]
+#IF
+CHECKNAMELIST ..\QuestDiary\命运之刃名单.txt
+#ACT
+MESSAGEBOX 今天你已经完成此任务
+break
+
+#if
+check [105] 1
+#act
+messagebox 带上1块纯度大于10的金矿去找比奇武器店老板
+break
+
+#if
+checklevel 43
+#say
+　\ \
+确定开始[命运之刃]任务吗？\ \
+<[确定]/@05rw>        <[取消]/@exit>
+#elsesay
+43级才可接此任务
+
+[@05rw]
+#act
+set [105] 1
+close
+messagebox 带上1块纯度大于10的金矿去比奇<卫家店>
+break
+
+[@rw04]
+#if
+check [102] 1
+#act
+messagebox 比奇的项链店老板正在找你，快去吧！
+break
+
+#if
+checklevel 42
+#say
+　\ \
+确定开始[祈福项链]任务吗？\ \
+<[确定]/@04rw>        <[取消]/@exit>
+#elsesay
+42级才可接此任务
+
+[@04rw]
+#act
+set [102] 1
+close
+messagebox 比奇的项链店老板正在找人帮忙
+break
+
+[@rw03]
+#if
+checklevel 40
+#say
+　\ \
+确定开始[神秘商店]任务吗？\ \
+<[确定]/@01rw>        <[取消]/@exit>
+#elsesay
+40级才可接此任务
+
+[@rw02]
+#IF
+CHECKNAMELIST ..\QuestDiary\黑铁手套名单.txt
+#ACT
+MESSAGEBOX 今天你已经完成此任务
+break
+
+#if
+check [101] 1
+#act
+messagebox 比奇的屠夫正在找你，快去吧！
+break
+
+#if
+checklevel 37
+#say
+　\ \
+确定开始[黑铁手套]任务吗？\ \
+<[确定]/@02rw>        <[取消]/@exit>
+#elsesay
+37级才可接此任务
+
+[@02rw]
+#act
+set [101] 1
+close
+messagebox 比奇的屠夫正在找人帮忙
+break
+
+[@rw01]
+#if
+check [100] 1
+#act
+messagebox 你已完成此任务
+break
+
+#if
+checklevel 35
+#say
+　\ \
+确定开始[神秘商店]任务吗？\ \
+<[确定]/@01rw>        <[取消]/@exit>
+#elsesay
+35级才可接此任务
+
+[@01rw]
+#act
+mapmove Q011 13 10
+break

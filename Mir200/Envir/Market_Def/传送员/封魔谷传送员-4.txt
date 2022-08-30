@@ -1,0 +1,41 @@
+[@main]
+亲爱的玩家：<$USERNAME>，你想去哪呢？\
+这里可是三英雄当年压制众魔，并将他们进行封印的峡谷\
+城里城外都充满恶魔，危险重重，年轻人，你可要小心那！\
+我将为您提供城市之间的传送服务\ \
+<去[庄园]/@zhuangyuan>                      <挑战[幻境]/@huanjing>\
+<向[比奇省]移动/@goBQ>\ \
+<离 开/@exit>
+
+[@goBQ]
+#IF
+#ACT
+mapmove 0 331 269
+break
+
+[@zhuangyuan]
+#if
+checklevel 11
+#ACT
+set [168] 1
+mapmove GA0 69 71
+#elseACT
+messagebox 等级达到11级才可以进入庄园
+break
+
+[@huanjing]
+　\
+<幻境地图设置>：无双倍[经验+爆率]、BOSS随机刷新\ \
+<幻境进入条件>：10万金币\ \
+<10万金币进入[幻境]/@gohj2>\ \
+<返 回/@main>
+
+[@gohj2]
+#if
+checkgold 100000
+#ACT
+take 金币 100000
+mapmove h001 74 69
+#elseact
+messagebox 幻境进入条件：10万金币
+break

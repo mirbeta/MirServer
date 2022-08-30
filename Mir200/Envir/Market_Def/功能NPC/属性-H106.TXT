@@ -1,0 +1,221 @@
+[@main]
+真没有想到,除我之外居然还有人发现这里\
+我一生都在追寻如何提高装备的属性，并最终获得了成功\
+但却被魔王关进了这个封闭的禁地里！\ \
+※<去幻境七层/@h007>※\ \
+※<提高装备属性/@tigao>※ [<免费提升，无须元宝>]\ \
+　                                             <留在此地/@exit>
+
+[@h007]
+#ACT
+mapmove H007 162 172
+break
+
+[@tigao]
+　\
+每次提升装备的属性需要消耗一张<灵符> 成功率1%\ \
+每种属性最多提升<２点>，提升失败装备不会破碎\ \
+<升级-衣服/@ti1>  <升级-头盔/@tou1>  <升级-项链/@lian1>  <升级-手镯/@zhuo1>  <升级-戒指/@jie1>\ \
+<离开/@exit>
+
+[@ti1]
+衣服属性提升\ \ \
+※<加-攻击/@ti11>※   ※<加-魔法/@ti12>※   ※<加-道术/@ti13>※\ \
+　                                              <返回/@tigao>
+[@ti11]
+#if
+CHECKITEMADDVALUE 0 2 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 0 2 120 1 0
+GAMEGIRD - 1
+goto @ti1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@ti12]
+#if
+CHECKITEMADDVALUE 0 3 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 0 3 120 1 0
+GAMEGIRD - 1
+goto @ti1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@ti13]
+#if
+CHECKITEMADDVALUE 0 4 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 0 4 120 1 0
+GAMEGIRD - 1
+goto @ti1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@tou1]
+头盔属性提升\ \ \
+※<加-攻击/@tou11>※   ※<加-魔法/@tou12>※   ※<加-道术/@tou13>※\ \
+　                                              <返回/@tigao>
+[@tou11]
+#if
+CHECKITEMADDVALUE 4 2 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 4 2 120 1 0
+GAMEGIRD - 1
+goto @tou1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@tou12]
+#if
+CHECKITEMADDVALUE 4 3 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 4 3 120 1 0
+GAMEGIRD - 1
+goto @tou1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@tou13]
+#if
+CHECKITEMADDVALUE 4 4 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 4 4 120 1 0
+GAMEGIRD - 1
+goto @tou1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@lian1]
+项链属性提升\ \ \
+※<加-攻击/@lian11>※   ※<加-魔法/@lian12>※   ※<加-道术/@lian13>※\ \
+　                                              <返回/@tigao>
+[@lian11]
+#if
+CHECKITEMADDVALUE 3 2 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 3 2 120 1 0
+GAMEGIRD - 1
+goto @lian1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@lian12]
+#if
+CHECKITEMADDVALUE 3 3 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 3 3 120 1 0
+GAMEGIRD - 1
+goto @lian1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@lian13]
+#if
+CHECKITEMADDVALUE 3 4 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 3 4 120 1 0
+GAMEGIRD - 1
+goto @lian1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@zhuo1]
+手镯属性提升\ \ \
+※<加-攻击/@zhuo11>※   ※<加-魔法/@zhuo12>※   ※<加-道术/@zhuo13>※\ \
+注：请将需要升级的手镯佩带在拿刀的一侧\
+　                                              <返回/@tigao>
+[@zhuo11]
+#if
+CHECKITEMADDVALUE 6 2 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 6 2 120 1 0
+GAMEGIRD - 1
+goto @zhuo1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@zhuo12]
+#if
+CHECKITEMADDVALUE 6 3 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 6 3 120 1 0
+GAMEGIRD - 1
+goto @zhuo1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@zhuo13]
+#if
+CHECKITEMADDVALUE 6 4 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 6 4 120 1 0
+GAMEGIRD - 1
+goto @zhuo1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@jie1]
+戒指属性提升\ \ \
+※<加-攻击/@jie11>※   ※<加-魔法/@jie12>※   ※<加-道术/@jie13>※\ \
+注：请将需要升级的戒指佩带在拿刀的一侧\
+　                                              <返回/@tigao>
+[@jie11]
+#if
+CHECKITEMADDVALUE 8 2 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 8 2 120 1 0
+GAMEGIRD - 1
+goto @jie1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@jie12]
+#if
+CHECKITEMADDVALUE 8 3 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 8 3 120 1 0
+GAMEGIRD - 1
+goto @jie1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break
+
+[@jie13]
+#if
+CHECKITEMADDVALUE 8 4 < 2
+CHECKGAMEGIRD > 0
+#act
+UPGRADEITEMEX 8 4 120 1 0
+GAMEGIRD - 1
+goto @jie1
+#elseact
+messagebox 每种属性最多提升２点，每次需要消耗一张灵符
+break

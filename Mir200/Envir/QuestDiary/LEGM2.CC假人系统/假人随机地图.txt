@@ -1,0 +1,25 @@
+[@随机地图选择]
+{
+#If
+random 2
+#Act
+GMEXECUTE 去 65
+CHANGEATTACKMODE 5
+SENDMSG 0 玩家[<$USERNAME>],进入龙源血路,神殿皇宫拥有超大BOSS,建议组队前往!
+BREAK
+
+#If
+random 1
+#Act
+GMEXECUTE 去 H007
+CHANGEATTACKMODE 5
+SENDMSG 0 玩家[<$USERNAME>],进入环境七层,神殿皇宫拥有超大BOSS,建议组队前往!
+BREAK
+
+#If
+#Act
+GMEXECUTE 去 Fama1
+CHANGEATTACKMODE 5
+SENDMSG 0 玩家[<$USERNAME>],进入玛雅神殿,神殿皇宫拥有超大BOSS,建议组队前往!
+BREAK
+}

@@ -1,0 +1,639 @@
+(@ReclaimItem)
+[@main]
+<COLOR=clLime 实现装备永久保值 避免未来装备泛滥> 高级装备可进行如下回收：\ \
+※ <[声望]回收/@sw> ※ -- <仅用于勋章兑换 洗红名> --  <查看详细说明/@sm1>\ \
+※ <[灵符]回收/@lf> ※ -- <仅用于装备属性升级> --     <查看详细说明/@sm2>\ \
+※ <[金刚石]回收/@jgs> ※ -- <仅用于铸造高级武器> --   <查看详细说明/@sm3>\ \
+<离 开/@exit>              <以上涉及所有功能完全免费，不收取任何费用>
+
+[@sm1]
+#IF
+#ACT
+messagebox 勋章兑换NPC：[荣誉勋章管理(土城仓库二楼)]\　\[洗红名命令：@洗红名]
+break
+
+[@sm2]
+#IF
+#ACT
+messagebox 属性升级NPC：[沙巴克铁匠(土城)]、[禁地守护人(王者禁地)]
+break
+
+[@sm3]
+#IF
+#ACT
+messagebox 武器铸造NPC：[武器铸造师(苍月武器库)]
+break
+
+[@sw]
+#IF
+#ACT
+QUERYITEMDLG 声望回收 @声望 0
+break
+#say
+　\
+声望回收范围：\ \
+沃玛首饰、炼狱、魔杖、银蛇、命运之刃\ \
+当前回收价格：1件=声望×5\ \
+<返回/@main>
+
+[@声望]
+#if
+CHECKCREDITPOINT > 250
+#act
+close
+messagebox 最多携带255点声望
+break
+
+#if
+CHECKDLGITEMNAME 炼狱
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[炼狱]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 银蛇
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[银蛇]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 魔杖
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[魔杖]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 幽灵项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[幽灵项链]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 生命项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[生命项链]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天珠项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[天珠项链]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 幽灵手套
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[幽灵手套]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 思贝儿手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[思贝儿手镯]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 三眼手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[三眼手镯]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 龙之戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[龙之戒指]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 红宝石戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[红宝石戒指]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 铂金戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[铂金戒指]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 命运之刃
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+CREDITPOINT + 5
+sendmsg 6 提示：[命运之刃]回收成功　当前声望：<$CREDITPOINT>
+close
+goto @main
+break
+
+#if
+#act
+close
+sendmsg 6 提示：当前物品不在声望回收范围之内
+break
+
+[@lf]
+#IF
+#ACT
+QUERYITEMDLG 灵符回收 @灵符 0
+break
+#say
+　\
+灵符回收范围：\ \
+圣战套装、法神套装、天尊套装、六大重装、4级勋章\ \
+当前回收价格：1件=灵符×10\ \
+<返回/@main>
+
+
+[@灵符]
+#if
+CHECKDLGITEMNAME 圣战头盔
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[圣战头盔]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 圣战项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[圣战项链]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 圣战手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[圣战手镯]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 圣战戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[圣战戒指]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 法神头盔
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[法神头盔]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 法神项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[法神项链]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 法神手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[法神手镯]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 法神戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[法神戒指]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天尊头盔
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天尊头盔]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天尊项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天尊项链]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天尊手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天尊手镯]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天尊戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天尊戒指]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天魔神甲
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天魔神甲]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 圣战宝甲
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[圣战宝甲]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 法神披风
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[法神披风]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 霓裳羽衣
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[霓裳羽衣]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天尊道袍
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天尊道袍]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 天师长袍
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[天师长袍]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章41号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[荣誉勋章41号]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章42号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[荣誉勋章42号]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章43号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[荣誉勋章43号]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章44号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[荣誉勋章44号]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章45号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEGIRD + 10
+sendmsg 6 提示：[荣誉勋章45号]回收成功　当前灵符：<$GAMEGIRD>
+close
+goto @main
+break
+
+#if
+#act
+close
+sendmsg 6 提示：当前物品不在灵符回收范围之内
+break
+
+[@jgs]
+#IF
+#ACT
+QUERYITEMDLG 金刚石回收 @金刚石 0
+#say
+　\
+金刚石回收范围：\ \
+祖玛首饰、井中月、嗜血、无极棍、3级勋章\ \
+当前回收价格：武器×300  黑头-阎罗-心灵-骑士×30  其他×100\ \
+<返回/@main>
+
+[@金刚石]
+#if
+CHECKDLGITEMNAME 井中月
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 300
+sendmsg 6 提示：[井中月]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 嗜血
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 300
+sendmsg 6 提示：[嗜血]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 无极棍
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 300
+sendmsg 6 提示：[无极棍]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 黑铁头盔
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 30
+sendmsg 6 提示：[黑铁头盔]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 绿色项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[绿色项链]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 恶魔铃铛
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[恶魔铃铛]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 灵魂项链
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[灵魂项链]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 心灵手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 30
+sendmsg 6 提示：[心灵手镯]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 阎罗手套
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 30
+sendmsg 6 提示：[阎罗手套]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 骑士手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 30
+sendmsg 6 提示：[骑士手镯]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 龙之手镯
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[龙之手镯]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 力量戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[力量戒指]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 紫碧螺
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[紫碧螺]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 泰坦戒指
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[泰坦戒指]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章31号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[荣誉勋章31号]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章32号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[荣誉勋章32号]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章33号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[荣誉勋章33号]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章34号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[荣誉勋章34号]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+CHECKDLGITEMNAME 荣誉勋章35号
+#act
+UPGRADEDLGITEM 0 0 0 1 0
+GAMEDIAMOND + 100
+sendmsg 6 提示：[荣誉勋章35号]回收成功　当前金刚石：<$GAMEDIAMOND>
+close
+goto @main
+break
+
+#if
+#act
+close
+sendmsg 6 提示：当前物品不在金刚石回收范围之内
+break

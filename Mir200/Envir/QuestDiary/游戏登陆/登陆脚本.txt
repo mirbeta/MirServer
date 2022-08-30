@@ -1,0 +1,32 @@
+[@登陆设置]
+{
+#IF
+ISADMIN
+#ACT
+map T2361
+CHANGEMODE 1 1
+CHANGEMODE 2 1
+CHANGEMODE 3 1
+ADDLINELIST .\QuestDiary\游戏登陆\GM登陆记录.txt <$IPLOCAL>┃<$IPADDR>
+break
+
+#IF
+ISNEWHUMAN
+#ACT
+Gmexecute 禁言 self 10000
+SENDMSG 5 新人上线自动禁言，11级恢复正常 249 0 10
+SENDMSG 6 系统代练命令：@代练
+SENDMSG 6 领取充值命令：@元宝
+SENDMSG 6 全区喊话命令：@喊
+SENDMSG 6 千里传音命令：@传
+SENDMSG 6 万能网页命令：@web
+INC G1 1
+break
+#say
+亲爱的[<$USERNAME>]，欢迎回到这个熟悉又陌生的世界.\ \
+您即将重新开始一段崭新的传奇之旅.\ \
+还记得怎么玩吗?\ \
+游戏的初期，野外的<鹿>、<稻草人>、<钉耙猫>等都是不错的选择.\ \
+祝您在游戏中找回丢失多年的传奇感动!!!
+
+}

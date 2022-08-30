@@ -1,0 +1,24 @@
+[@main]
+　\ \
+行会争霸规则：地图内所有人均为同一行会即可占领\ \
+<宣布占领[行会争霸地图]/@zhan>    <[10元宝一次 全区提示]>\ \
+<关闭/@exit>
+
+
+[@zhan]
+#if
+IsSameGuildOnMap ZM6
+#ELSEACT
+MESSAGEBOX 地图内还有其他行会成员！
+break
+
+#if
+CHECKGAMEGOLD > 9
+#act
+GAMEGOLD - 10
+sendmsg 1 [行会争霸地图]已被【<$GUILDNAME>】占领!!!
+goto @main
+break
+#elseact
+messagebox 你的元宝已不足，请及时充值！
+break

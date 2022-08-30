@@ -1,0 +1,291 @@
+(@@InPutString @@InPutInteger)
+[@main]
+#IF
+ISADMIN
+#say
+　\
+<元宝充值/@@InPutInteger6>   <封停人物/@01>   <解封人物/@02>   <视频认证/@03>   <删除认证/@03A>\ \
+<监狱惩罚/@04>   <永久收监/@05>   <清空包裹/@06>   <怪物攻城/@07>\ \
+<赢送清零/@08>   <制造物品/@09>\ \
+<输入玩家名字/@@InPutString6>     当前玩家：<$STR(S6)>      <名字清空/@del>     <土城/@tu>  <比奇/@bi>\ \ \
+赌场赢 <$STR(G12)>     赌场送 <$STR(G11)>     祝福油类 <$STR(G5)>     注册人物 <$STR(G1)>
+
+[@tu]
+#act
+mapmove 3 330 330
+break
+
+[@bi]
+#act
+mapmove 0 333 266
+break
+
+[@@InPutString6]
+#If
+#Act
+DelayGoto 1 ~InPutString6
+
+[~InPutString6]
+#if
+CheckOnline <$STR(S6)>
+#act
+sendmsg 5 提示：[<$STR(S6)>]在线
+goto @main
+#elseact
+messagebox 此人不在线
+goto @main
+break
+
+[@del]
+#if
+#act
+MOV S6 ◆
+goto @main
+break
+
+[@01]
+#act
+GMEXECUTE +jww <$STR(S6)> 1
+GMEXECUTE VV踢人 <$STR(S6)>
+sendmsg 6 提示：[<$STR(S6)>]已禁封
+break
+
+[@02]
+#act
+GMEXECUTE -jww <$STR(S6)>
+DELLINELIST DenyChrNameList.txt <$STR(S6)>
+sendmsg 6 提示：[<$STR(S6)>]解封成功
+break
+
+[@03]
+#act
+<$STR(S6)>.RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜女性玩家【<$STR(S6)>】通过视频认证!!!
+SENDMSG 0 恭喜女性玩家【<$STR(S6)>】通过视频认证!!!
+SENDMSG 0 恭喜女性玩家【<$STR(S6)>】通过视频认证!!!
+SENDMSG 0 视频认证的女性玩家享受七彩名字+直传[爱的小屋]特权
+<$STR(S6)>.messagebox 恭喜通过视频认证\　\您可享受七彩名字+直传[爱的小屋]特权
+break
+
+[@03A]
+#act
+<$STR(S6)>.RestRenewLevel
+break
+
+[@04]
+#act
+<$STR(S6)>.mapmove 0147 5 10
+break
+
+[@05]
+#act
+<$STR(S6)>.map T2361
+break
+
+[@06]
+#act
+GMEXECUTE 清理垃圾 self
+break
+
+[@07]
+　\ \
+<比奇皇宫/@10bi>    <苍月岛/@10cang>    <封魔谷/@10gu>\ \
+<返回/@main>
+
+[@10bi]
+#act
+MISSION 0 344 192
+PARAM1 338
+PARAM2 198
+PARAM3 5
+PARAM4 20
+MOBPLACE 赤月恶魔
+MOBPLACE 双头金刚
+MOBPLACE 双头血魔
+MOBPLACE 牛魔王
+MOBPLACE 暗之牛魔王
+MOBPLACE 黄泉教主
+MOBPLACE 祖玛教主
+MOBPLACE 沃玛教主
+MOBPLACE 虹魔教主
+MOBPLACE 暗之触龙神
+MOBPLACE 触龙神
+MOBPLACE 重装使者
+MOBPLACE 地藏魔王
+MOBPLACE 暗之双头血魔
+MOBPLACE 暗之双头金刚
+MOBPLACE 暗之虹魔教主
+MOBPLACE 暗之骷髅精灵
+MOBPLACE 暗之沃玛教主
+MOBPLACE 暗之黄泉教主
+MOBPLACE 白野猪
+MOBPLACE 邪恶毒蛇
+MOBPLACE 尸王
+MOBPLACE 白野猪
+MOBPLACE 邪恶毒蛇
+MOBPLACE 尸王
+MOBPLACE 祖玛卫士
+MOBPLACE 祖玛卫士3
+MOBPLACE 祖玛雕像
+MOBPLACE 祖玛雕像3
+MOBPLACE 祖玛弓箭手
+MOBPLACE 祖玛弓箭手3
+MOBPLACE 祖玛卫士
+MOBPLACE 祖玛卫士3
+MOBPLACE 祖玛雕像
+MOBPLACE 祖玛雕像3
+MOBPLACE 祖玛弓箭手
+MOBPLACE 祖玛弓箭手3
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了比奇皇宫！！！
+break
+
+[@10cang]
+#act
+MISSION 5 177 365
+PARAM1 177
+PARAM2 365
+PARAM3 5
+PARAM4 30
+MOBPLACE 赤月恶魔
+MOBPLACE 双头金刚
+MOBPLACE 双头血魔
+MOBPLACE 牛魔王
+MOBPLACE 暗之牛魔王
+MOBPLACE 黄泉教主
+MOBPLACE 祖玛教主
+MOBPLACE 沃玛教主
+MOBPLACE 虹魔教主
+MOBPLACE 暗之触龙神
+MOBPLACE 触龙神
+MOBPLACE 重装使者
+MOBPLACE 地藏魔王
+MOBPLACE 暗之双头血魔
+MOBPLACE 暗之双头金刚
+MOBPLACE 暗之虹魔教主
+MOBPLACE 暗之骷髅精灵
+MOBPLACE 暗之沃玛教主
+MOBPLACE 暗之黄泉教主
+MOBPLACE 白野猪
+MOBPLACE 邪恶毒蛇
+MOBPLACE 尸王
+MOBPLACE 白野猪
+MOBPLACE 邪恶毒蛇
+MOBPLACE 尸王
+MOBPLACE 祖玛卫士
+MOBPLACE 祖玛卫士3
+MOBPLACE 祖玛雕像
+MOBPLACE 祖玛雕像3
+MOBPLACE 祖玛弓箭手
+MOBPLACE 祖玛弓箭手3
+MOBPLACE 祖玛卫士
+MOBPLACE 祖玛卫士3
+MOBPLACE 祖玛雕像
+MOBPLACE 祖玛雕像3
+MOBPLACE 祖玛弓箭手
+MOBPLACE 祖玛弓箭手3
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了苍月岛！！！
+break
+
+[@10gu]
+#act
+MISSION 4 268 256
+PARAM1 268
+PARAM2 256
+PARAM3 5
+PARAM4 30
+MOBPLACE 赤月恶魔
+MOBPLACE 双头金刚
+MOBPLACE 双头血魔
+MOBPLACE 牛魔王
+MOBPLACE 暗之牛魔王
+MOBPLACE 黄泉教主
+MOBPLACE 祖玛教主
+MOBPLACE 沃玛教主
+MOBPLACE 虹魔教主
+MOBPLACE 暗之触龙神
+MOBPLACE 触龙神
+MOBPLACE 重装使者
+MOBPLACE 地藏魔王
+MOBPLACE 暗之双头血魔
+MOBPLACE 暗之双头金刚
+MOBPLACE 暗之虹魔教主
+MOBPLACE 暗之骷髅精灵
+MOBPLACE 暗之沃玛教主
+MOBPLACE 暗之黄泉教主
+MOBPLACE 白野猪
+MOBPLACE 邪恶毒蛇
+MOBPLACE 尸王
+MOBPLACE 白野猪
+MOBPLACE 邪恶毒蛇
+MOBPLACE 尸王
+MOBPLACE 祖玛卫士
+MOBPLACE 祖玛卫士3
+MOBPLACE 祖玛雕像
+MOBPLACE 祖玛雕像3
+MOBPLACE 祖玛弓箭手
+MOBPLACE 祖玛弓箭手3
+MOBPLACE 祖玛卫士
+MOBPLACE 祖玛卫士3
+MOBPLACE 祖玛雕像
+MOBPLACE 祖玛雕像3
+MOBPLACE 祖玛弓箭手
+MOBPLACE 祖玛弓箭手3
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+SendMsg 0 怪物攻城：大量BOSS攻入了封魔谷！！！
+break
+
+[@08]
+#ACT
+mov G11 0
+mov G12 0
+BREAK
+
+[@09]
+#IF
+#ACT
+GIVE <$STR(S6)> 1
+sendmsg 6 提示：[<$STR(S6)>]制作成功
+BREAK
+
+[@@InPutInteger6]
+#If
+ISADMIN
+#Act
+DelayGoto 1 ~InPutInteger6
+
+[~InPutInteger6]
+#if
+CheckOnline <$STR(S6)>
+#act
+SENDMSG 5 充值提示：已经向[<$STR(S6)>]充值元宝[<$STR(M6)>]
+SENDMSG 1 ★玩家[<$STR(S6)>]元宝充值成功，获得<$STR(M6)>元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+<$STR(S6)>.GAMEGOLD + <$STR(M6)>
+<$STR(S6)>.SENDMSG 5 充值提示：元宝成功到帐<$STR(M6)>个
+<$STR(S6)>.SENDMSG 6 感谢您对本游戏的鼎力支持！
+<$STR(S6)>.messagebox 元宝充值成功\　\元宝到帐：<$STR(M6)>个\　\查询命令：@元宝
+#elseact
+messagebox 此人不在线
+break

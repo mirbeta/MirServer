@@ -1,0 +1,17 @@
+
+
+[@计时]
+#IF
+#ACT
+INC G3 1
+break
+
+[@清零]
+#IF
+#ACT
+CLEARNAMELIST ..\QuestDiary\圣诞名单.txt
+CLEARNAMELIST ..\QuestDiary\藏宝阁名单.txt
+CLEARNAMELIST ..\QuestDiary\黑铁手套名单.txt
+CLEARNAMELIST ..\QuestDiary\命运之刃名单.txt
+CLEARNAMELIST ..\QuestDiary\神秘洞口名单.txt
+break

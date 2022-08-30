@@ -1,0 +1,303 @@
+2022-08-16 21:33:43.1351 Info Message Template Auto Format enabled
+2022-08-16 21:33:43.2199 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-16 21:33:43.2282 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(ObjectHandleOnStack assemblyName, ObjectHandleOnStack requestingAssembly, StackCrawlMarkHandle stackMark, Boolean throwOnFileNotFound, ObjectHandleOnStack assemblyLoadContext, ObjectHandleOnStack retAssembly)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, RuntimeAssembly requestingAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2022-08-16 21:33:43.2622 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-08-16 21:33:43.2640 Debug Setting 'NLog.Targets.FileTarget.fileName' to '${basedir}/logs/${shortdate}.log'
+2022-08-16 21:33:43.2703 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} | ${level:uppercase=false} | ${message} ${onexception:${exception:format=tostring} ${newline} ${stacktrace} ${newline}'
+2022-08-16 21:33:43.2721 Debug Setting 'NLog.LayoutRenderers.Wrappers.OnExceptionLayoutRendererWrapper.Inner' to '${exception:format=tostring} ${newline} ${stacktrace} ${newline}'
+2022-08-16 21:33:43.2782 Info Adding target FileTarget(Name=fileTarget)
+2022-08-16 21:33:43.2782 Debug Registered target fileTarget: NLog.Targets.FileTarget
+2022-08-16 21:33:43.2819 Debug Setting 'NLog.Targets.ColoredConsoleTarget.name' to 'consoleTarget'
+2022-08-16 21:33:43.2819 Debug Setting 'NLog.Targets.ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'true'
+2022-08-16 21:33:43.2822 Debug Setting 'NLog.Targets.ColoredConsoleTarget.layout' to '${longdate}|${level}|${logger}|${message} ${exception}'
+2022-08-16 21:33:43.3226 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Trace'
+2022-08-16 21:33:43.3226 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2022-08-16 21:33:43.3238 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2022-08-16 21:33:43.3238 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2022-08-16 21:33:43.3238 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'White'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2022-08-16 21:33:43.3242 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Magenta'
+2022-08-16 21:33:43.3253 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2022-08-16 21:33:43.3253 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-08-16 21:33:43.3253 Debug Registered target consoleTarget: NLog.Targets.ColoredConsoleTarget
+2022-08-16 21:33:43.4740 Debug Watching file-filter 'NLog.config' in directory: /Volumes/Data/Mirserver/SelGate
+2022-08-16 21:33:43.4751 Debug --- NLog configuration dump ---
+2022-08-16 21:33:43.4752 Debug Targets:
+2022-08-16 21:33:43.4763 Debug FileTarget(Name=fileTarget)
+2022-08-16 21:33:43.4763 Debug ColoredConsoleTarget(Name=consoleTarget)
+2022-08-16 21:33:43.4763 Debug Rules:
+2022-08-16 21:33:43.4776 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 21:33:43.4776 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 21:33:43.4776 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 21:33:43.4776 Debug --- End of NLog configuration dump ---
+2022-08-16 21:33:43.4809 Info Validating config: TargetNames=fileTarget, consoleTarget, ConfigItems=56, FilePath=/Volumes/Data/Mirserver/SelGate/NLog.config
+2022-08-16 21:33:43.4817 Debug Unused target checking is started... Rule Count: 3, Target Count: 2
+2022-08-16 21:33:43.4844 Debug Unused target checking is completed. Total Rule Count: 3, Total Target Count: 2, Unused Target Count: 0
+2022-08-16 21:33:43.4910 Info Configuration initialized.
+2022-08-16 21:33:43.5140 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.0.2.1287. Product version: 5.0.2+2e39110a453280dcac5435b28379bd8d936aa2d0. GlobalAssemblyCache: False
+2022-08-16 21:33:43.5156 Warn Logger: SelGate.Program configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:33:43.5156 Warn Logger: SelGate.Program configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:33:43.5163 Debug Targets configured when LogLevel >= Trace for Logger: SelGate.Program
+2022-08-16 21:33:43.5163 Debug Logger SelGate.Program [Trace] => fileTarget consoleTarget
+2022-08-16 21:33:43.5163 Debug Logger SelGate.Program [Debug] => fileTarget consoleTarget
+2022-08-16 21:33:43.5163 Debug Logger SelGate.Program [Info] => fileTarget consoleTarget
+2022-08-16 21:33:43.5163 Debug Logger SelGate.Program [Warn] => fileTarget consoleTarget
+2022-08-16 21:33:43.5163 Debug Logger SelGate.Program [Error] => fileTarget consoleTarget
+2022-08-16 21:33:43.5163 Debug Logger SelGate.Program [Fatal] => fileTarget consoleTarget
+2022-08-16 21:33:43.6223 Debug Hide assemblies for callsite
+2022-08-16 21:33:43.6223 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-08-16 21:33:43.6243 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-08-16 21:33:43.6311 Warn Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:33:43.6312 Warn Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:33:43.6312 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-08-16 21:33:43.6312 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => fileTarget consoleTarget
+2022-08-16 21:33:43.6312 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => fileTarget consoleTarget
+2022-08-16 21:33:43.6312 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => fileTarget consoleTarget
+2022-08-16 21:33:43.6312 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => fileTarget consoleTarget
+2022-08-16 21:33:43.6323 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => fileTarget consoleTarget
+2022-08-16 21:33:43.6323 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => fileTarget consoleTarget
+2022-08-16 21:33:43.6364 Warn Logger: Microsoft.Extensions.Hosting.Internal.Host configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:33:43.6364 Warn Logger: Microsoft.Extensions.Hosting.Internal.Host configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:33:43.6364 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-08-16 21:33:43.6364 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => fileTarget consoleTarget
+2022-08-16 21:33:43.6364 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => fileTarget consoleTarget
+2022-08-16 21:33:43.6372 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => fileTarget consoleTarget
+2022-08-16 21:33:43.6372 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => fileTarget consoleTarget
+2022-08-16 21:33:43.6372 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => fileTarget consoleTarget
+2022-08-16 21:33:43.6372 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => fileTarget consoleTarget
+2022-08-16 21:33:43.6388 Warn Logger: Microsoft.Hosting.Lifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:33:43.6388 Warn Logger: Microsoft.Hosting.Lifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:33:43.6388 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-08-16 21:33:43.6392 Debug Logger Microsoft.Hosting.Lifetime [Trace] => fileTarget consoleTarget
+2022-08-16 21:33:43.6392 Debug Logger Microsoft.Hosting.Lifetime [Debug] => fileTarget consoleTarget
+2022-08-16 21:33:43.6392 Debug Logger Microsoft.Hosting.Lifetime [Info] => fileTarget consoleTarget
+2022-08-16 21:33:43.6392 Debug Logger Microsoft.Hosting.Lifetime [Warn] => fileTarget consoleTarget
+2022-08-16 21:33:43.6392 Debug Logger Microsoft.Hosting.Lifetime [Error] => fileTarget consoleTarget
+2022-08-16 21:33:43.6392 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => fileTarget consoleTarget
+2022-08-16 21:33:43.6583 Debug FileTarget(Name=fileTarget): Preparing for new file '/Volumes/Data/Mirserver/SelGate/logs/2022-08-16.log'
+2022-08-16 21:33:43.6609 Debug FileTarget(Name=fileTarget): Creating file appender: /Volumes/Data/Mirserver/SelGate/logs/2022-08-16.log
+2022-08-16 21:33:43.7678 Warn Logger: SelGate.TimedService configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:33:43.7678 Warn Logger: SelGate.TimedService configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:33:43.7683 Debug Targets configured when LogLevel >= Trace for Logger: SelGate.TimedService
+2022-08-16 21:33:43.7683 Debug Logger SelGate.TimedService [Trace] => fileTarget consoleTarget
+2022-08-16 21:33:43.7683 Debug Logger SelGate.TimedService [Debug] => fileTarget consoleTarget
+2022-08-16 21:33:43.7683 Debug Logger SelGate.TimedService [Info] => fileTarget consoleTarget
+2022-08-16 21:33:43.7698 Debug Logger SelGate.TimedService [Warn] => fileTarget consoleTarget
+2022-08-16 21:33:43.7698 Debug Logger SelGate.TimedService [Error] => fileTarget consoleTarget
+2022-08-16 21:33:43.7702 Debug Logger SelGate.TimedService [Fatal] => fileTarget consoleTarget
+2022-08-16 21:59:22.1713 Info Message Template Auto Format enabled
+2022-08-16 21:59:22.2756 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-16 21:59:22.2863 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(ObjectHandleOnStack assemblyName, ObjectHandleOnStack requestingAssembly, StackCrawlMarkHandle stackMark, Boolean throwOnFileNotFound, ObjectHandleOnStack assemblyLoadContext, ObjectHandleOnStack retAssembly)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, RuntimeAssembly requestingAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2022-08-16 21:59:22.3282 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-08-16 21:59:22.3303 Debug Setting 'NLog.Targets.FileTarget.fileName' to '${basedir}/logs/${shortdate}.log'
+2022-08-16 21:59:22.3412 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} | ${level:uppercase=false} | ${message} ${onexception:${exception:format=tostring} ${newline} ${stacktrace} ${newline}'
+2022-08-16 21:59:22.3431 Debug Setting 'NLog.LayoutRenderers.Wrappers.OnExceptionLayoutRendererWrapper.Inner' to '${exception:format=tostring} ${newline} ${stacktrace} ${newline}'
+2022-08-16 21:59:22.3494 Info Adding target FileTarget(Name=fileTarget)
+2022-08-16 21:59:22.3505 Debug Registered target fileTarget: NLog.Targets.FileTarget
+2022-08-16 21:59:22.3533 Debug Setting 'NLog.Targets.ColoredConsoleTarget.name' to 'consoleTarget'
+2022-08-16 21:59:22.3533 Debug Setting 'NLog.Targets.ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'true'
+2022-08-16 21:59:22.3533 Debug Setting 'NLog.Targets.ColoredConsoleTarget.layout' to '${message} ${exception}'
+2022-08-16 21:59:22.3903 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Trace'
+2022-08-16 21:59:22.3903 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'DarkMagenta'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Green'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2022-08-16 21:59:22.3913 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2022-08-16 21:59:22.3923 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2022-08-16 21:59:22.3923 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2022-08-16 21:59:22.3923 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Magenta'
+2022-08-16 21:59:22.3923 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2022-08-16 21:59:22.3923 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-08-16 21:59:22.3923 Debug Registered target consoleTarget: NLog.Targets.ColoredConsoleTarget
+2022-08-16 21:59:22.5044 Debug Watching file-filter 'NLog.config' in directory: /Volumes/Data/Mirserver/SelGate
+2022-08-16 21:59:22.5044 Debug --- NLog configuration dump ---
+2022-08-16 21:59:22.5044 Debug Targets:
+2022-08-16 21:59:22.5060 Debug FileTarget(Name=fileTarget)
+2022-08-16 21:59:22.5060 Debug ColoredConsoleTarget(Name=consoleTarget)
+2022-08-16 21:59:22.5062 Debug Rules:
+2022-08-16 21:59:22.5062 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 21:59:22.5062 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 21:59:22.5073 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 21:59:22.5073 Debug --- End of NLog configuration dump ---
+2022-08-16 21:59:22.5101 Info Validating config: TargetNames=fileTarget, consoleTarget, ConfigItems=50, FilePath=/Volumes/Data/Mirserver/SelGate/NLog.config
+2022-08-16 21:59:22.5107 Debug Unused target checking is started... Rule Count: 3, Target Count: 2
+2022-08-16 21:59:22.5139 Debug Unused target checking is completed. Total Rule Count: 3, Total Target Count: 2, Unused Target Count: 0
+2022-08-16 21:59:22.5196 Info Configuration initialized.
+2022-08-16 21:59:22.5513 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.0.2.1287. Product version: 5.0.2+2e39110a453280dcac5435b28379bd8d936aa2d0. GlobalAssemblyCache: False
+2022-08-16 21:59:22.5528 Warn Logger: SelGate.Program configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:59:22.5528 Warn Logger: SelGate.Program configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:59:22.5535 Debug Targets configured when LogLevel >= Trace for Logger: SelGate.Program
+2022-08-16 21:59:22.5535 Debug Logger SelGate.Program [Trace] => fileTarget consoleTarget
+2022-08-16 21:59:22.5535 Debug Logger SelGate.Program [Debug] => fileTarget consoleTarget
+2022-08-16 21:59:22.5535 Debug Logger SelGate.Program [Info] => fileTarget consoleTarget
+2022-08-16 21:59:22.5535 Debug Logger SelGate.Program [Warn] => fileTarget consoleTarget
+2022-08-16 21:59:22.5535 Debug Logger SelGate.Program [Error] => fileTarget consoleTarget
+2022-08-16 21:59:22.5544 Debug Logger SelGate.Program [Fatal] => fileTarget consoleTarget
+2022-08-16 21:59:22.6763 Debug Hide assemblies for callsite
+2022-08-16 21:59:22.6763 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-08-16 21:59:22.6785 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-08-16 21:59:22.6852 Warn Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:59:22.6852 Warn Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:59:22.6852 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-08-16 21:59:22.6852 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => fileTarget consoleTarget
+2022-08-16 21:59:22.6852 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => fileTarget consoleTarget
+2022-08-16 21:59:22.6862 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => fileTarget consoleTarget
+2022-08-16 21:59:22.6862 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => fileTarget consoleTarget
+2022-08-16 21:59:22.6862 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => fileTarget consoleTarget
+2022-08-16 21:59:22.6862 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => fileTarget consoleTarget
+2022-08-16 21:59:22.6898 Warn Logger: Microsoft.Extensions.Hosting.Internal.Host configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:59:22.6898 Warn Logger: Microsoft.Extensions.Hosting.Internal.Host configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:59:22.6898 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-08-16 21:59:22.6903 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => fileTarget consoleTarget
+2022-08-16 21:59:22.6903 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => fileTarget consoleTarget
+2022-08-16 21:59:22.6903 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => fileTarget consoleTarget
+2022-08-16 21:59:22.6914 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => fileTarget consoleTarget
+2022-08-16 21:59:22.6914 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => fileTarget consoleTarget
+2022-08-16 21:59:22.6914 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => fileTarget consoleTarget
+2022-08-16 21:59:22.6926 Warn Logger: Microsoft.Hosting.Lifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:59:22.6926 Warn Logger: Microsoft.Hosting.Lifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:59:22.6926 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-08-16 21:59:22.6926 Debug Logger Microsoft.Hosting.Lifetime [Trace] => fileTarget consoleTarget
+2022-08-16 21:59:22.6926 Debug Logger Microsoft.Hosting.Lifetime [Debug] => fileTarget consoleTarget
+2022-08-16 21:59:22.6933 Debug Logger Microsoft.Hosting.Lifetime [Info] => fileTarget consoleTarget
+2022-08-16 21:59:22.6933 Debug Logger Microsoft.Hosting.Lifetime [Warn] => fileTarget consoleTarget
+2022-08-16 21:59:22.6933 Debug Logger Microsoft.Hosting.Lifetime [Error] => fileTarget consoleTarget
+2022-08-16 21:59:22.6933 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => fileTarget consoleTarget
+2022-08-16 21:59:22.7082 Debug FileTarget(Name=fileTarget): Preparing for new file '/Volumes/Data/Mirserver/SelGate/logs/2022-08-16.log'
+2022-08-16 21:59:22.7103 Debug FileTarget(Name=fileTarget): Creating file appender: /Volumes/Data/Mirserver/SelGate/logs/2022-08-16.log
+2022-08-16 21:59:22.8013 Warn Logger: SelGate.TimedService configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 21:59:22.8013 Warn Logger: SelGate.TimedService configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 21:59:22.8013 Debug Targets configured when LogLevel >= Trace for Logger: SelGate.TimedService
+2022-08-16 21:59:22.8022 Debug Logger SelGate.TimedService [Trace] => fileTarget consoleTarget
+2022-08-16 21:59:22.8022 Debug Logger SelGate.TimedService [Debug] => fileTarget consoleTarget
+2022-08-16 21:59:22.8034 Debug Logger SelGate.TimedService [Info] => fileTarget consoleTarget
+2022-08-16 21:59:22.8034 Debug Logger SelGate.TimedService [Warn] => fileTarget consoleTarget
+2022-08-16 21:59:22.8034 Debug Logger SelGate.TimedService [Error] => fileTarget consoleTarget
+2022-08-16 21:59:22.8034 Debug Logger SelGate.TimedService [Fatal] => fileTarget consoleTarget
+2022-08-16 22:00:25.9939 Info Message Template Auto Format enabled
+2022-08-16 22:00:26.0752 Info Loading assembly: NLog.Web.AspNetCore
+2022-08-16 22:00:26.1250 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(ObjectHandleOnStack assemblyName, ObjectHandleOnStack requestingAssembly, StackCrawlMarkHandle stackMark, Boolean throwOnFileNotFound, ObjectHandleOnStack assemblyLoadContext, ObjectHandleOnStack retAssembly)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, RuntimeAssembly requestingAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2022-08-16 22:00:26.1573 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-08-16 22:00:26.1590 Debug Setting 'NLog.Targets.FileTarget.fileName' to '${basedir}/logs/${shortdate}.log'
+2022-08-16 22:00:26.1647 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} | ${level:uppercase=false} | ${message} ${onexception:${exception:format=tostring} ${newline} ${stacktrace} ${newline}'
+2022-08-16 22:00:26.1663 Debug Setting 'NLog.LayoutRenderers.Wrappers.OnExceptionLayoutRendererWrapper.Inner' to '${exception:format=tostring} ${newline} ${stacktrace} ${newline}'
+2022-08-16 22:00:26.1723 Info Adding target FileTarget(Name=fileTarget)
+2022-08-16 22:00:26.1723 Debug Registered target fileTarget: NLog.Targets.FileTarget
+2022-08-16 22:00:26.1755 Debug Setting 'NLog.Targets.ColoredConsoleTarget.name' to 'consoleTarget'
+2022-08-16 22:00:26.1755 Debug Setting 'NLog.Targets.ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'true'
+2022-08-16 22:00:26.1755 Debug Setting 'NLog.Targets.ColoredConsoleTarget.layout' to '${message} ${exception}'
+2022-08-16 22:00:26.2210 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Trace'
+2022-08-16 22:00:26.2213 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2022-08-16 22:00:26.2213 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2022-08-16 22:00:26.2213 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'DarkMagenta'
+2022-08-16 22:00:26.2213 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Green'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2022-08-16 22:00:26.2223 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.foregroundColor' to 'Magenta'
+2022-08-16 22:00:26.2234 Debug Setting 'NLog.Targets.ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2022-08-16 22:00:26.2234 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-08-16 22:00:26.2234 Debug Registered target consoleTarget: NLog.Targets.ColoredConsoleTarget
+2022-08-16 22:00:26.3601 Debug Watching file-filter 'NLog.config' in directory: /Volumes/Data/Mirserver/SelGate
+2022-08-16 22:00:26.3606 Debug --- NLog configuration dump ---
+2022-08-16 22:00:26.3862 Debug Targets:
+2022-08-16 22:00:26.3879 Debug FileTarget(Name=fileTarget)
+2022-08-16 22:00:26.4358 Debug ColoredConsoleTarget(Name=consoleTarget)
+2022-08-16 22:00:26.4365 Debug Rules:
+2022-08-16 22:00:26.4382 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 22:00:26.4388 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 22:00:26.4388 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] writeTo: [ fileTarget consoleTarget ]
+2022-08-16 22:00:26.4388 Debug --- End of NLog configuration dump ---
+2022-08-16 22:00:26.4441 Info Validating config: TargetNames=fileTarget, consoleTarget, ConfigItems=50, FilePath=/Volumes/Data/Mirserver/SelGate/NLog.config
+2022-08-16 22:00:26.4453 Debug Unused target checking is started... Rule Count: 3, Target Count: 2
+2022-08-16 22:00:26.4484 Debug Unused target checking is completed. Total Rule Count: 3, Total Target Count: 2, Unused Target Count: 0
+2022-08-16 22:00:26.4553 Info Configuration initialized.
+2022-08-16 22:00:26.5036 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.0.2.1287. Product version: 5.0.2+2e39110a453280dcac5435b28379bd8d936aa2d0. GlobalAssemblyCache: False
+2022-08-16 22:00:26.5057 Warn Logger: SelGate.Program configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 22:00:26.5057 Warn Logger: SelGate.Program configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 22:00:26.5064 Debug Targets configured when LogLevel >= Trace for Logger: SelGate.Program
+2022-08-16 22:00:26.5064 Debug Logger SelGate.Program [Trace] => fileTarget consoleTarget
+2022-08-16 22:00:26.5064 Debug Logger SelGate.Program [Debug] => fileTarget consoleTarget
+2022-08-16 22:00:26.5064 Debug Logger SelGate.Program [Info] => fileTarget consoleTarget
+2022-08-16 22:00:26.5064 Debug Logger SelGate.Program [Warn] => fileTarget consoleTarget
+2022-08-16 22:00:26.5064 Debug Logger SelGate.Program [Error] => fileTarget consoleTarget
+2022-08-16 22:00:26.5073 Debug Logger SelGate.Program [Fatal] => fileTarget consoleTarget
+2022-08-16 22:00:26.6281 Debug Hide assemblies for callsite
+2022-08-16 22:00:26.6283 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-08-16 22:00:26.6303 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-08-16 22:00:26.6371 Warn Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 22:00:26.6595 Warn Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 22:00:26.6595 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-08-16 22:00:26.6595 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => fileTarget consoleTarget
+2022-08-16 22:00:26.6595 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => fileTarget consoleTarget
+2022-08-16 22:00:26.6595 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => fileTarget consoleTarget
+2022-08-16 22:00:26.6595 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => fileTarget consoleTarget
+2022-08-16 22:00:26.6603 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => fileTarget consoleTarget
+2022-08-16 22:00:26.6603 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => fileTarget consoleTarget
+2022-08-16 22:00:26.6648 Warn Logger: Microsoft.Extensions.Hosting.Internal.Host configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 22:00:26.6648 Warn Logger: Microsoft.Extensions.Hosting.Internal.Host configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 22:00:26.6648 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-08-16 22:00:26.6648 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => fileTarget consoleTarget
+2022-08-16 22:00:26.6653 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => fileTarget consoleTarget
+2022-08-16 22:00:26.6653 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => fileTarget consoleTarget
+2022-08-16 22:00:26.6653 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => fileTarget consoleTarget
+2022-08-16 22:00:26.6653 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => fileTarget consoleTarget
+2022-08-16 22:00:26.6653 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => fileTarget consoleTarget
+2022-08-16 22:00:26.6667 Warn Logger: Microsoft.Hosting.Lifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 22:00:26.6667 Warn Logger: Microsoft.Hosting.Lifetime configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 22:00:26.6667 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-08-16 22:00:26.6673 Debug Logger Microsoft.Hosting.Lifetime [Trace] => fileTarget consoleTarget
+2022-08-16 22:00:26.6673 Debug Logger Microsoft.Hosting.Lifetime [Debug] => fileTarget consoleTarget
+2022-08-16 22:00:26.6673 Debug Logger Microsoft.Hosting.Lifetime [Info] => fileTarget consoleTarget
+2022-08-16 22:00:26.6673 Debug Logger Microsoft.Hosting.Lifetime [Warn] => fileTarget consoleTarget
+2022-08-16 22:00:26.6673 Debug Logger Microsoft.Hosting.Lifetime [Error] => fileTarget consoleTarget
+2022-08-16 22:00:26.6673 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => fileTarget consoleTarget
+2022-08-16 22:00:26.6842 Debug FileTarget(Name=fileTarget): Preparing for new file '/Volumes/Data/Mirserver/SelGate/logs/2022-08-16.log'
+2022-08-16 22:00:26.6867 Debug FileTarget(Name=fileTarget): Creating file appender: /Volumes/Data/Mirserver/SelGate/logs/2022-08-16.log
+2022-08-16 22:00:26.8020 Warn Logger: SelGate.TimedService configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Info has been skipped.
+2022-08-16 22:00:26.8023 Warn Logger: SelGate.TimedService configured with duplicate output to target: FileTarget(Name=fileTarget). LoggingRule with NamePattern='*' and Level=Warn has been skipped.
+2022-08-16 22:00:26.8023 Debug Targets configured when LogLevel >= Trace for Logger: SelGate.TimedService
+2022-08-16 22:00:26.8023 Debug Logger SelGate.TimedService [Trace] => fileTarget consoleTarget
+2022-08-16 22:00:26.8033 Debug Logger SelGate.TimedService [Debug] => fileTarget consoleTarget
+2022-08-16 22:00:26.8033 Debug Logger SelGate.TimedService [Info] => fileTarget consoleTarget
+2022-08-16 22:00:26.8033 Debug Logger SelGate.TimedService [Warn] => fileTarget consoleTarget
+2022-08-16 22:00:26.8044 Debug Logger SelGate.TimedService [Error] => fileTarget consoleTarget
+2022-08-16 22:00:26.8044 Debug Logger SelGate.TimedService [Fatal] => fileTarget consoleTarget

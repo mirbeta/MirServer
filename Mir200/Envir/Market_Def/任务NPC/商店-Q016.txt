@@ -1,0 +1,119 @@
+[@main]
+#if
+CHECKLEVELEX > 39
+#say
+恭喜你来到传说中的“神秘商店”下列物品你只能挑选一项来购买，\
+购买完毕我将直接把你送回土城\
+<炼狱/@b1>        价格：1根金条+5块持久10以上金矿\
+<银蛇/@b2>        价格：1根金条+4块持久10以上金矿\
+<魔杖/@b3>        价格：1根金条+3块持久10以上金矿\
+<祝福油/@b4>      价格：100元宝\
+<神水/@b5>        价格：100元宝\
+<鹿血/@b6>        价格：100元宝\
+<修复神水/@b7>    价格：100元宝                <准备不足 返回土城/@hui>
+
+#elsesay
+恭喜你来到传说中的“神秘商店”下列物品你只能挑选一项来购买，\
+购买完毕我将直接把你送回土城\
+<炼狱/@b1>        价格：1根金条+5块持久10以上金矿\
+<银蛇/@b2>        价格：1根金条+4块持久10以上金矿\
+<魔杖/@b3>        价格：1根金条+3块持久10以上金矿\
+<祝福油>      价格：??????\
+<神水>        价格：??????\
+<鹿血>        价格：??????\
+<修复神水>    价格：??????                 <准备不足 返回土城/@hui>
+
+[@hui]
+#act
+mapmove 3 330 330
+break
+
+[@b1]
+#IF
+checkitem 金条 1
+CHECKDURAEVA 金矿 10
+Checkitem 金矿 5
+#ACT
+Take 金矿 5
+take 金条 1
+give 炼狱 1
+set [100] 1
+MAPMOVE 3 330 330
+#elseact
+messagebox 价格：金条+5块持久10以上金矿
+break
+
+[@b2]
+#IF
+checkitem 金条 1
+CHECKDURAEVA 金矿 10
+Checkitem 金矿 4
+#ACT
+Take 金矿 4
+take 金条 1
+give 银蛇 1
+set [100] 1
+MAPMOVE 3 330 330
+#elseact
+messagebox 价格：金条+4块持久10以上金矿
+break
+
+[@b3]
+#IF
+checkitem 金条 1
+CHECKDURAEVA 金矿 10
+Checkitem 金矿 3
+#ACT
+Take 金矿 3
+take 金条 1
+give 魔杖 1
+set [100] 1
+MAPMOVE 3 330 330
+#elseact
+messagebox 价格：金条+3块持久10以上金矿
+break
+
+[@b4]
+#IF
+CHECKGAMEGOLD > 99
+#act
+GAMEGOLD - 100
+give 祝福油 1
+MAPMOVE 3 330 330
+INC G5 1
+#elseact
+messagebox 价格：100元宝
+break
+
+[@b5]
+#IF
+CHECKGAMEGOLD > 99
+#act
+GAMEGOLD - 100
+give 神水 1
+MAPMOVE 3 330 330
+#elseact
+messagebox 价格：100元宝
+break
+
+[@b6]
+#IF
+CHECKGAMEGOLD > 99
+#act
+GAMEGOLD - 100
+give 鹿血 1
+MAPMOVE 3 330 330
+#elseact
+messagebox 价格：100元宝
+break
+
+[@b7]
+#IF
+CHECKGAMEGOLD > 99
+#act
+GAMEGOLD - 100
+give 修复神水 1
+MAPMOVE 3 330 330
+#elseact
+messagebox 价格：100元宝
+break

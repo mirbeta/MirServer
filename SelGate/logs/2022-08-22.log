@@ -1,0 +1,89 @@
+[2022-08-22 15:20:59.2151] | Info | 正在启动服务... 
+[2022-08-22 15:20:59.3490] | Info | 欢迎使用翎风系列游戏软件... 
+[2022-08-22 15:20:59.3495] | Info | 网站:http://www.gameofmir.com 
+[2022-08-22 15:20:59.3495] | Info | 论坛:http://bbs.gameofmir.com 
+[2022-08-22 15:20:59.3528] | Info | 数据库服务器[10.10.0.102:5100]链接成功. 
+[2022-08-22 15:20:59.3528] | Debug | Cleanup timeout session... 
+[2022-08-22 15:20:59.3528] | Debug | 线程[9d3c5083ebef400d882d54cda9738c56]连接 10.10.0.102:5100 成功... 
+[2022-08-22 15:20:59.3549] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:20:59.3596] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:21:09.3548] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:21:09.3555] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:21:19.3532] | Debug | Cleanup timeout session... 
+[2022-08-22 15:21:19.3562] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:21:19.3562] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:21:29.3568] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:21:29.3572] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:21:39.3546] | Debug | Cleanup timeout session... 
+[2022-08-22 15:21:39.3577] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:21:39.3582] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:21:49.3593] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:21:49.3593] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:21:59.3561] | Debug | Cleanup timeout session... 
+[2022-08-22 15:21:59.3603] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:21:59.3603] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:22:09.3625] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:22:09.3625] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:22:19.3563] | Debug | Cleanup timeout session... 
+[2022-08-22 15:22:19.3636] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:22:19.3636] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:22:29.3652] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:22:29.3652] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:22:39.3578] | Debug | Cleanup timeout session... 
+[2022-08-22 15:22:39.3653] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:22:39.3653] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:22:49.3668] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:22:49.3672] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:22:59.3583] | Debug | Cleanup timeout session... 
+[2022-08-22 15:22:59.3675] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:22:59.3675] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:23:09.3695] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:23:09.3695] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:23:19.3598] | Debug | Cleanup timeout session... 
+[2022-08-22 15:23:19.3711] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:23:19.3715] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:23:29.3722] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:23:29.3722] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:23:39.3610] | Debug | Cleanup timeout session... 
+[2022-08-22 15:23:39.3734] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:23:39.3734] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:23:39.8650] | Info | 数据库服务器[10.10.0.102:5100]断开链接. 
+[2022-08-22 15:25:13.6696] | Info | 正在启动服务... 
+[2022-08-22 15:25:13.7637] | Info | 欢迎使用翎风系列游戏软件... 
+[2022-08-22 15:25:13.7642] | Info | 网站:http://www.gameofmir.com 
+[2022-08-22 15:25:13.7642] | Info | 论坛:http://bbs.gameofmir.com 
+[2022-08-22 15:25:13.7674] | Info | 数据库服务器[10.10.0.102:5100]链接成功. 
+[2022-08-22 15:25:13.7674] | Debug | Cleanup timeout session... 
+[2022-08-22 15:25:13.7674] | Debug | 线程[da53f63fa11b4999a367cb4e98aa3b8b]连接 10.10.0.102:5100 成功... 
+[2022-08-22 15:25:13.7701] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:25:13.7748] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:25:23.7695] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:25:23.7695] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:25:33.7685] | Debug | Cleanup timeout session... 
+[2022-08-22 15:25:33.7711] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:25:33.7717] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:25:43.7718] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:25:43.7723] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:25:53.7698] | Debug | Cleanup timeout session... 
+[2022-08-22 15:25:53.7832] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:25:53.7905] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:26:03.7844] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:26:03.8044] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:26:13.7702] | Debug | Cleanup timeout session... 
+[2022-08-22 15:26:13.7909] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:26:13.7982] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:26:23.7915] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:26:23.8123] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:26:33.7720] | Debug | Cleanup timeout session... 
+[2022-08-22 15:26:33.7933] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:26:33.7960] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:26:43.7940] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:26:43.7947] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:26:53.7729] | Debug | Cleanup timeout session... 
+[2022-08-22 15:26:53.7950] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:26:53.7955] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:27:03.7954] | Debug | Send DBSvr Heartbeat. 
+[2022-08-22 15:27:03.7954] | Debug | DBSvr Heartbeat Response 
+[2022-08-22 15:27:12.9265] | Info | 数据库服务器[10.10.0.102:5100]断开链接. 
+[2022-08-22 15:27:13.7739] | Debug | Cleanup timeout session... 
+[2022-08-22 15:27:13.7976] | Debug | 服务器[10.10.0.102:5100]建立链接.失败次数:[1] 

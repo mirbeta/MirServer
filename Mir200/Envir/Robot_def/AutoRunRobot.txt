@@ -1,0 +1,10 @@
+#AutoRun NPC SEC 1 @Mir2m2假人系统脚本RM
+
+#AutoRun NPC MIN 1 @计时
+#AutoRun NPC RUNONWEEK 1:0:00 @清零
+#AutoRun NPC RUNONWEEK 2:0:00 @清零
+#AutoRun NPC RUNONWEEK 3:0:00 @清零
+#AutoRun NPC RUNONWEEK 4:0:00 @清零
+#AutoRun NPC RUNONWEEK 5:0:00 @清零
+#AutoRun NPC RUNONWEEK 6:0:00 @清零
+#AutoRun NPC RUNONWEEK 7:0:00 @清零

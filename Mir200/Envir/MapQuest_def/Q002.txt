@@ -1,0 +1,6 @@
+[@main]
+#if
+#act
+give ¾«ÁéÍ·¿ø 1
+mapmove 1 237 308
+break

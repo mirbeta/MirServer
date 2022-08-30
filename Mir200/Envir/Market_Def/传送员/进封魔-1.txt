@@ -1,0 +1,15 @@
+[@main]
+　\
+年轻的勇士，你想进入封魔谷吗？\ \
+<去[封魔谷]/@fe>\ \
+<离开/@Exit>
+
+[@fe◆]
+#act
+messagebox 封魔谷尚未开放
+break
+
+[@fe]
+#act
+mapmove 4 448 190
+break

@@ -1,0 +1,2 @@
+[@main]
+#CALL [\LEGM2.CC假人系统\假人登录脚本.txt] @OFFLINEPLAYEX

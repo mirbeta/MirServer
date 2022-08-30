@@ -1,0 +1,90 @@
+(@@sendmsg @@withdrawal @@receipts)
+[@main]
+沙巴克是在 <$OWNERGUILD> 的管理下。受约束于 <$LORD>\
+城堡总黄金是: <$CASTLEGOLD>\
+今天的收入是: <$TODAYINCOME>\ 
+当前系统时间: <$DATETIME>\
+╔┄┄┄┄┄╦┄┄┄┄┄╦┄┄┄┄┄╦┄┄┄┄┄╗\
+║ <收回现金/@@withdrawal> ║ <贮藏现金/@@receipts> ║ <控制城门/@treatdoor> ║ <修理城堡/@repaircastle> ║\
+╠┄┄┄┄┄╬┄┄┄┄┄╬┄┄┄┄┄╬┄┄┄┄┄╣\
+║ <聘用弓箭/@hirearchers> ║ <防御方式/@commandorder> ║ <攻城信息/@aboutwar> ║ <占领天数/@day> ║\
+╚┄┄┄┄┄╩┄┄┄┄┄╩┄┄┄┄┄╩┄┄┄┄┄╝\
+
+[@day]
+占领天数:<$CASTLEGETDAYS>\ \
+<返 回/@main>
+
+[@aboutwar]
+下一次战役记录在:\
+<$CASTLEWARDATE> , 20:00开始。\ \
+
+<详细情况./@listwar>\
+
+<返 回/@main>\
+
+[@listwar]
+<$LISTOFWAR>\ \
+<返 回/@aboutwar>
+
+[@treatdoor]
+城门当前状态为:<$CASTLEDOORSTATE>\ \ \ \
+╔┄┄┄┄┄┄╗╔┄┄┄┄┄┄╗╔┄┄┄┄┄┄╗\
+┆『<关闭城门/@closemaindoor>』┆┆『<打开城门/@openmaindoor>』┆┆『<返回上页/@main>』┆\
+╚┄┄┄┄┄┄╝╚┄┄┄┄┄┄╝╚┄┄┄┄┄┄╝\
+
+[@openmaindoor]
+#ACT
+MESSAGEBOX 城门已经打开。
+goto @main
+break
+[@closemaindoor]
+#ACT
+MESSAGEBOX 城门已经关闭。
+goto @main
+break
+
+[@repaircastle]
+请选择要修理的位置？\ \ \
+╔┄┄┄┄┄┄╗╔┄┄┄┄┄┄╗╔┄┄┄┄┄┄╗\
+┆『<修理城门/@repairdoor>』┆┆『<修理城墙/@repairwalls>』┆┆『<返回上页/@main>』┆\
+╚┄┄┄┄┄┄╝╚┄┄┄┄┄┄╝╚┄┄┄┄┄┄╝
+
+[@repairdoor]
+修理城门所需费用为:<$REPAIRDOORGOLD>金币。\ \ \
+╔┄┄┄┄┄┄╗╔┄┄┄┄┄┄╗\
+┆『<修理城门/@repairdoornow>』┆┆『<返回上页/@repaircastle>』┆\
+╚┄┄┄┄┄┄╝╚┄┄┄┄┄┄╝
+
+[@repairwalls]
+修理城墙所需费用为:<$REPAIRWALLGOLD>金币。\ \ \
+╔┄┄┄┄┄┄┄╗ ╔┄┄┄┄┄┄┄╗\
+┆『<修理城墙一/@repairwallnow1>』┆ ┆『<修理城墙二/@repairwallnow2>』┆\
+╚┄┄┄┄┄┄┄╝ ╚┄┄┄┄┄┄┄╝\
+╔┄┄┄┄┄┄┄╗ ╔┄┄┄┄┄┄┄╗\
+┆『<修理城墙三/@repairwallnow3>』┆ ┆『<返回上一页/@repaircastle>』┆\
+╚┄┄┄┄┄┄┄╝ ╚┄┄┄┄┄┄┄╝
+
+[@hirearchers]
+雇用弓箭手可保护城堡的安全，并维护城堡的治安。\
+每个弓箭手的雇用费用为<$ARCHERFEE>金币。\
+╔┄┄┄┄┬┄┄┄┄┬┄┄┄┄┬┄┄┄┄╗\ 
+┊聘用<一号/@hirearchernow1>┊聘用<二号/@hirearchernow2>┊聘用<三号/@hirearchernow3>┊聘用<四号/@hirearchernow4>┊\
+├┄┄┄┄┼┄┄┄┄┼┄┄┄┄┼┄┄┄┄┤\ 
+┊聘用<五号/@hirearchernow5>┊聘用<六号/@hirearchernow6>┊聘用<七号/@hirearchernow7>┊聘用<八号/@hirearchernow8>┊\
+├┄┄┄┄┼┄┄┄┄┼┄┄┄┄┼┄┄┄┄┼┄┄╗\
+┊聘用<九号/@hirearchernow9>┊聘用<十号/@hirearchernow10>┊聘用<11号/@hirearchernow11>┊聘用<12号/@hirearchernow12>┊<返回/@main>┊\
+╚┄┄┄┄┴┄┄┄┄┴┄┄┄┄┴┄┄┄┄┴┄┄╝\
+
+[@commandorder]
+守卫们正在进行沙巴克的防御工作,你想改变他们?\ \ \
+╔┄┄┄┄┬┄┄┄┄┬┄┄╗\ 
+┊<正常防守/@guardrule_normalnow>┊<进攻来者/@guardrule_pkattack>┊<返回/@main>┊\
+╚┄┄┄┄┴┄┄┄┄┴┄┄╝\
+
+[@guardrule_normalnow]
+防守方式已经更改，守卫们已经目前处于正常防御状态.\ \ \
+<返回/@commandorder>
+
+[@guardrule_pkattack]
+防守方式已经更改，守卫们已经目前处于对来犯者进攻状态.\ \ \
+<返回/@commandorder>

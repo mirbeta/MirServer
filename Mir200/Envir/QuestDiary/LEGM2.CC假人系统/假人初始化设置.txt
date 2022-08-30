@@ -1,0 +1,52 @@
+[@假人初始化]
+{
+#IF
+#ACT
+;===========这里是假人挂机时长=========
+CALCVAR GLOBAL 假人挂机时长 = 300
+SAVEVAR GLOBAL 假人挂机时长 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+;===========这里是假人是否允许挂载=========
+CALCVAR GLOBAL 开一键加载 = 1
+SAVEVAR GLOBAL 开一键加载 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+;===这里设置假人复活提示
+CALCVAR GLOBAL 假人上线提示 = ★玛法勇士〖<$USERNAME>〗来到了<$SERVERNAME>.顿时电闪雷鸣.风云再起
+SAVEVAR GLOBAL 假人上线提示 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+
+;===这里版本类型0=单体1=合击====================
+
+CALCVAR GLOBAL 版本类型 = 0
+SAVEVAR GLOBAL 版本类型 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+
+;===这里设置假人是否自动加入行会3=自动加人4=不自动加入========
+
+CALCVAR GLOBAL 是否加入行会 = 4
+SAVEVAR GLOBAL 是否加入行会 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+
+;===这里设置假人是否允许每秒增加经验5=增加6=不增加========
+
+CALCVAR GLOBAL 是否允许泡点 = 5
+SAVEVAR GLOBAL 是否允许泡点 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+CALCVAR GLOBAL 每秒经验数 = 3000
+SAVEVAR GLOBAL 每秒经验数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+
+;===这里设置假人每秒回血的数值默认是30========
+
+CALCVAR GLOBAL 英雄回血数 = 60
+SAVEVAR GLOBAL 英雄回血数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+CALCVAR GLOBAL 主号回血数 = 60
+SAVEVAR GLOBAL 主号回血数 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+
+;===这里设置假人回城或者随机的最低血量默认100========
+
+CALCVAR GLOBAL 假人随机血 = 100
+SAVEVAR GLOBAL 假人随机血 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+CALCVAR GLOBAL 假人回城血 = 80
+SAVEVAR GLOBAL 假人回城血 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+
+;===充值开始时间=回收开始时间按毫秒计算=======
+
+CALCVAR GLOBAL 回起始时间 = 600000
+SAVEVAR GLOBAL 回起始时间 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+CALCVAR GLOBAL 充起始时间 = 1200000
+SAVEVAR GLOBAL 充起始时间 ..\QuestDiary\LEGM2.CC假人系统\假人全局变量.txt
+}

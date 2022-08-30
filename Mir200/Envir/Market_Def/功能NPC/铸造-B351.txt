@@ -1,0 +1,645 @@
+[@main]
+我可以为你铸造以下终级武器：[<免费铸造，无须元宝>]\ \
+<裁决之杖/@duan07>         <怒斩/@duan01>         <屠龙/@duan04>\ \
+<骨玉权杖/@duan08>         <龙牙/@duan02>         <嗜魂法杖/@duan05>\ \
+<龙纹剑/@duan09>           <太极棍/@duan03>       <逍遥扇/@duan06>\ \
+<离开/@exit>                                您当前金刚石数量：<$GAMEDIAMOND>
+
+[@duan06]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan6> -- 成功率最高65% 需要15000金刚石\ \
+<[实力铸造]/@duanA6> -- 成功率100% 需要30000金刚石\ \
+<返回/@main>
+
+[@duanA6]
+　\
+铸造逍遥扇需要以下材料：\ \
+金矿10块+银矿10块+30000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA6A>※\ \
+<返回/@main>
+
+[@duanA6A]
+#IF
+checkitem 金矿 10
+checkitem 银矿 10
+CHECKGAMEDIAMOND > 29999
+#ACT
+take 金矿 10
+take 银矿 10
+GAMEDIAMOND - 30000
+give 逍遥扇 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[逍遥扇]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan05]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan5> -- 成功率最高65% 需要15000金刚石\ \
+<[实力铸造]/@duanA5> -- 成功率100% 需要30000金刚石\ \
+<返回/@main>
+
+[@duanA5]
+　\
+铸造嗜魂法杖需要以下材料：\ \
+金矿10块+银矿10块+30000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA5A>※\ \
+<返回/@main>
+
+[@duanA5A]
+#IF
+checkitem 金矿 10
+checkitem 银矿 10
+CHECKGAMEDIAMOND > 29999
+#ACT
+take 金矿 10
+take 银矿 10
+GAMEDIAMOND - 30000
+give 嗜魂法杖 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[嗜魂法杖]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan04]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan4> -- 成功率最高65% 需要15000金刚石\ \
+<[实力铸造]/@duanA4> -- 成功率100% 需要30000金刚石\ \
+<返回/@main>
+
+[@duanA4]
+　\
+铸造屠龙需要以下材料：\ \
+金矿10块+银矿10块+30000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA4A>※\ \
+<返回/@main>
+
+[@duanA4A]
+#IF
+checkitem 金矿 10
+checkitem 银矿 10
+CHECKGAMEDIAMOND > 29999
+#ACT
+take 金矿 10
+take 银矿 10
+GAMEDIAMOND - 30000
+give 屠龙 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[屠龙]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan03]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan3> -- 成功率最高65% 需要5000金刚石\ \
+<[实力铸造]/@duanA3> -- 成功率100% 需要10000金刚石\ \
+<返回/@main>
+
+[@duanA3]
+　\
+铸造太极棍需要以下材料：\ \
+金矿5块+银矿5块+10000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA3A>※\ \
+<返回/@main>
+
+[@duanA3A]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 9999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 10000
+give 太极棍 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[太极棍]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan02]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan2> -- 成功率最高65% 需要5000金刚石\ \
+<[实力铸造]/@duanA2> -- 成功率100% 需要10000金刚石\ \
+<返回/@main>
+
+[@duanA2]
+　\
+铸造龙牙需要以下材料：\ \
+金矿5块+银矿5块+10000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA2A>※\ \
+<返回/@main>
+
+[@duanA2A]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 9999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 10000
+give 龙牙 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[龙牙]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan01]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan1> -- 成功率最高65% 需要5000金刚石\ \
+<[实力铸造]/@duanA1> -- 成功率100% 需要10000金刚石\ \
+<返回/@main>
+
+[@duanA1]
+　\
+铸造怒斩需要以下材料：\ \
+金矿5块+银矿5块+10000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA1A>※\ \
+<返回/@main>
+
+[@duanA1A]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 9999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 10000
+give 怒斩 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[怒斩]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan09]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan9> -- 成功率最高65% 需要2000金刚石\ \
+<[实力铸造]/@duanA9> -- 成功率100% 需要4000金刚石\ \
+<返回/@main>
+
+[@duanA9]
+　\
+铸造龙纹剑需要以下材料：\ \
+金矿5块+银矿5块+4000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA9A>※\ \
+<返回/@main>
+
+[@duanA9A]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 3999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 4000
+give 龙纹剑 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[龙纹剑]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan08]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan8> -- 成功率最高65% 需要2000金刚石\ \
+<[实力铸造]/@duanA8> -- 成功率100% 需要4000金刚石\ \
+<返回/@main>
+
+[@duanA8]
+　\
+铸造骨玉权杖需要以下材料：\ \
+金矿5块+银矿5块+4000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA8A>※\ \
+<返回/@main>
+
+[@duanA8A]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 3999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 4000
+give 骨玉权杖 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[骨玉权杖]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan07]
+　\
+请选择铸造方式：\ \
+<[运气铸造]/@duan7> -- 成功率最高65% 需要2000金刚石\ \
+<[实力铸造]/@duanA7> -- 成功率100% 需要4000金刚石\ \
+<返回/@main>
+
+[@duanA7]
+　\
+铸造裁决之杖需要以下材料：\ \
+金矿5块+银矿5块+4000颗金刚石      <成功率：100%>\ \
+※<开始铸造/@duanA7A>※\ \
+<返回/@main>
+
+[@duanA7A]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 3999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 4000
+give 裁决之杖 1
+SENDMSG 0 [%s]-在苍月武器店内成功打造出一把[裁决之杖]
+close
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan7]
+铸造裁决之杖需要以下步骤与材料：\ \
+1：金矿5块+银矿5块+2000颗金刚石  <铸造--裁决之杖半成品>\
+※<开始铸造/@duan77>※\ \
+2：裁决之杖半成品（拿在手中）+金条1根+祝福油  <铸造--裁决之杖>\
+※<开始铸造/@duan777>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan77]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 1999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 2000
+give [!]裁决之杖 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan777]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]裁决之杖 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]裁决之杖 1
+movr D4 2
+INC D4 1
+give 裁决之杖 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[裁决之杖]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan8]
+铸造骨玉权杖需要以下步骤与材料：\ \
+1：金矿5块+银矿5块+2000颗金刚石  <铸造--骨玉权杖半成品>\
+※<开始铸造/@duan88>※\ \
+2：骨玉权杖半成品（拿在手中）+金条1根+祝福油  <铸造--骨玉权杖>\
+※<开始铸造/@duan888>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan88]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 1999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 2000
+give [!]骨玉权杖 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan888]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]骨玉权杖 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]骨玉权杖 1
+movr D4 2
+INC D4 1
+give 骨玉权杖 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[骨玉权杖]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan9]
+铸造龙纹剑需要以下步骤与材料：\ \
+1：金矿5块+银矿5块+2000颗金刚石  <铸造--龙纹剑半成品>\
+※<开始铸造/@duan99>※\ \
+2：龙纹剑半成品（拿在手中）+金条1根+祝福油  <铸造--龙纹剑>\
+※<开始铸造/@duan999>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan99]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 1999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 2000
+give [!]龙纹剑 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan999]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]龙纹剑 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]龙纹剑 1
+movr D4 2
+INC D4 1
+give 龙纹剑 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[龙纹剑]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan1]
+铸造怒斩需要以下步骤与材料：\ \
+1：金矿5块+银矿5块+5000颗金刚石  <铸造--怒斩半成品>\
+※<开始铸造/@duan11>※\ \
+2：怒斩半成品（拿在手中）+金条1根+祝福油  <铸造--怒斩>\
+※<开始铸造/@duan111>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan11]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 4999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 5000
+give [!]怒斩 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan111]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]怒斩 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]怒斩 1
+movr D4 2
+INC D4 1
+give 怒斩 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[怒斩]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan2]
+铸造龙牙需要以下步骤与材料：\ \
+1：金矿5块+银矿5块+5000颗金刚石  <铸造--龙牙半成品>\
+※<开始铸造/@duan21>※\ \
+2：龙牙半成品（拿在手中）+金条1根+祝福油  <铸造--龙牙>\
+※<开始铸造/@duan211>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan21]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 4999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 5000
+give [!]龙牙 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan211]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]龙牙 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]龙牙 1
+movr D4 2
+INC D4 1
+give 龙牙 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[龙牙]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan3]
+铸造太极棍需要以下步骤与材料：\ \
+1：金矿5块+银矿5块+5000颗金刚石  <铸造--太极棍半成品>\
+※<开始铸造/@duan31>※\ \
+2：太极棍半成品（拿在手中）+金条1根+祝福油  <铸造--太极棍>\
+※<开始铸造/@duan311>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan31]
+#IF
+checkitem 金矿 5
+checkitem 银矿 5
+CHECKGAMEDIAMOND > 4999
+#ACT
+take 金矿 5
+take 银矿 5
+GAMEDIAMOND - 5000
+give [!]太极棍 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan311]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]太极棍 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]太极棍 1
+movr D4 2
+INC D4 1
+give 太极棍 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[太极棍]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan4]
+铸造屠龙需要以下步骤与材料：\ \
+1：金矿10块+银矿10块+15000颗金刚石  <铸造--屠龙半成品>\
+※<开始铸造/@duan41>※\ \
+2：屠龙半成品（拿在手中）+金条1根+祝福油  <铸造--屠龙>\
+※<开始铸造/@duan411>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan41]
+#IF
+checkitem 金矿 10
+checkitem 银矿 10
+CHECKGAMEDIAMOND > 14999
+#ACT
+take 金矿 10
+take 银矿 10
+GAMEDIAMOND - 15000
+give [!]屠龙 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan411]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]屠龙 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]屠龙 1
+movr D4 2
+INC D4 1
+give 屠龙 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[屠龙]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan5]
+铸造嗜魂法杖需要以下步骤与材料：\ \
+1：金矿10块+银矿10块+15000颗金刚石  <铸造--嗜魂法杖半成品>\
+※<开始铸造/@duan51>※\ \
+2：嗜魂法杖半成品（拿在手中）+金条1根+祝福油  <铸造--嗜魂法杖>\
+※<开始铸造/@duan511>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan51]
+#IF
+checkitem 金矿 10
+checkitem 银矿 10
+CHECKGAMEDIAMOND > 14999
+#ACT
+take 金矿 10
+take 银矿 10
+GAMEDIAMOND - 15000
+give [!]嗜魂法杖 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan511]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]嗜魂法杖 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]嗜魂法杖 1
+movr D4 2
+INC D4 1
+give 嗜魂法杖 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[嗜魂法杖]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan6]
+铸造逍遥扇需要以下步骤与材料：\ \
+1：金矿10块+银矿10块+15000颗金刚石  <铸造--逍遥扇半成品>\
+※<开始铸造/@duan61>※\ \
+2：逍遥扇半成品（拿在手中）+金条1根+祝福油  <铸造--逍遥扇>\
+※<开始铸造/@duan611>※\ \
+3：<试刀> 基础成功率20% 每多放一瓶祝福油成功率增加1%   <返回/@main>
+
+[@duan61]
+#IF
+checkitem 金矿 10
+checkitem 银矿 10
+CHECKGAMEDIAMOND > 14999
+#ACT
+take 金矿 10
+take 银矿 10
+GAMEDIAMOND - 15000
+give [!]逍遥扇 1
+messagebox 请将半成品拿在手中进行下一步铸造
+#elseACT
+messagebox 缺少铸造条件
+break
+
+[@duan611]
+#IF
+checkitem 金条 1
+checkitem 祝福油 1
+CheckItemw [!]逍遥扇 1
+#ACT
+take 金条 1
+take 祝福油 46
+takew [!]逍遥扇 1
+movr D4 2
+INC D4 1
+give 逍遥扇 1 10 <$STR(D4)>
+SENDMSG 6 提示：铸造成功！请试刀！
+SENDMSG 0 [%s]-在苍月武器店内打造出一把[逍遥扇]-祝TA试刀成功！
+#elseACT
+messagebox 缺少铸造条件
+break

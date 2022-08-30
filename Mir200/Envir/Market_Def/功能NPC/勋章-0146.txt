@@ -1,0 +1,612 @@
+[@main]
+这里可以使用声望兑换荣誉勋章，声望越高兑换的勋章属性就越高\
+兑换1级勋章需要 80点声望\
+兑换2级勋章需要160点声望\
+兑换3级勋章需要240点声望\
+兑换4级勋章需要240点声望+祖玛装备\
+<兑换[荣誉勋章]/@xun1>\
+<[荣誉勋章]升级/@xun2>\
+<查询[当前声望]/@xun3>\
+<离开/@exit>
+
+[@xun2]
+　\
+4级荣誉勋章可以使用声望进行对应属性升级，[20点]声望升级一次\
+一个勋章最多升级[30次]，对应属性最多加[4点]\ \
+<升级[荣誉勋章41号]/@S41>  <升级[荣誉勋章42号]/@S42>  <查询勋章已升级次数/@chacha>\ \
+<升级[荣誉勋章43号]/@S43>  <升级[荣誉勋章44号]/@S44>  <升级[荣誉勋章45号]/@S45>\ \
+<返回/@main>
+
+[@chacha]
+#if
+CHECKUSEITEM 2
+#elseact
+messagebox 请先佩戴勋章后再查询
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 0
+#act
+messagebox 当前佩戴勋章尚未升级
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 1
+#act
+messagebox 当前佩戴勋章已经升级：1次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 2
+#act
+messagebox 当前佩戴勋章已经升级：2次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 3
+#act
+messagebox 当前佩戴勋章已经升级：3次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 4
+#act
+messagebox 当前佩戴勋章已经升级：4次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 5
+#act
+messagebox 当前佩戴勋章已经升级：5次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 6
+#act
+messagebox 当前佩戴勋章已经升级：6次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 7
+#act
+messagebox 当前佩戴勋章已经升级：7次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 8
+#act
+messagebox 当前佩戴勋章已经升级：8次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 9
+#act
+messagebox 当前佩戴勋章已经升级：9次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 10
+#act
+messagebox 当前佩戴勋章已经升级：10次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 11
+#act
+messagebox 当前佩戴勋章已经升级：11次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 12
+#act
+messagebox 当前佩戴勋章已经升级：12次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 13
+#act
+messagebox 当前佩戴勋章已经升级：13次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 14
+#act
+messagebox 当前佩戴勋章已经升级：14次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 15
+#act
+messagebox 当前佩戴勋章已经升级：15次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 16
+#act
+messagebox 当前佩戴勋章已经升级：16次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 17
+#act
+messagebox 当前佩戴勋章已经升级：17次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 18
+#act
+messagebox 当前佩戴勋章已经升级：18次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 19
+#act
+messagebox 当前佩戴勋章已经升级：19次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 20
+#act
+messagebox 当前佩戴勋章已经升级：20次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 21
+#act
+messagebox 当前佩戴勋章已经升级：21次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 22
+#act
+messagebox 当前佩戴勋章已经升级：22次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 23
+#act
+messagebox 当前佩戴勋章已经升级：23次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 24
+#act
+messagebox 当前佩戴勋章已经升级：24次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 25
+#act
+messagebox 当前佩戴勋章已经升级：25次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 26
+#act
+messagebox 当前佩戴勋章已经升级：26次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 27
+#act
+messagebox 当前佩戴勋章已经升级：27次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 28
+#act
+messagebox 当前佩戴勋章已经升级：28次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 29
+#act
+messagebox 当前佩戴勋章已经升级：29次
+break
+
+#if
+CHECKITEMADDVALUE 2 10 = 30
+#act
+messagebox 当前佩戴勋章已经不能再升级
+break
+
+[@S45]
+#if
+CHECKITEMADDVALUE 2 4 < 4
+CHECKITEMADDVALUE 2 10 < 30
+CHECKCREDITPOINT > 19
+CheckItemw 荣誉勋章45号 1
+#act
+CREDITPOINT - 20
+movr D3 15
+goto @S45X
+#ELSEACT
+messagebox 不符合升级条件
+break
+
+[@S45X]
+#if
+equal D3 1
+#act
+UPGRADEITEMEX 2 4 0 0 0 0
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 6 提示：荣誉勋章升级成功
+#ELSEACT
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 5 提示：荣誉勋章升级失败
+break
+
+[@S44]
+#if
+CHECKITEMADDVALUE 2 3 < 4
+CHECKCREDITPOINT > 19
+CHECKITEMADDVALUE 2 10 < 30
+CheckItemw 荣誉勋章44号 1
+#act
+CREDITPOINT - 20
+movr D3 15
+goto @S44X
+#ELSEACT
+messagebox 不符合升级条件
+break
+
+[@S44X]
+#if
+equal D3 1
+#act
+UPGRADEITEMEX 2 3 0 0 0 0
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 6 提示：荣誉勋章升级成功
+#ELSEACT
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 5 提示：荣誉勋章升级失败
+break
+
+[@S43]
+#if
+CHECKITEMADDVALUE 2 2 < 4
+CHECKCREDITPOINT > 19
+CHECKITEMADDVALUE 2 10 < 30
+CheckItemw 荣誉勋章43号 1
+#act
+CREDITPOINT - 20
+movr D3 15
+goto @S43X
+#ELSEACT
+messagebox 不符合升级条件
+break
+
+[@S43X]
+#if
+equal D3 1
+#act
+UPGRADEITEMEX 2 2 0 0 0 0
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 6 提示：荣誉勋章升级成功
+#ELSEACT
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 5 提示：荣誉勋章升级失败
+break
+
+[@S42]
+#if
+CHECKITEMADDVALUE 2 1 < 4
+CHECKCREDITPOINT > 19
+CHECKITEMADDVALUE 2 10 < 30
+CheckItemw 荣誉勋章42号 1
+#act
+CREDITPOINT - 20
+movr D3 15
+goto @S42X
+#ELSEACT
+messagebox 不符合升级条件
+break
+
+[@S42X]
+#if
+equal D3 1
+#act
+UPGRADEITEMEX 2 1 0 0 0 0
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 6 提示：荣誉勋章升级成功
+#ELSEACT
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 5 提示：荣誉勋章升级失败
+break
+
+[@S41]
+#if
+CHECKITEMADDVALUE 2 0 < 4
+CHECKCREDITPOINT > 19
+CHECKITEMADDVALUE 2 10 < 30
+CheckItemw 荣誉勋章41号 1
+#act
+CREDITPOINT - 20
+movr D3 15
+goto @S41X
+#ELSEACT
+messagebox 不符合升级条件
+break
+
+[@S41X]
+#if
+equal D3 1
+#act
+UPGRADEITEMEX 2 0 0 0 0 0
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 6 提示：荣誉勋章升级成功
+#ELSEACT
+UPGRADEITEMEX 2 10 0 0 0 0
+sendmsg 5 提示：荣誉勋章升级失败
+break
+
+[@xun3]
+　\
+你当前声望：<$CREDITPOINT> 点\ \
+<返回/@main>
+
+[@xun1]
+<兑换[1级勋章]/@zhi1>\ \
+<兑换[2级勋章]/@zhi2>\ \
+<兑换[3级勋章]/@zhi3>\ \
+<兑换[4级勋章]/@zhi4>\ \
+<返回/@main>
+
+[@zhi1]
+<荣誉勋章11号/@11>  80声望\ \
+<荣誉勋章12号/@12>  80声望\ \
+<荣誉勋章13号/@13>  80声望\ \
+<荣誉勋章14号/@14>  80声望\ \
+<荣誉勋章15号/@15>  80声望                <返回/@xun1>
+
+[@zhi2]
+<荣誉勋章21号/@21>  160声望\ \
+<荣誉勋章22号/@22>  160声望\ \
+<荣誉勋章23号/@23>  160声望\ \
+<荣誉勋章24号/@24>  160声望\ \
+<荣誉勋章25号/@25>  160声望               <返回/@xun1>
+
+[@zhi3]
+<荣誉勋章31号/@31>  240声望\ \
+<荣誉勋章32号/@32>  240声望\ \
+<荣誉勋章33号/@33>  240声望\ \
+<荣誉勋章34号/@34>  240声望\ \
+<荣誉勋章35号/@35>  240声望               <返回/@xun1>
+
+[@zhi4]
+<荣誉勋章41号/@41>  240声望+阎罗手套\ \
+<荣誉勋章42号/@42>  240声望+黑铁头盔\ \
+<荣誉勋章43号/@43>  240声望+力量戒指\ \
+<荣誉勋章44号/@44>  240声望+紫碧螺\ \
+<荣誉勋章45号/@45>  240声望+泰坦戒指      <返回/@xun1>
+
+
+[@11]
+#if
+CHECKCREDITPOINT > 79
+#act
+CREDITPOINT - 80
+give 荣誉勋章11号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@12]
+#if
+CHECKCREDITPOINT > 79
+#act
+CREDITPOINT - 80
+give 荣誉勋章12号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@13]
+#if
+CHECKCREDITPOINT > 79
+#act
+CREDITPOINT - 80
+give 荣誉勋章13号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@14]
+#if
+CHECKCREDITPOINT > 79
+#act
+CREDITPOINT - 80
+give 荣誉勋章14号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@15]
+#if
+CHECKCREDITPOINT > 79
+#act
+CREDITPOINT - 80
+give 荣誉勋章15号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@21]
+#if
+CHECKCREDITPOINT > 159
+#act
+CREDITPOINT - 160
+give 荣誉勋章21号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@22]
+#if
+CHECKCREDITPOINT > 159
+#act
+CREDITPOINT - 160
+give 荣誉勋章22号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@23]
+#if
+CHECKCREDITPOINT > 159
+#act
+CREDITPOINT - 160
+give 荣誉勋章23号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@24]
+#if
+CHECKCREDITPOINT > 159
+#act
+CREDITPOINT - 160
+give 荣誉勋章24号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@25]
+#if
+CHECKCREDITPOINT > 159
+#act
+CREDITPOINT - 160
+give 荣誉勋章25号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@31]
+#if
+CHECKCREDITPOINT > 239
+#act
+CREDITPOINT - 240
+give 荣誉勋章31号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@32]
+#if
+CHECKCREDITPOINT > 239
+#act
+CREDITPOINT - 240
+give 荣誉勋章32号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@33]
+#if
+CHECKCREDITPOINT > 239
+#act
+CREDITPOINT - 240
+give 荣誉勋章33号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@34]
+#if
+CHECKCREDITPOINT > 239
+#act
+CREDITPOINT - 240
+give 荣誉勋章34号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@35]
+#if
+CHECKCREDITPOINT > 239
+#act
+CREDITPOINT - 240
+give 荣誉勋章35号 1
+close
+#elseact
+messagebox 声望不足，无法兑换
+break
+
+[@41]
+#if
+CHECKCREDITPOINT > 239
+checkitem 阎罗手套 1
+#act
+take 阎罗手套 1
+CREDITPOINT - 240
+give 荣誉勋章41号 1
+close
+#elseact
+messagebox 声望不足，或者缺少祖玛装备
+break
+
+[@42]
+#if
+CHECKCREDITPOINT > 239
+checkitem 黑铁头盔 1
+#act
+take 黑铁头盔 1
+CREDITPOINT - 240
+give 荣誉勋章42号 1
+close
+#elseact
+messagebox 声望不足，或者缺少祖玛装备
+break
+
+[@43]
+#if
+CHECKCREDITPOINT > 239
+checkitem 力量戒指 1
+#act
+take 力量戒指 1
+CREDITPOINT - 240
+give 荣誉勋章43号 1
+close
+#elseact
+messagebox 声望不足，或者缺少祖玛装备
+break
+
+[@44]
+#if
+CHECKCREDITPOINT > 239
+checkitem 紫碧螺 1
+#act
+take 紫碧螺 1
+CREDITPOINT - 240
+give 荣誉勋章44号 1
+close
+#elseact
+messagebox 声望不足，或者缺少祖玛装备
+break
+
+[@45]
+#if
+CHECKCREDITPOINT > 239
+checkitem 泰坦戒指 1
+#act
+take 泰坦戒指 1
+CREDITPOINT - 240
+give 荣誉勋章45号 1
+close
+#elseact
+messagebox 声望不足，或者缺少祖玛装备
+break

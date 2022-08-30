@@ -1,0 +1,97 @@
+[@main]
+行会战争专用地图，PK不红名，死亡掉装备！\ \
+<行会战地图一(随机√ 小退√)>   <集结点>：<上点/@dian1>  <下点/@dian2>\ \
+<行会战地图二(随机× 小退√)>   <集结点>：<上点/@dian3>  <下点/@dian4>  <左点/@dian5>  <右点/@dian6>\ \
+<行会争霸地图(随机× 小退×)>   <集结点>：<上点/@dian7>  <下点/@dian8>  <随机点/@dian9>\ \
+<离开/@exit>
+
+[@dian1]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove f003 20 23
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian2]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove f003 80 63
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian3]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove f005 12 14
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian4]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove f005 87 88
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian5]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove f005 10 87
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian6]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove f005 85 14
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian7]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove ZM6 10 12
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+[@dian8]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+mapmove ZM6 36 38
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break
+
+
+[@dian9]
+#if
+HAVEGUILD
+CHECKLEVELEX > 34
+#act
+map ZM6
+#elseact
+messagebox 35级以下无行会人员禁止进入！
+break

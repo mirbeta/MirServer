@@ -1,0 +1,653 @@
+[@领取元宝]
+{
+#IF
+checkaccountlist ..\QuestDiary\freenet\01.txt
+#ACT
+GAMEGOLD + 1
+delaccountlist ..\QuestDiary\freenet\01.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得1元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\02.txt
+#ACT
+GAMEGOLD + 2
+delaccountlist ..\QuestDiary\freenet\02.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得2元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\03.txt
+#ACT
+GAMEGOLD + 3
+delaccountlist ..\QuestDiary\freenet\03.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得3元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\04.txt
+#ACT
+GAMEGOLD + 4
+delaccountlist ..\QuestDiary\freenet\04.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得4元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\05.txt
+#ACT
+GAMEGOLD + 5
+delaccountlist ..\QuestDiary\freenet\05.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得5元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\06.txt
+#ACT
+GAMEGOLD + 6
+delaccountlist ..\QuestDiary\freenet\06.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得6元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\07.txt
+#ACT
+GAMEGOLD + 7
+delaccountlist ..\QuestDiary\freenet\07.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得7元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\08.txt
+#ACT
+GAMEGOLD + 8
+delaccountlist ..\QuestDiary\freenet\08.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得8元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\09.txt
+#ACT
+GAMEGOLD + 9
+delaccountlist ..\QuestDiary\freenet\09.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得9元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\1.txt
+#ACT
+GAMEGOLD + 10
+delaccountlist ..\QuestDiary\freenet\1.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得10元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\2.txt
+#ACT
+GAMEGOLD + 20
+delaccountlist ..\QuestDiary\freenet\2.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得20元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\3.txt
+#ACT
+GAMEGOLD + 30
+delaccountlist ..\QuestDiary\freenet\3.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得30元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\4.txt
+#ACT
+GAMEGOLD + 40
+delaccountlist ..\QuestDiary\freenet\4.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得40元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\5.txt
+#ACT
+GAMEGOLD + 50
+delaccountlist ..\QuestDiary\freenet\5.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得50元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\6.txt
+#ACT
+GAMEGOLD + 60
+delaccountlist ..\QuestDiary\freenet\6.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得60元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\7.txt
+#ACT
+GAMEGOLD + 70
+delaccountlist ..\QuestDiary\freenet\7.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得70元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\8.txt
+#ACT
+GAMEGOLD + 80
+delaccountlist ..\QuestDiary\freenet\8.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得80元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\9.txt
+#ACT
+GAMEGOLD + 90
+delaccountlist ..\QuestDiary\freenet\9.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得90元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\10.txt
+#ACT
+GAMEGOLD + 100
+delaccountlist ..\QuestDiary\freenet\10.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得100元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\20.txt
+#ACT
+GAMEGOLD + 200
+delaccountlist ..\QuestDiary\freenet\20.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得200元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\30.txt
+#ACT
+GAMEGOLD + 300
+delaccountlist ..\QuestDiary\freenet\30.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得300元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\40.txt
+#ACT
+GAMEGOLD + 400
+delaccountlist ..\QuestDiary\freenet\40.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得400元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\50.txt
+#ACT
+GAMEGOLD + 500
+delaccountlist ..\QuestDiary\freenet\50.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得500元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\60.txt
+#ACT
+GAMEGOLD + 600
+delaccountlist ..\QuestDiary\freenet\60.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得600元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\70.txt
+#ACT
+GAMEGOLD + 700
+delaccountlist ..\QuestDiary\freenet\70.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得700元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\80.txt
+#ACT
+GAMEGOLD + 800
+delaccountlist ..\QuestDiary\freenet\80.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得800元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\90.txt
+#ACT
+GAMEGOLD + 900
+delaccountlist ..\QuestDiary\freenet\90.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得900元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\100.txt
+#ACT
+GAMEGOLD + 1000
+delaccountlist ..\QuestDiary\freenet\100.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得1000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\200.txt
+#ACT
+GAMEGOLD + 2000
+delaccountlist ..\QuestDiary\freenet\200.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得2000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\300.txt
+#ACT
+GAMEGOLD + 3000
+delaccountlist ..\QuestDiary\freenet\300.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得3000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\400.txt
+#ACT
+GAMEGOLD + 4000
+delaccountlist ..\QuestDiary\freenet\400.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得4000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\500.txt
+#ACT
+GAMEGOLD + 5000
+delaccountlist ..\QuestDiary\freenet\500.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得5000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\600.txt
+#ACT
+GAMEGOLD + 6000
+delaccountlist ..\QuestDiary\freenet\600.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得6000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\700.txt
+#ACT
+GAMEGOLD + 7000
+delaccountlist ..\QuestDiary\freenet\700.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得7000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\800.txt
+#ACT
+GAMEGOLD + 8000
+delaccountlist ..\QuestDiary\freenet\800.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得8000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\900.txt
+#ACT
+GAMEGOLD + 9000
+delaccountlist ..\QuestDiary\freenet\900.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得9000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\1000.txt
+#ACT
+GAMEGOLD + 10000
+delaccountlist ..\QuestDiary\freenet\1000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得10000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\2000.txt
+#ACT
+GAMEGOLD + 20000
+delaccountlist ..\QuestDiary\freenet\2000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得20000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\3000.txt
+#ACT
+GAMEGOLD + 30000
+delaccountlist ..\QuestDiary\freenet\3000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得30000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\4000.txt
+#ACT
+GAMEGOLD + 40000
+delaccountlist ..\QuestDiary\freenet\4000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得40000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\5000.txt
+#ACT
+GAMEGOLD + 50000
+delaccountlist ..\QuestDiary\freenet\5000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得50000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\6000.txt
+#ACT
+GAMEGOLD + 60000
+delaccountlist ..\QuestDiary\freenet\6000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得60000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\7000.txt
+#ACT
+GAMEGOLD + 70000
+delaccountlist ..\QuestDiary\freenet\7000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得70000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\8000.txt
+#ACT
+GAMEGOLD + 80000
+delaccountlist ..\QuestDiary\freenet\8000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得80000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\9000.txt
+#ACT
+GAMEGOLD + 90000
+delaccountlist ..\QuestDiary\freenet\9000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得90000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\freenet\10000.txt
+#ACT
+GAMEGOLD + 100000
+delaccountlist ..\QuestDiary\freenet\10000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得100000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+break
+
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay01.txt
+#ACT
+GAMEGOLD + 1
+DelAccountList ..\QuestDiary\冲值元宝\pay01.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得1元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay02.txt
+#ACT
+GAMEGOLD + 2
+DelAccountList ..\QuestDiary\冲值元宝\pay02.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得2元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay03.txt
+#ACT
+GAMEGOLD + 3
+DelAccountList ..\QuestDiary\冲值元宝\pay03.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得3元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay04.txt
+#ACT
+GAMEGOLD + 4
+DelAccountList ..\QuestDiary\冲值元宝\pay04.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得4元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay05.txt
+#ACT
+GAMEGOLD + 5
+DelAccountList ..\QuestDiary\冲值元宝\pay05.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得5元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay06.txt
+#ACT
+GAMEGOLD + 6
+DelAccountList ..\QuestDiary\冲值元宝\pay06.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得6元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay07.txt
+#ACT
+GAMEGOLD + 7
+DelAccountList ..\QuestDiary\冲值元宝\pay07.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得7元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay08.txt
+#ACT
+GAMEGOLD + 8
+DelAccountList ..\QuestDiary\冲值元宝\pay08.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得8元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay09.txt
+#ACT
+GAMEGOLD + 9
+DelAccountList ..\QuestDiary\冲值元宝\pay09.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得9元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay1.txt
+#ACT
+GAMEGOLD + 10
+DelAccountList ..\QuestDiary\冲值元宝\pay1.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得10元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay2.txt
+#ACT
+GAMEGOLD + 20
+DelAccountList ..\QuestDiary\冲值元宝\pay2.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得20元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay3.txt
+#ACT
+GAMEGOLD + 30
+DelAccountList ..\QuestDiary\冲值元宝\pay3.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得30元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay4.txt
+#ACT
+GAMEGOLD + 40
+DelAccountList ..\QuestDiary\冲值元宝\pay4.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得40元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay5.txt
+#ACT
+GAMEGOLD + 50
+DelAccountList ..\QuestDiary\冲值元宝\pay5.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得50元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay6.txt
+#ACT
+GAMEGOLD + 60
+DelAccountList ..\QuestDiary\冲值元宝\pay6.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得60元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay7.txt
+#ACT
+GAMEGOLD + 70
+DelAccountList ..\QuestDiary\冲值元宝\pay7.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得70元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay8.txt
+#ACT
+GAMEGOLD + 80
+DelAccountList ..\QuestDiary\冲值元宝\pay8.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得80元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay9.txt
+#ACT
+GAMEGOLD + 90
+DelAccountList ..\QuestDiary\冲值元宝\pay9.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得90元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay10.txt
+#ACT
+GAMEGOLD + 100
+DelAccountList ..\QuestDiary\冲值元宝\pay10.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得100元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay20.txt
+#ACT
+GAMEGOLD + 200
+DelAccountList ..\QuestDiary\冲值元宝\pay20.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得200元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay30.txt
+#ACT
+GAMEGOLD + 300
+DelAccountList ..\QuestDiary\冲值元宝\pay30.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得300元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay40.txt
+#ACT
+GAMEGOLD + 400
+DelAccountList ..\QuestDiary\冲值元宝\pay40.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得400元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay50.txt
+#ACT
+GAMEGOLD + 500
+DelAccountList ..\QuestDiary\冲值元宝\pay50.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得500元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay60.txt
+#ACT
+GAMEGOLD + 600
+DelAccountList ..\QuestDiary\冲值元宝\pay60.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得600元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay70.txt
+#ACT
+GAMEGOLD + 700
+DelAccountList ..\QuestDiary\冲值元宝\pay70.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得700元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay80.txt
+#ACT
+GAMEGOLD + 800
+DelAccountList ..\QuestDiary\冲值元宝\pay80.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得800元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay90.txt
+#ACT
+GAMEGOLD + 900
+DelAccountList ..\QuestDiary\冲值元宝\pay90.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得900元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay100.txt
+#ACT
+GAMEGOLD + 1000
+DelAccountList ..\QuestDiary\冲值元宝\pay100.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得1000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay200.txt
+#ACT
+GAMEGOLD + 2000
+DelAccountList ..\QuestDiary\冲值元宝\pay200.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得2000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay300.txt
+#ACT
+GAMEGOLD + 3000
+DelAccountList ..\QuestDiary\冲值元宝\pay300.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得3000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay400.txt
+#ACT
+GAMEGOLD + 4000
+DelAccountList ..\QuestDiary\冲值元宝\pay400.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得4000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay500.txt
+#ACT
+GAMEGOLD + 5000
+DelAccountList ..\QuestDiary\冲值元宝\pay500.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得5000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay600.txt
+#ACT
+GAMEGOLD + 6000
+DelAccountList ..\QuestDiary\冲值元宝\pay600.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得6000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay700.txt
+#ACT
+GAMEGOLD + 7000
+DelAccountList ..\QuestDiary\冲值元宝\pay700.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得7000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay800.txt
+#ACT
+GAMEGOLD + 8000
+DelAccountList ..\QuestDiary\冲值元宝\pay800.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得8000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay900.txt
+#ACT
+GAMEGOLD + 9000
+DelAccountList ..\QuestDiary\冲值元宝\pay900.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得9000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay1000.txt
+#ACT
+GAMEGOLD + 10000
+DelAccountList ..\QuestDiary\冲值元宝\pay1000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得10000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay2000.txt
+#ACT
+GAMEGOLD + 20000
+DelAccountList ..\QuestDiary\冲值元宝\pay2000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得20000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay3000.txt
+#ACT
+GAMEGOLD + 30000
+DelAccountList ..\QuestDiary\冲值元宝\pay3000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得30000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay4000.txt
+#ACT
+GAMEGOLD + 40000
+DelAccountList ..\QuestDiary\冲值元宝\pay4000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得40000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay5000.txt
+#ACT
+GAMEGOLD + 50000
+DelAccountList ..\QuestDiary\冲值元宝\pay5000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得50000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay6000.txt
+#ACT
+GAMEGOLD + 60000
+DelAccountList ..\QuestDiary\冲值元宝\pay6000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得60000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay7000.txt
+#ACT
+GAMEGOLD + 70000
+DelAccountList ..\QuestDiary\冲值元宝\pay7000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得70000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay8000.txt
+#ACT
+GAMEGOLD + 80000
+DelAccountList ..\QuestDiary\冲值元宝\pay8000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得80000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay9000.txt
+#ACT
+GAMEGOLD + 90000
+DelAccountList ..\QuestDiary\冲值元宝\pay9000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得90000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#IF
+CheckAccountList ..\QuestDiary\冲值元宝\pay10000.txt
+#ACT
+GAMEGOLD + 100000
+DelAccountList ..\QuestDiary\冲值元宝\pay10000.txt
+SENDMSG 1 ★玩家[<$USERNAME>]使用官网在线充值，获得100000元宝.本游戏元宝仅限购买辅助物品(如：喇叭、烟花)及玩家之间交易！
+goto @领取元宝
+#ELSESAY
+您当前拥有:<$GAMEGOLD>元宝\
+充值元宝请登录：www.aresm2.com\
+注意：充值请填写正确的游戏帐号\
+<关闭/@exit>
+}

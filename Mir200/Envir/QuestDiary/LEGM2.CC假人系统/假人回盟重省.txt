@@ -1,0 +1,52 @@
+[@ªÿ¿¥¡À]
+{
+#If
+random 9
+#Act
+MAPMOVE 3 327 333
+BREAK
+#If
+random 8
+#Act
+MAPMOVE 3 328 328
+BREAK
+#If
+random 7
+#Act
+MAPMOVE 3 330 328
+BREAK
+#If
+random 6
+#Act
+MAPMOVE 3 332 330
+BREAK
+#If
+random 5
+#Act
+MAPMOVE 3 334 332
+BREAK
+#If
+random 4
+#Act
+MAPMOVE 3 332 332
+BREAK
+#If
+random 3
+#Act
+MAPMOVE 3 330 332
+BREAK
+#If
+random 2
+#Act
+MAPMOVE 3 328 332
+BREAK
+#If
+random 1
+#Act
+MAPMOVE 3 328 330
+BREAK
+#If
+#Act
+MAPMOVE 3 330 330
+BREAK
+}

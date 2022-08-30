@@ -1,0 +1,42 @@
+(@buy @sell)
+%100
++3
+[@main]
+　\
+彩票风靡世界，想一夜爆富吗？那就来买几张吧！\
+一等奖奖金高达[<COLOR=clYellow 100万金币>]\ \
+<买/@buy> 彩票\
+<对话/@hua>\
+<退出/@exit>
+
+[@hua]
+　\
+我的脚下有一条不知通往何处的秘密通道，你想去那里吗？\
+虽然我们是朋友，但我也不能白帮忙啊，所以...\ \
+<向通道移动/@bai>\
+<向毒蛇山谷移动/@du>\
+<返回/@main>
+
+[@bai]
+#IF
+checkgold 1000
+#ACT
+take 金币 1000
+mapmove D701 105 158
+#ELSEACT
+messagebox 向通道移动需要1000金币
+break
+
+[@du]
+#IF
+checkgold 1000
+#ACT
+take 金币 1000
+mapmove 2 295 62
+#ELSEACT
+messagebox 向毒蛇山谷移动需要1000金币
+break
+
+[goods]
+彩票	500	3
+商品	50	3

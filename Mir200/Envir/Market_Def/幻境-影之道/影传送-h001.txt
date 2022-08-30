@@ -1,0 +1,32 @@
+[@main]
+沙巴克藏宝阁藏宝无数，必须穿越危险的影之道才可进入\
+这个地方不是随便就可以进入的\
+想去探险吗？\ \
+沙巴克成员每人每天可免费进入一次\ \
+<沙巴克成员进入影之道/@goying>      <付费50元宝进入/@goying2>\ \
+<关闭/@exit>
+
+[@goying]
+#IF
+CHECKNAMELIST ..\QuestDiary\藏宝阁名单.txt
+#ACT
+MESSAGEBOX 你今天已经进入过一次
+break
+#if
+IsCastleGuild 0
+#act
+addnamelist ..\QuestDiary\藏宝阁名单.txt
+mapmove h201 18 98
+#elseact
+MESSAGEBOX 你非沙巴克成员
+break
+
+[@goying2]
+#IF
+CHECKGAMEGOLD > 49
+#ACT
+GAMEGOLD - 50
+mapmove h201 18 98
+#ELSEACT
+MESSAGEBOX 付费50元宝才能进入
+break

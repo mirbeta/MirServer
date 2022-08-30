@@ -1,0 +1,40 @@
+[@main]
+三英雄时代被打败的赤月恶魔卷土重来，阴森黑暗的巢穴中\
+时时刻刻发出令人毛骨悚然的吼叫之声！\
+我可以将你送回你来的地方\ \
+<进入[庄园]/@zhuangyuan>                      <挑战[幻境]/@huanjing>\
+<回到[比奇]/@goBQ>\ \
+<离 开/@exit>
+
+[@zhuangyuan]
+#if
+checklevel 11
+#ACT
+set [168] 1
+mapmove GA0 69 71
+#elseACT
+messagebox 等级达到11级才可以进入庄园
+break
+
+[@goBQ]
+#IF
+#ACT
+mapmove 0 331 269
+break
+
+[@huanjing]
+　\
+<幻境地图设置>：无双倍[经验+爆率]、BOSS随机刷新\ \
+<幻境进入条件>：10万金币\ \
+<10万金币进入[幻境]/@gohj2>\ \
+<返 回/@main>
+
+[@gohj2]
+#if
+checkgold 100000
+#ACT
+take 金币 100000
+mapmove h001 74 69
+#elseact
+messagebox 幻境进入条件：10万金币
+break

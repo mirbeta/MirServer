@@ -1,0 +1,11 @@
+[@main]
+#if
+checkitem 八卦宝石(坎) 1
+#act
+take 八卦宝石(坎) 1
+sendmsg 7 提示：成功进入!!!
+break
+#elseact
+sendmsg 5 提示：你闯入了任务地图,连接中断!!!
+kick
+break

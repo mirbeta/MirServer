@@ -1,0 +1,44 @@
+[@假人随机回收]
+{
+#IF
+random 5
+#ACT
+ReadRandomLine ..\QuestDiary\LEGM2.CC假人系统\回收装备数量.txt S20
+MOV M21 <$STR(S20)>
+MOV M22 <$STR(S20)>
+MUL M21 3000
+MUL M22 5
+SENDMSG 0 〖提示〗[%s]成功回收(<$STR(S20)>)件魔龙装备,获得经验+(<$STR(M21)>),元宝+(<$STR(M22)>)!
+MOV S20 0
+MOV M21 0
+MOV M22 0
+BREAK
+
+#IF
+random 3
+#ACT
+ReadRandomLine ..\QuestDiary\LEGM2.CC假人系统\回收装备数量.txt S20
+MOV M21 <$STR(S20)>
+MOV M22 <$STR(S20)>
+MUL M21 3000
+MUL M22 5
+SENDMSG 0 〖提示〗[%s]成功回收(<$STR(S20)>)件赤月装备,获得经验+(<$STR(M21)>),元宝+(<$STR(M22)>)!
+MOV S20 0
+MOV M21 0
+MOV M22 0
+BREAK
+
+#IF
+random 2
+#ACT
+ReadRandomLine ..\QuestDiary\LEGM2.CC假人系统\回收装备数量.txt S20
+MOV M21 <$STR(S20)>
+MOV M22 <$STR(S20)>
+MUL M21 3000
+MUL M22 5
+SENDMSG 0 〖提示〗[%s]成功回收(<$STR(S20)>)件祖玛装备,获得经验+(<$STR(M21)>),元宝+(<$STR(M22)>)!
+MOV S20 0
+MOV M21 0
+MOV M22 0
+BREAK
+}

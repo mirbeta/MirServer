@@ -1,0 +1,69 @@
+(@buy @sell @repair @s_repair)
+%100
++24
++26
+[@main]
+#if
+checkitem 玉水晶 1
+#say
+欢迎. 我可以帮你什么吗?\ \
+<购买/@buy>手镯 \
+<出售/@sell>手镯\
+<修理/@repair>手镯\
+<特殊修理/@s_repair>\
+<送玉水晶/@rw01>\ \
+<关闭/@exit>
+#elsesay
+欢迎. 我可以帮你什么吗?\ \
+<购买/@buy>手镯 \
+<出售/@sell>手镯\
+<修理/@repair>手镯\
+<特殊修理/@s_repair>\ \
+<关闭/@exit>
+
+[@rw01]
+#if
+checkitem 玉水晶 1
+#act
+INC M8 1
+DelayCall 500 @1
+break
+#say
+正在打磨玉水晶……
+
+[@1]
+#if
+SMALL M8 20
+#act
+DelayCall 500 @rw01
+break
+#say
+正在打磨玉水晶…
+#ELSEact
+MOV M8 0
+take 玉水晶 1
+give 三眼手镯(晶) 1
+break
+#elsesay
+　\
+把这<三眼手镯(晶)>交送给兽人古墓二层的〈小李〉\ \
+坐标：骷髅洞二层(192,233)
+
+[@buy]
+请选择你要购买的手镯.\ \ \
+<返 回/@Main>
+[@sell]
+您出售哪种手镯?\
+我们也处理手套.\ \
+<返 回/@Main>
+[@repair]
+你可以修理各种手镯,手套. \ \ \
+<返 回/@Main>
+[~@repair]
+看上去修好了.\ \
+<返 回/@Main>
+[goods]
+小手镯 	      10      3
+银手镯	      10      3
+铁手镯        10      3
+钢手镯        10      3

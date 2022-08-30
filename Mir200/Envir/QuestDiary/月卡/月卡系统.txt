@@ -1,0 +1,30 @@
+[@月卡]
+{
+#IF
+CHECKLEVELEX > 34
+CHECKUSERDATE ..\QuestDiary\月卡\月卡记录.txt > 30 p0 p1
+#ACT
+messagebox 你的月卡已过期，请到【杂货铺】购买月卡！
+SENDMSG 5 你的月卡已过期,%t秒后连接中断... 249 0 100 @踢人
+BREAK
+
+#IF
+CHECKLEVELEX > 34
+checknamelist ..\QuestDiary\月卡\月卡名单.txt
+#ACT
+SENDMSG 7 [<$USERNAME>]月卡剩余：<$STR(p1)>天
+SENDMSG 5 [<$USERNAME>]元宝数量：<$GAMEGOLD>个
+BREAK
+
+#IF
+CHECKLEVELEX > 34
+#ACT
+messagebox 等级达到35级，请到【杂货铺】购买月卡！
+SENDMSG 5 请及时进行月卡充值,%t秒后连接中断... 249 0 100 @踢人
+BREAK
+
+[@踢人]
+#act
+GMEXECUTE VV踢人 <$USERNAME>
+break
+}

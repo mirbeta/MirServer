@@ -1,0 +1,420 @@
+(@@sendmsg)
+[@PlayLevelUp]
+#if
+checklevelex = 11
+#act
+Gmexecute 取消禁言 self
+messagebox 恭喜达到11级，禁言解除！
+break
+
+#if
+checklevelex = 35
+#act
+SENDMSG 5 ╭────────────────────────────╮
+SENDMSG 5 │恭喜达到35级，请到【杂货铺】购买月卡，否则将不能正常游戏│
+SENDMSG 5 │恭喜达到35级，请到【杂货铺】购买月卡，否则将不能正常游戏│
+SENDMSG 5 │恭喜达到35级，请到【杂货铺】购买月卡，否则将不能正常游戏│
+SENDMSG 5 ╰────────────────────────────╯
+messagebox 恭喜达到35级，请到【杂货铺】购买月卡，否则将不能正常游戏！
+break
+
+[@OnLogout_OffLinePlaying]
+#If
+checklevel 35
+#act
+GMEXECUTE VV管理模式
+OffLine 7200 1
+break
+#elseact
+GMEXECUTE VV踢人 <$USERNAME>
+break
+
+;------------31号物品
+
+[@StdModeFunc11]
+#IF
+#ACT
+DelNameList ..\QuestDiary\月卡\月卡名单.txt
+DELUSERDATE ..\QuestDiary\月卡\月卡记录.txt
+addnamelist ..\QuestDiary\月卡\月卡名单.txt
+ADDUSERDATE ..\QuestDiary\月卡\月卡记录.txt
+sendmsg 7 月卡充值成功！
+sendmsg 7 充值日期：<$DATETIME>
+BREAK
+
+[@StdModeFunc12]
+#IF
+#ACT
+MAPMOVE 3 330 330
+break
+
+[@StdModeFunc13]
+#IF
+#ACT
+MAPMOVE 0 333 268
+break
+
+[@StdModeFunc14]
+#IF
+#Act
+Gmexecute showeffect 78
+Gmexecute showeffect 79
+Gmexecute showeffect 80
+SENDMSG 0 [%s]在:%m%x:%y处燃放礼炮，大家快去欣赏哦！
+DelayCall 2000 @礼炮1
+
+[@礼炮1]
+#Act
+Gmexecute showeffect 79
+Gmexecute showeffect 80
+Gmexecute showeffect 81
+DelayCall 2000 @礼炮2
+
+[@礼炮2]
+#Act
+Gmexecute showeffect 80
+Gmexecute showeffect 81
+Gmexecute showeffect 82
+DelayCall 2000 @礼炮3
+
+[@礼炮3]
+#Act
+Gmexecute showeffect 81
+Gmexecute showeffect 82
+Gmexecute showeffect 83
+DelayCall 2000 @礼炮4
+
+[@礼炮4]
+#Act
+Gmexecute showeffect 82
+Gmexecute showeffect 83
+Gmexecute showeffect 78
+DelayCall 2000 @礼炮5
+
+[@礼炮5]
+#Act
+Gmexecute showeffect 83
+Gmexecute showeffect 78
+Gmexecute showeffect 79
+DelayCall 2000 @礼炮6
+
+[@礼炮6]
+#Act
+Gmexecute showeffect 78
+Gmexecute showeffect 81
+Gmexecute showeffect 83
+ClearDelayGoto
+break
+
+[@StdModeFunc15]
+#IF
+#ACT
+Gmexecute MOBFIREBURN <$CURRENTMAP> <$CURRENTX> <$CURRENTY> 5 600 0
+SENDMSG 6 提示：爱情火焰放置成功,持续时间600秒
+BREAK
+
+[@StdModeFunc16]
+#IF
+#ACT
+Gmexecute MOBFIREBURN <$CURRENTMAP> <$CURRENTX> <$CURRENTY> 4 600 0
+SENDMSG 6 提示：神圣之光放置成功,持续时间600秒
+BREAK
+
+[@StdModeFunc17]
+#IF
+#ACT
+Gmexecute showeffect 78
+BREAK
+
+[@StdModeFunc18]
+#IF
+#ACT
+Gmexecute showeffect 79
+BREAK
+
+[@StdModeFunc19]
+#IF
+#ACT
+Gmexecute showeffect 80
+BREAK
+
+[@StdModeFunc20]
+#IF
+#ACT
+Gmexecute showeffect 81
+BREAK
+
+[@StdModeFunc21]
+#IF
+#ACT
+Gmexecute showeffect 82
+BREAK
+
+[@StdModeFunc22]
+#IF
+#ACT
+Gmexecute showeffect 83
+BREAK
+
+[@StdModeFunc23]
+#IF
+#ACT
+Gmexecute showeffect 84
+BREAK
+
+[@StdModeFunc24]
+#IF
+#Act
+MOVR M10 5000
+INC M10 1000
+give 金币 <$STR(M10)>
+break
+
+[@StdModeFunc25]
+#IF
+#Act
+Gmexecute showeffect 3
+Kill 0
+break
+
+[@StdModeFunc26]
+#IF
+#Act
+RepairAll
+break
+
+[@StdModeFunc27]
+#IF
+checkitem 疗伤药 6
+#act
+take 疗伤药 6
+give 疗伤药包 1
+break
+#elseact
+sendmsg 6 提示：6个疗伤药捆一包
+break
+
+[@StdModeFunc28]
+#IF
+checkitem 万年雪霜 6
+#act
+take 万年雪霜 6
+give 雪霜包 1
+break
+#elseact
+sendmsg 6 提示：6个万年雪霜捆一包
+break
+
+[@StdModeFunc29]
+#IF
+checkitem 强效太阳水 6
+#act
+take 强效太阳水 6
+give 强效太阳包 1
+break
+#elseact
+sendmsg 6 提示：6个强效太阳水捆一包
+break
+
+[@StdModeFunc30]
+#IF
+IsOnMap 0150
+#act
+map 0150
+break
+#elseact
+sendmsg 6 提示：仅限沙巴克皇宫内使用！
+break
+
+[@StdModeFunc31]
+#act
+GAMEGOLD + 1
+SENDMSG 7 提示:元宝增加1个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc32]
+#act
+GAMEGOLD + 10
+SENDMSG 7 提示:元宝增加10个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc33]
+#act
+GAMEGOLD + 50
+SENDMSG 7 提示:元宝增加50个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc34]
+#act
+GAMEGOLD + 100
+SENDMSG 7 提示:元宝增加100个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc35]
+#act
+GAMEGOLD + 500
+SENDMSG 7 提示:元宝增加500个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc36]
+#act
+GAMEGOLD + 1000
+SENDMSG 7 提示:元宝增加1000个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc37]
+#act
+GAMEGOLD + 5000
+SENDMSG 7 提示:元宝增加5000个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc38]
+#act
+GAMEGOLD + 10000
+SENDMSG 7 提示:元宝增加10000个.您当前的元宝为：<$GAMEGOLD>个
+break
+
+[@StdModeFunc39]
+#if
+checkgold 19000001
+#act
+give 金条 1
+messagebox 你身上携带的金钱太多了.无法再进行兑换!
+#elseact
+give 金币 1000000
+SENDMSG 7 提示：金币已经增加100W在包裹里面.
+break
+
+[@StdModeFunc40]
+#if
+#act
+give 金条 5
+break
+
+;--------------------------------------------------------------
+
+[@UserCmd1]
+#CALL [\冲值元宝\元宝.txt] @领取元宝
+
+[@UserCmd2]
+　\
+您当前的PK值：<$PKPOINT> 点    \ \
+您当前的声望：<$CREDITPOINT> 点\ \
+<[1点声望消除100点PK值]/@洗红>
+
+[@UserCmd3]
+#If
+ISONMAP GA0
+#say
+　\
+改变摆摊外观：<[外观类型一]/@一>  <[外观类型二]/@二>  <[外观类型三]/@三>\ \
+<[开启离线功能]/@OffLinePlay>  1000金币/次\ \
+注：<服务器重启、脱机人物清理都将导致离线摆摊终止>\ \
+　　<如果摆摊涉嫌欺诈，官方有权没收全部元宝并封号>
+#elsesay
+　\ \
+离线摆摊只可以在[庄园]使用
+
+
+
+[@UserCmd4]
+　\ \ \
+　                  <[输入喊话内容]/@@sendMsg>
+
+[@@sendMsg]
+#if
+CHECKGAMEGOLD > 4
+#act
+GAMEGOLD - 5
+SETSENDMSGFLAG
+break
+#elseact
+sendmsg 5 提示：喊话一次需要5元宝
+break
+
+[@UserCmd5]
+#CALL [\代练系统\代练.txt] @系统代练
+
+[@UserCmd6]
+#IF
+CHECKGAMEGOLD > 5
+#ACT
+MOV S1 $PARAM(1)
+GAMEGOLD - 6
+SENDMSG 0 <$USERNAME>:<$STR(S1)> 151 235
+#ELSEACT 
+SENDMSG 5 提示：使用千里传音需要支付6元宝
+break
+
+[@UserCmd7]
+#IF
+ISADMIN
+#ACT
+MOV S1 $PARAM(1)
+SendScrollMsg <$STR(S1)> 251 0
+break
+
+[@UserCmd8]
+#ACT
+WebBrowser http://www.aresm2.com/web.htm
+BREAK
+
+[@UserCmd9]
+#if
+EQUAL M58 3
+#ACT
+sendmsg 5 提示：游戏异常，中断连接!!!
+KICK
+break
+
+#if
+#ACT
+INC M58 1
+sendmsg 5 提示：游戏异常!!!
+BREAK
+
+[@洗红]
+#if
+CHECKCREDITPOINT > 0
+#act
+CREDITPOINT - 1
+CHANGEPKPOINT - 100
+sendmsg 6 提示：成功消除100点PK值！
+close
+#elseact
+sendmsg 5 提示：声望不足1点，无法消除PK值！
+break
+
+[@OffLinePlay]
+#If
+IsDupMode
+#Act
+messagebox 不能与他人重叠
+break
+
+#if
+checkgold 1000
+#act
+take 金币 1000
+GMEXECUTE VV管理模式
+OffLine 7200 1
+break
+#elseact
+messagebox 金币不足
+break
+
+[@一]
+#if
+#act
+Gmexecute StallLooks 0
+break
+[@二]
+#if
+#act
+Gmexecute StallLooks 1
+break
+[@三]
+#if
+#act
+Gmexecute StallLooks 2
+break

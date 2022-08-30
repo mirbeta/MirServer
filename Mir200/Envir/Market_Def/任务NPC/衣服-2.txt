@@ -1,0 +1,61 @@
+(@@InPutString)
+[@main]
+#if
+checkitem 凤凰翎毛 1
+#say
+　\
+我正在为比奇国王赶制一件凤凰战衣，马上就要完工了\
+却发现凤凰翎毛缺了不少，你能帮我找来吗？我高价收购！\ \
+<我有一根 高价卖你/@rw01>\ \
+<比奇杂货老板让我给你带来一根/@rw02>
+#elsesay
+　\
+很高兴见到你，<$USERNAME>
+
+[@rw01]
+#if
+checkitem 凤凰翎毛 1
+#act
+take 凤凰翎毛 1
+give 金币 500
+messagebox 拿好你的报酬！
+close
+#elseact
+close
+messagebox 没时间跟你开玩笑！
+break
+
+[@rw02]
+#if
+checkitem 凤凰翎毛 1
+#act
+take 凤凰翎毛 1
+break
+#say
+　\
+杂货老板只让你带来一根羽毛吗？\ \
+<是的/@exit2>\ \
+<还让我带来了口信/@@InPutString8>
+
+[@@InPutString8]
+#If
+#Act
+DelayGoto 1 ~InPutString8
+
+[~InPutString8]
+#if
+equal S8 八月初八凤凰回家
+#act
+give 蛇毒 1
+break
+#say
+　\
+沃玛森林里有个隐居的〈老人〉，你赶紧把这瓶<蛇毒>送到他那里！\
+记住一定要赶在八月初八之前送到！
+#elsesay
+　\
+你是不是记错了？
+
+[@exit2]
+　\
+谢谢你，也帮我谢谢杂货老板！

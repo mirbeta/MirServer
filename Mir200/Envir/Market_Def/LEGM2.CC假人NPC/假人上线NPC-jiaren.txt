@@ -1,0 +1,791 @@
+[@main]
+#IF
+ISADMIN
+#ACT
+#CALL [\\LEGM2.CC假人系统\假人登录脚本.txt] @假人设置页面
+BREAK
+
+#IF
+checknamelist ..\QuestDiary\LEGM2.CC假人系统\假人名单列表.txt
+#ACT
+ChangeLevel = 40
+H.ChangeLevel = 40
+AbilityAdd 4 30 60
+AbilityAdd 5 30 60
+AbilityAdd 6 30 60
+H.AbilityAdd 4 30 60
+H.AbilityAdd 5 30 60
+H.AbilityAdd 6 30 60
+GMEXECUTE 清理垃圾 <$USERNAME>
+GOTO @继续
+#ELSEACT
+MESSAGEBOX 你来错地方了，这里不是你能来的。
+
+[@继续]
+主号领取装备：<商店套/@商店套>  <沃玛套/@沃玛套>  <祖玛套/@祖玛套>  <赤月套/@赤月套>\ \
+
+英雄领取装备：<商店套/@英雄商店套>  <沃玛套/@英雄沃玛套>  <祖玛套/@英雄祖玛套>  <赤月套/@英雄赤月套>\ \
+
+领取英雄技能：<英雄技能/@英雄技能>\ \
+
+领取英雄合击：<领取合击技能/@合击技能>\ \
+
+[@合击技能]
+战士 +战士合击：<[破 魂 斩]/@hj1>       道士+道士合击:<[噬魂沼泽]/@hj2>\
+法师 +法师合击：<[火龙气焰]/@hj3>       战士+法师合击:<[雷霆一击]/@hj4>\
+道士 +法师合击：<[末日审判]/@hj5>       战士+道士合击:<[劈星斩]/@hj6>\   
+合击的必备物品：<[火龙之心]/@LQHL>      \
+
+[@hj1]
+#if
+#ACT
+SENDMSG 6 恭喜您领取战士+战士英雄合击[破魂斩]成功！！
+H.ADDSKILL 破魂斩
+H.GIVE 火龙之心
+H.TakeOn 火龙之心 9
+close
+
+[@hj2]
+#if
+#ACT
+SENDMSG 6 恭喜您领取道士+道士英雄合击[噬魂沼泽]成功！！
+H.ADDSKILL 噬魂沼泽
+H.GIVE 火龙之心
+H.TakeOn 火龙之心 9
+close
+
+[@hj3]
+#if
+#ACT
+SENDMSG 6 恭喜您领取法师+法师英雄合击[火龙气焰]成功！！
+H.ADDSKILL 火龙气焰
+H.GIVE 火龙之心
+H.TakeOn 火龙之心 9
+close
+
+[@hj4]
+#if
+#ACT
+SENDMSG 6 恭喜您领取战士+法师英雄合击[雷霆一击]成功！！
+H.ADDSKILL 雷霆一击
+H.GIVE 火龙之心
+H.TakeOn 火龙之心 9
+close
+
+[@hj5]
+#if
+#ACT
+SENDMSG 6 恭喜您领取道士+法师英雄合击[末日审判]成功！！
+H.ADDSKILL 末日审判
+H.GIVE 火龙之心
+H.TakeOn 火龙之心 9
+close
+
+[@hj6]
+#if
+#ACT
+SENDMSG 6 恭喜您领取战士+道士英雄合击[劈星斩]成功！！
+H.ADDSKILL 劈星斩
+H.GIVE 火龙之心
+H.TakeOn 火龙之心 9
+close
+
+[@赤月套]
+#IF
+checkjob warrior
+#ACT
+GIVE 裁决之杖 1
+GIVE 圣战头盔 1
+GIVE 圣战戒指 2
+GIVE 圣战手镯 2
+GIVE 圣战项链 1
+GIVE 天魔神甲 1
+GIVE 圣战宝甲 1
+TakeOn 裁决之杖 1
+TakeOn 圣战头盔 4
+TakeOn 圣战戒指 7
+TakeOn 圣战戒指 8
+TakeOn 圣战手镯 5
+TakeOn 圣战手镯 6
+TakeOn 圣战项链 3
+TakeOn 天魔神甲 0
+TakeOn 圣战宝甲 0
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+break
+
+#IF
+checkjob wizard
+#ACT
+GIVE 骨玉权杖 1
+GIVE 法神头盔 1
+GIVE 法神戒指 2
+GIVE 法神手镯 2
+GIVE 法神项链 1
+GIVE 法神披风 1
+GIVE 霓裳羽衣 1
+TakeOn 骨玉权杖 1
+TakeOn 法神头盔 4
+TakeOn 法神戒指 7
+TakeOn 法神戒指 8
+TakeOn 法神手镯 5
+TakeOn 法神手镯 6
+TakeOn 法神项链 3
+TakeOn 法神披风 0
+TakeOn 霓裳羽衣 0
+ADDSKILL 火球术 3 
+ADDSKILL 抗拒火环 3 
+ADDSKILL 诱惑之光 3 
+ADDSKILL 瞬息移动 3
+ADDSKILL 地狱火 3 
+ADDSKILL 雷电术 3
+ADDSKILL 大火球 3 
+ADDSKILL 爆裂火焰 3
+ADDSKILL 火墙 3 
+ADDSKILL 疾光电影 3 
+ADDSKILL 地狱雷光 3 
+ADDSKILL 魔法盾 3 
+ADDSKILL 圣言术 3 
+ADDSKILL 冰咆哮 3
+break
+
+#IF
+checkjob taoist
+#ACT
+GIVE 龙纹剑 1
+GIVE 天尊头盔 1
+GIVE 天尊戒指 2
+GIVE 天尊手镯 2
+GIVE 天尊项链 1
+GIVE 天尊道袍 1
+GIVE 天师长袍 1
+TakeOn 龙纹剑 1
+TakeOn 天尊头盔 4
+TakeOn 天尊戒指 7
+TakeOn 天尊戒指 8
+TakeOn 天尊手镯 5
+TakeOn 天尊手镯 6
+TakeOn 天尊项链 3
+TakeOn 天尊道袍 0
+TakeOn 天师长袍 0
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3 
+ADDSKILL 灵魂火符 3 
+ADDSKILL 召唤骷髅 3 
+ADDSKILL 隐身术 3 
+ADDSKILL 集体隐身术 3 
+ADDSKILL 幽灵盾 3
+ADDSKILL 困魔咒 3
+ADDSKILL 心灵启示 3
+ADDSKILL 神圣战甲术 3 
+ADDSKILL 群体治疗术 3
+ADDSKILL 召唤神兽 3
+break
+
+[@祖玛套]
+#IF
+checkjob warrior
+#ACT
+GIVE 裁决之杖 1
+GIVE 黑铁头盔 1
+GIVE 力量戒指 2
+GIVE 骑士手镯 2
+GIVE 绿色项链 1
+GIVE 战神盔甲(男) 1
+GIVE 战神盔甲(女) 1
+TakeOn 裁决之杖 1
+TakeOn 黑铁头盔 4
+TakeOn 力量戒指 7
+TakeOn 力量戒指 8
+TakeOn 骑士手镯 5
+TakeOn 骑士手镯 6
+TakeOn 绿色项链 3
+TakeOn 战神盔甲(男) 0
+TakeOn 战神盔甲(女) 0
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+break
+
+#IF
+checkjob wizard
+#ACT
+GIVE 骨玉权杖 1
+GIVE 道士头盔 1
+GIVE 紫碧螺 2
+GIVE 龙之手镯 2
+GIVE 恶魔铃铛 1
+GIVE 恶魔长袍(男) 1
+GIVE 恶魔长袍(女) 1
+TakeOn 骨玉权杖 1
+TakeOn 道士头盔 4
+TakeOn 紫碧螺 7
+TakeOn 紫碧螺 8
+TakeOn 龙之手镯 5
+TakeOn 龙之手镯 6
+TakeOn 恶魔铃铛 3
+TakeOn 恶魔长袍(男) 0
+TakeOn 恶魔长袍(女) 0
+ADDSKILL 火球术 3 
+ADDSKILL 抗拒火环 3 
+ADDSKILL 诱惑之光 3 
+ADDSKILL 瞬息移动 3
+ADDSKILL 地狱火 3 
+ADDSKILL 雷电术 3
+ADDSKILL 大火球 3 
+ADDSKILL 爆裂火焰 3
+ADDSKILL 火墙 3 
+ADDSKILL 疾光电影 3 
+ADDSKILL 地狱雷光 3 
+ADDSKILL 魔法盾 3 
+ADDSKILL 圣言术 3 
+ADDSKILL 冰咆哮 3
+break
+
+#IF
+checkjob taoist
+#ACT
+GIVE 龙纹剑 1
+GIVE 道士头盔 1
+GIVE 泰坦戒指 2
+GIVE 三眼手镯 2
+GIVE 灵魂项链 1
+GIVE 灵魂战衣(男) 1
+GIVE 灵魂战衣(女) 1
+TakeOn 龙纹剑 1
+TakeOn 道士头盔 4
+TakeOn 泰坦戒指 7
+TakeOn 泰坦戒指 8
+TakeOn 三眼手镯 5
+TakeOn 三眼手镯 6
+TakeOn 灵魂项链 3
+TakeOn 灵魂战衣(男) 0
+TakeOn 灵魂战衣(女) 0
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3 
+ADDSKILL 灵魂火符 3 
+ADDSKILL 召唤骷髅 3 
+ADDSKILL 隐身术 3 
+ADDSKILL 集体隐身术 3 
+ADDSKILL 幽灵盾 3
+ADDSKILL 困魔咒 3
+ADDSKILL 心灵启示 3
+ADDSKILL 神圣战甲术 3 
+ADDSKILL 群体治疗术 3
+ADDSKILL 召唤神兽 3
+break
+
+
+
+[@沃玛套]
+#IF
+checkjob warrior
+#ACT
+GIVE 井中月 1
+GIVE 道士头盔 1
+GIVE 龙之戒指 2
+GIVE 幽灵手套 2
+GIVE 幽灵项链 1
+GIVE 重盔甲(男) 1
+GIVE 重盔甲(女) 1
+TakeOn 井中月 1
+TakeOn 道士头盔 4
+TakeOn 龙之戒指 7
+TakeOn 龙之戒指 8
+TakeOn 幽灵手套 5
+TakeOn 幽灵手套 6
+TakeOn 幽灵项链 3
+TakeOn 重盔甲(男) 0
+TakeOn 重盔甲(女) 0
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+break
+
+#IF
+checkjob wizard
+#ACT
+GIVE 魔杖 1
+GIVE 道士头盔 1
+GIVE 红宝石戒指 2
+GIVE 思贝儿手镯 2
+GIVE 生命项链 1
+GIVE 魔法长袍(男) 1
+GIVE 魔法长袍(女) 1
+TakeOn 魔杖 1
+TakeOn 道士头盔 4
+TakeOn 红宝石戒指 7
+TakeOn 红宝石戒指 8
+TakeOn 思贝儿手镯 5
+TakeOn 思贝儿手镯 6
+TakeOn 生命项链 3
+TakeOn 魔法长袍(男) 0
+TakeOn 魔法长袍(女) 0
+ADDSKILL 火球术 3 
+ADDSKILL 抗拒火环 3 
+ADDSKILL 诱惑之光 3 
+ADDSKILL 瞬息移动 3
+ADDSKILL 地狱火 3 
+ADDSKILL 雷电术 3
+ADDSKILL 大火球 3 
+ADDSKILL 爆裂火焰 3
+ADDSKILL 火墙 3 
+ADDSKILL 疾光电影 3 
+ADDSKILL 地狱雷光 3 
+ADDSKILL 魔法盾 3 
+ADDSKILL 圣言术 3 
+ADDSKILL 冰咆哮 3
+break
+
+#IF
+checkjob taoist
+#ACT
+GIVE 银蛇 1
+GIVE 道士头盔 1
+GIVE 铂金戒指 2
+GIVE 心灵手镯 2
+GIVE 天竺项链 1
+GIVE 灵魂战衣(男) 1
+GIVE 灵魂战衣(女) 1
+TakeOn 银蛇 1
+TakeOn 道士头盔 4
+TakeOn 铂金戒指 7
+TakeOn 铂金戒指 8
+TakeOn 心灵手镯 5
+TakeOn 心灵手镯 6
+TakeOn 天竺项链 3
+TakeOn 灵魂战衣(男) 0
+TakeOn 灵魂战衣(女) 0
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3 
+ADDSKILL 灵魂火符 3 
+ADDSKILL 召唤骷髅 3 
+ADDSKILL 隐身术 3 
+ADDSKILL 集体隐身术 3 
+ADDSKILL 幽灵盾 3
+ADDSKILL 困魔咒 3
+ADDSKILL 心灵启示 3
+ADDSKILL 神圣战甲术 3 
+ADDSKILL 群体治疗术 3
+ADDSKILL 召唤神兽 3
+break
+
+
+[@商店套]
+#IF
+checkjob warrior
+#ACT
+GIVE 炼狱 1
+GIVE 道士头盔 1
+GIVE 珊瑚戒指 2
+GIVE 死神手套 2
+GIVE 蓝翡翠项链 1
+GIVE 重盔甲(男) 1
+GIVE 重盔甲(女) 1
+TakeOn 炼狱 1
+TakeOn 道士头盔 4
+TakeOn 珊瑚戒指 7
+TakeOn 珊瑚戒指 8
+TakeOn 死神手套 5
+TakeOn 死神手套 6
+TakeOn 蓝翡翠项链 3
+TakeOn 重盔甲(男) 0
+TakeOn 重盔甲(女) 0
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+break
+
+#IF
+checkjob wizard
+#ACT
+GIVE 魔杖 1
+GIVE 道士头盔 1
+GIVE 魅力戒指 2
+GIVE 黑檀手镯 2
+GIVE 放大镜 1
+GIVE 魔法长袍(男) 1
+GIVE 魔法长袍(女) 1
+TakeOn 魔杖 1
+TakeOn 道士头盔 4
+TakeOn 魅力戒指 7
+TakeOn 魅力戒指 8
+TakeOn 黑檀手镯 5
+TakeOn 黑檀手镯 6
+TakeOn 放大镜 3
+TakeOn 魔法长袍(男) 0
+TakeOn 魔法长袍(女) 0
+ADDSKILL 火球术 3 
+ADDSKILL 抗拒火环 3 
+ADDSKILL 诱惑之光 3 
+ADDSKILL 瞬息移动 3
+ADDSKILL 地狱火 3 
+ADDSKILL 雷电术 3
+ADDSKILL 大火球 3 
+ADDSKILL 爆裂火焰 3
+ADDSKILL 火墙 3 
+ADDSKILL 疾光电影 3 
+ADDSKILL 地狱雷光 3 
+ADDSKILL 魔法盾 3 
+ADDSKILL 圣言术 3 
+ADDSKILL 冰咆哮 3
+break
+
+#IF
+checkjob taoist
+#ACT
+GIVE 银蛇 1
+GIVE 道士头盔 1
+GIVE 降妖除魔戒指 2
+GIVE 道士手镯 2
+GIVE 竹笛 1
+GIVE 灵魂战衣(男) 1
+GIVE 灵魂战衣(女) 1
+TakeOn 银蛇 1
+TakeOn 道士头盔 4
+TakeOn 降妖除魔戒指 7
+TakeOn 降妖除魔戒指 8
+TakeOn 道士手镯 5
+TakeOn 道士手镯 6
+TakeOn 竹笛 3
+TakeOn 灵魂战衣(男) 0
+TakeOn 灵魂战衣(女) 0
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3 
+ADDSKILL 灵魂火符 3 
+ADDSKILL 召唤骷髅 3 
+ADDSKILL 隐身术 3 
+ADDSKILL 集体隐身术 3 
+ADDSKILL 幽灵盾 3
+ADDSKILL 困魔咒 3
+ADDSKILL 心灵启示 3
+ADDSKILL 神圣战甲术 3 
+ADDSKILL 群体治疗术 3
+ADDSKILL 召唤神兽 3
+break
+
+
+[@英雄技能]
+;-----------------------战士-------------------------
+#IF
+H.checkjob warrior
+#ACT
+H.ADDSKILL 英雄基本剑术 3
+H.ADDSKILL 英雄攻杀剑术 3
+H.ADDSKILL 英雄刺杀剑术 3
+H.ADDSKILL 英雄半月弯刀 3
+H.ADDSKILL 英雄野蛮冲撞 3
+H.ADDSKILL 英雄烈火剑法 3
+;-----------------------方士-------------------------
+#IF
+H.checkjob taoist
+#ACT
+H.ADDSKILL 英雄治愈术 3
+H.ADDSKILL 英雄精神战法 3
+H.ADDSKILL 英雄施毒术 3
+H.ADDSKILL 英雄灵魂火符 3
+H.ADDSKILL 英雄召唤骷髅 3
+H.ADDSKILL 英雄隐身术 3
+H.ADDSKILL 英雄集体隐身 3
+H.ADDSKILL 英雄幽灵盾 3
+H.ADDSKILL 英雄神圣战甲 3
+H.ADDSKILL 英雄心灵启示 3
+H.ADDSKILL 英雄困魔咒 3
+H.ADDSKILL 英雄群疗术 3
+H.ADDSKILL 英雄召唤神兽 3
+
+;-----------------------法师-------------------------
+#IF
+H.checkjob wizard
+#ACT
+H.ADDSKILL 英雄火球术 3
+H.ADDSKILL 英雄抗拒火环 3
+H.ADDSKILL 英雄诱惑之光 3
+H.ADDSKILL 英雄地狱火 3
+H.ADDSKILL 英雄雷电术 3
+H.ADDSKILL 英雄瞬息移动 3
+H.ADDSKILL 英雄大火球 3
+H.ADDSKILL 英雄爆裂火焰 3
+H.ADDSKILL 英雄火墙 3
+H.ADDSKILL 英雄疾光电影 3
+H.ADDSKILL 英雄地狱雷光 3
+H.ADDSKILL 英雄魔法盾 3
+H.ADDSKILL 英雄圣言术 3
+H.ADDSKILL 英雄冰咆哮 3
+H.ADDSKILL 英雄灭天火 1
+
+[@英雄赤月套]
+#IF
+H.checkjob warrior
+#ACT
+H.GIVE 裁决之杖 1
+H.GIVE 圣战头盔 1
+H.GIVE 圣战戒指 2
+H.GIVE 圣战手镯 2
+H.GIVE 圣战项链 1
+H.GIVE 天魔神甲 1
+H.GIVE 圣战宝甲 1
+H.TakeOn 裁决之杖 1
+H.TakeOn 圣战头盔 4
+H.TakeOn 圣战戒指 7
+H.TakeOn 圣战戒指 8
+H.TakeOn 圣战手镯 5
+H.TakeOn 圣战手镯 6
+H.TakeOn 圣战项链 3
+H.TakeOn 天魔神甲 0
+H.TakeOn 圣战宝甲 0
+break
+
+#IF
+H.checkjob wizard
+#ACT
+H.GIVE 骨玉权杖 1
+H.GIVE 法神头盔 1
+H.GIVE 法神戒指 2
+H.GIVE 法神手镯 2
+H.GIVE 法神项链 1
+H.GIVE 法神披风 1
+H.GIVE 霓裳羽衣 1
+H.TakeOn 骨玉权杖 1
+H.TakeOn 法神头盔 4
+H.TakeOn 法神戒指 7
+H.TakeOn 法神戒指 8
+H.TakeOn 法神手镯 5
+H.TakeOn 法神手镯 6
+H.TakeOn 法神项链 3
+H.TakeOn 法神披风 0
+H.TakeOn 霓裳羽衣 0
+break
+
+#IF
+H.checkjob taoist
+#ACT
+H.GIVE 龙纹剑 1
+H.GIVE 天尊头盔 1
+H.GIVE 天尊戒指 2
+H.GIVE 天尊手镯 2
+H.GIVE 天尊项链 1
+H.GIVE 天尊道袍 1
+H.GIVE 天师长袍 1
+H.TakeOn 龙纹剑 1
+H.TakeOn 天尊头盔 4
+H.TakeOn 天尊戒指 7
+H.TakeOn 天尊戒指 8
+H.TakeOn 天尊手镯 5
+H.TakeOn 天尊手镯 6
+H.TakeOn 天尊项链 3
+H.TakeOn 天尊道袍 0
+H.TakeOn 天师长袍 0
+break
+
+[@英雄祖玛套]
+#IF
+H.checkjob warrior
+#ACT
+H.GIVE 裁决之杖 1
+H.GIVE 黑铁头盔 1
+H.GIVE 力量戒指 2
+H.GIVE 骑士手镯 2
+H.GIVE 绿色项链 1
+H.GIVE 战神盔甲(男) 1
+H.GIVE 战神盔甲(女) 1
+H.TakeOn 裁决之杖 1
+H.TakeOn 黑铁头盔 4
+H.TakeOn 力量戒指 7
+H.TakeOn 力量戒指 8
+H.TakeOn 骑士手镯 5
+H.TakeOn 骑士手镯 6
+H.TakeOn 绿色项链 3
+H.TakeOn 战神盔甲(男) 0
+H.TakeOn 战神盔甲(女) 0
+break
+
+#IF
+H.checkjob wizard
+#ACT
+H.GIVE 骨玉权杖 1
+H.GIVE 道士头盔 1
+H.GIVE 紫碧螺 2
+H.GIVE 龙之手镯 2
+H.GIVE 恶魔铃铛 1
+H.GIVE 恶魔长袍(男) 1
+H.GIVE 恶魔长袍(女) 1
+H.TakeOn 骨玉权杖 1
+H.TakeOn 道士头盔 4
+H.TakeOn 紫碧螺 7
+H.TakeOn 紫碧螺 8
+H.TakeOn 龙之手镯 5
+H.TakeOn 龙之手镯 6
+H.TakeOn 恶魔铃铛 3
+H.TakeOn 恶魔长袍(男) 0
+H.TakeOn 恶魔长袍(女) 0
+break
+
+#IF
+H.checkjob taoist
+#ACT
+H.GIVE 龙纹剑 1
+H.GIVE 道士头盔 1
+H.GIVE 泰坦戒指 2
+H.GIVE 三眼手镯 2
+H.GIVE 灵魂项链 1
+H.GIVE 灵魂战衣(男) 1
+H.GIVE 灵魂战衣(女) 1
+H.TakeOn 龙纹剑 1
+H.TakeOn 道士头盔 4
+H.TakeOn 泰坦戒指 7
+H.TakeOn 泰坦戒指 8
+H.TakeOn 三眼手镯 5
+H.TakeOn 三眼手镯 6
+H.TakeOn 灵魂项链 3
+H.TakeOn 灵魂战衣(男) 0
+H.TakeOn 灵魂战衣(女) 0
+break
+
+
+
+[@英雄沃玛套]
+#IF
+H.checkjob warrior
+#ACT
+H.GIVE 井中月 1
+H.GIVE 道士头盔 1
+H.GIVE 龙之戒指 2
+H.GIVE 幽灵手套 2
+H.GIVE 幽灵项链 1
+H.GIVE 重盔甲(男) 1
+H.GIVE 重盔甲(女) 1
+H.TakeOn 井中月 1
+H.TakeOn 道士头盔 4
+H.TakeOn 龙之戒指 7
+H.TakeOn 龙之戒指 8
+H.TakeOn 幽灵手套 5
+H.TakeOn 幽灵手套 6
+H.TakeOn 幽灵项链 3
+H.TakeOn 重盔甲(男) 0
+H.TakeOn 重盔甲(女) 0
+break
+
+#IF
+H.checkjob wizard
+#ACT
+H.GIVE 魔杖 1
+H.GIVE 道士头盔 1
+H.GIVE 红宝石戒指 2
+H.GIVE 思贝儿手镯 2
+H.GIVE 生命项链 1
+H.GIVE 魔法长袍(男) 1
+H.GIVE 魔法长袍(女) 1
+H.TakeOn 魔杖 1
+H.TakeOn 道士头盔 4
+H.TakeOn 红宝石戒指 7
+H.TakeOn 红宝石戒指 8
+H.TakeOn 思贝儿手镯 5
+H.TakeOn 思贝儿手镯 6
+H.TakeOn 生命项链 3
+H.TakeOn 魔法长袍(男) 0
+H.TakeOn 魔法长袍(女) 0
+break
+
+#IF
+checkjob taoist
+#ACT
+H.GIVE 银蛇 1
+H.GIVE 道士头盔 1
+H.GIVE 铂金戒指 2
+H.GIVE 心灵手镯 2
+H.GIVE 天竺项链 1
+H.GIVE 灵魂战衣(男) 1
+H.GIVE 灵魂战衣(女) 1
+H.TakeOn 银蛇 1
+H.TakeOn 道士头盔 4
+H.TakeOn 铂金戒指 7
+H.TakeOn 铂金戒指 8
+H.TakeOn 心灵手镯 5
+H.TakeOn 心灵手镯 6
+H.TakeOn 天竺项链 3
+H.TakeOn 灵魂战衣(男) 0
+H.TakeOn 灵魂战衣(女) 0
+break
+
+
+[@英雄商店套]
+#IF
+H.checkjob warrior
+#ACT
+H.GIVE 炼狱 1
+H.GIVE 道士头盔 1
+H.GIVE 珊瑚戒指 2
+H.GIVE 死神手套 2
+H.GIVE 蓝翡翠项链 1
+H.GIVE 重盔甲(男) 1
+H.GIVE 重盔甲(女) 1
+H.TakeOn 炼狱 1
+H.TakeOn 道士头盔 4
+H.TakeOn 珊瑚戒指 7
+H.TakeOn 珊瑚戒指 8
+H.TakeOn 死神手套 5
+H.TakeOn 死神手套 6
+H.TakeOn 蓝翡翠项链 3
+H.TakeOn 重盔甲(男) 0
+H.TakeOn 重盔甲(女) 0
+break
+
+#IF
+H.checkjob wizard
+#ACT
+H.GIVE 魔杖 1
+H.GIVE 道士头盔 1
+H.GIVE 魅力戒指 2
+H.GIVE 黑檀手镯 2
+H.GIVE 放大镜 1
+H.GIVE 魔法长袍(男) 1
+H.GIVE 魔法长袍(女) 1
+H.TakeOn 魔杖 1
+H.TakeOn 道士头盔 4
+H.TakeOn 魅力戒指 7
+H.TakeOn 魅力戒指 8
+H.TakeOn 黑檀手镯 5
+H.TakeOn 黑檀手镯 6
+H.TakeOn 放大镜 3
+H.TakeOn 魔法长袍(男) 0
+H.TakeOn 魔法长袍(女) 0
+break
+
+#IF
+H.checkjob taoist
+#ACT
+H.GIVE 银蛇 1
+H.GIVE 道士头盔 1
+H.GIVE 降妖除魔戒指 2
+H.GIVE 道士手镯 2
+H.GIVE 竹笛 1
+H.GIVE 灵魂战衣(男) 1
+H.GIVE 灵魂战衣(女) 1
+H.TakeOn 银蛇 1
+H.TakeOn 道士头盔 4
+H.TakeOn 降妖除魔戒指 7
+H.TakeOn 降妖除魔戒指 8
+H.TakeOn 道士手镯 5
+H.TakeOn 道士手镯 6
+H.TakeOn 竹笛 3
+H.TakeOn 灵魂战衣(男) 0
+H.TakeOn 灵魂战衣(女) 0
+break

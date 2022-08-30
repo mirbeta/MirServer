@@ -1,0 +1,376 @@
+[@main]
+欢迎你来婚姻圣殿，你来这里一定有你想做的\
+我能帮你些什么呢？\
+在结婚的时后,系统会自动为你们点然光环和火把\ \
+┏━━━━━┳━━━━━┳━━━━━┓\
+┃<我想要结婚/@marry>┃<我想要离婚/@unmarry>┃<返回封魔谷/@hui>┃\
+┗━━━━━┻━━━━━┻━━━━━┛\
+[@hui]
+#ACT 
+mapmove 4 241 202
+break
+
+[@Marry]
+<$USERNAME>,你和你的心上人一起来了吗.?\
+结婚可是双方自愿的,如果你们准备好了.\
+请面对面站好.!再向对方<求婚/@Agree>..!\
+不管你的求婚有没有成功.都需要给我一个求婚戒指..!\ \
+<还没准备好/@Exit>
+
+[@Agree]
+#If
+CheckMarry
+#Act 
+Messagebox 你都结过婚了.还来注册结婚.想犯重婚罪呀.!
+Goto @Main
+Break
+#If
+CheckPoseMarry
+#Act 
+Messagebox 对方已经结过婚了.是不是想犯重婚罪呀.!
+Goto @Main
+Break
+
+#If
+Gender Man
+#ElseAct 
+Messagebox 只有男的向女的求婚.还没见过大姑娘向小伙子求婚的.!
+Goto @Main
+Break
+#If
+CheckPoseGender Man
+#Act 
+Messagebox 你变态呀.想搞同性恋.!
+Goto @Main
+Break
+
+#If
+CheckPoseDir 2
+#ElseAct 
+Messagebox 你们二个面对面站好呀.不要乱动.!
+Goto @Main
+Break
+
+#If
+CheckLevel 30
+#ElseAct 
+Messagebox 结婚要求你的等级必须30级或以上.小伙子努力练好级再来找我.!
+Goto @Main
+Break
+
+#If
+CheckPoseLevel > 19
+#ElseAct 
+Messagebox 你的对象还没成年.等她长大点再来吧.小伙子不要心急嘛.!
+Goto @Main
+Break
+
+#If 
+CheckItemw 求婚戒指 1
+#ElseAct 
+Messagebox 你没求婚戒指.弄到求婚戒指再来找我吧.!
+Goto @Main
+Break
+
+#If
+#Act
+Takew 求婚戒指 1
+Marry 
+
+
+[@StartMarry]
+#If
+CheckMarry
+#Act 
+Messagebox 你都结过婚了.还来注册结婚.想犯重婚罪呀.!
+Goto @Main
+Break
+
+#If
+Gender Man
+#Act
+Break
+#Say
+婚礼现在正式开始.\ \
+你愿意娶对方为妻.并照顾她一生一世吗.?\ \
+<我愿意/@RequestMarry>
+
+#If
+Gender WoMan
+#Act
+Break
+#Say
+婚礼现在正式开始.\ \
+请耐心等待你心爱的人向你求婚\ \
+
+[@RequestMarry]
+#If
+CheckMarry
+#Act 
+Messagebox 你都结过婚了.还来注册结婚，想犯重婚罪呀.!
+Goto @Main
+Break
+
+#If
+small M3 60
+#Act
+Marry RequestMarry
+Gmexecute showeffect 78
+Gmexecute showeffect 78
+Gmexecute showeffect 78
+SENDMSG 0 [%s]正在:%m%x:%y求婚.并放出一心一意的烟花表示诚心、[%s]的朋友快跟他一起放一心一意支持他~~。
+
+[@WateMarry]
+你已向对方求婚.请耐心等待对方的答复.!
+
+[@RevMarry]
+#If
+CheckMarry
+#Act
+Messagebox 你都结过婚了.还来注册结婚.想犯重婚罪呀.!
+Goto @Main
+Break
+
+#If
+#Say
+对方向你求婚.你是否答应嫁给他.?\ \
+<我愿意/@ResposeMarry> \
+<我不愿意/@ResposeMarryFail>
+
+[@ResposeMarry]
+#If
+CheckMarry
+#Act
+Messagebox 你都结过婚了.还来注册结婚.想犯重婚罪呀.!
+Goto @Main
+Break
+
+#If
+small M3 60
+#Act
+Marry ResponseMarry ok 
+Gmexecute showeffect 78
+Gmexecute showeffect 79
+Gmexecute showeffect 80
+SENDMSG 0 [%s]接受求婚,并在:%m%x:%y处开心的放出6种烟花、大家恭喜二位新人百年好合~白头偕老。
+DelayCall 2000 @庆典蛋糕1
+#ELSEAct
+MOV M3 0
+ClearDelayGoto
+
+[@庆典蛋糕1]
+#IF
+small M3 60
+#Act
+INC M3 2
+Gmexecute showeffect 79
+Gmexecute showeffect 80
+Gmexecute showeffect 81
+DelayCall 2000 @庆典蛋糕2
+#ELSEAct
+MOV M3 0
+ClearDelayGoto
+
+[@庆典蛋糕2]
+#IF
+small M3 60
+#Act
+INC M3 2
+Gmexecute showeffect 80
+Gmexecute showeffect 81
+Gmexecute showeffect 82
+DelayCall 2000 @庆典蛋糕3
+#ELSEAct
+MOV M3 0
+ClearDelayGoto
+
+[@庆典蛋糕3]
+#IF
+  small M3 60
+#Act
+  INC M3 2
+  Gmexecute showeffect 81
+  Gmexecute showeffect 82
+  Gmexecute showeffect 83
+  DelayCall 2000 @庆典蛋糕4
+#ELSEAct
+  MOV M3 0
+  ClearDelayGoto
+
+[@庆典蛋糕4]
+#IF
+  small M3 60
+#Act
+  INC M3 2
+  Gmexecute showeffect 82
+  Gmexecute showeffect 83
+  Gmexecute showeffect 81
+  DelayCall 2000 @庆典蛋糕5
+#ELSEAct
+  MOV M3 0
+  ClearDelayGoto
+
+[@庆典蛋糕5]
+#IF
+  small M3 60
+#Act
+  INC M3 2
+  Gmexecute showeffect 78
+  Gmexecute showeffect 83
+  Gmexecute showeffect 81
+  DelayCall 2000 @庆典蛋糕6
+#ELSEAct
+  MOV M3 0
+  ClearDelayGoto
+
+[@庆典蛋糕6]
+#IF
+  small M3 60
+#Act
+  INC M3 2
+  Gmexecute showeffect 78
+  Gmexecute showeffect 79
+  Gmexecute showeffect 81
+  DelayCall 2000 @庆典蛋糕
+#ELSEAct
+  MOV M3 0
+  ClearDelayGoto
+
+[@ResposeMarryFail]
+#If
+CheckMarry
+#Act
+Messagebox 你都结过婚了.还来注册结婚.想犯重婚罪呀.!
+Goto @Main
+Break
+
+#If
+#Act
+Marry Responsemarry Fail
+
+[@EndMarry]
+#Act
+Messagebox 你们二个已经成为了一对全法夫妻了.
+Close
+
+[@EndMarryFail]
+#Act
+Messagebox 结婚失败.
+Close
+
+[@MarryDirErr]
+#Act
+Messagebox 对方没站好位置.
+Close
+
+[@MarryCheckDir]
+#Act
+Messagebox 请站好位置.
+Close
+
+[@HumanTypeErr]
+#Act
+Messagebox 你变态呀.既然选择一个非人类作为结婚对象.
+Close
+
+[@MarrySexErr]
+#Act
+Messagebox 你变态呀.既然同性恋.
+Close
+
+;===================================离婚开始
+[@unmarry]
+#If
+Checkmarry
+#Act
+Unmarry
+#ElseAct
+Messagebox 你都没结婚离什么婚.?
+Close
+
+;===========双方离婚时没面对面站好显示的信息
+[@UnMarryCheckDir]
+要离婚是吧.?离婚是二个人的事.必须二个人对面对站好位置.\
+如果人来不了你只能选择强行离婚姻了.!\ \
+<我要强行离婚/@FUnMarry>\
+<返回/@main>
+
+
+;===========================对面位置不是人物时显示的信息
+[@UnMarryTypeErr]
+你对面站了个什么东西.怎么不太象人来的.!\ \
+<返回/@main>
+
+
+;=========================开始离婚程序后，双方显示的信息
+[@StartUnMarry]
+#If
+Gender Man
+#Act
+Break
+#Say
+是否确定真的要与你共事多年的妻子离婚吗.?\ \
+<确定/@RequestUnMarry>
+
+#If
+Gender WoMan
+#say
+你的老公现在向我请求离婚.是不是愿意协议离婚.? \ \
+<确定/@RequestUnMarry>
+#Act
+Break 
+
+;===========================================发出离婚请求
+[@RequestUnMarry]
+#If
+CheckMarry
+#Act
+UnMarry RequestUnmarry
+close
+break
+;===========================================回应离婚请求
+[@ResposeUnMarry]
+#If
+Checkmarry
+#Act
+Unmarry Responseunmarry 
+close
+break
+;===============================================
+;请求离婚后显示的信息
+[@WateUnMarry]
+你已向对方发出离婚请求.请耐心等待对方的答复.!
+
+;===============================================
+;请求离婚后对方显示的信息
+[@RevUnMarry]
+对方向你离婚请求,你是否答应离婚.? \ \
+<我愿意/@RequestUnMarry>
+<返回/@main>
+
+;===============================================
+;没结过婚的人点离婚后出的提示信息
+[@ExeMarryFail]
+你都没结过婚.跑来做什么.? \ \
+[返回/@main]
+
+;==============================================
+;强行离婚
+[@fUnMarry]
+#If
+Checkitem 金砖 1
+Checkmarry
+#Act
+Take 金砖 1
+Unmarry Requestunmarry Force
+#ElseAct
+Messagebox 要收一块金砖作为手续费.你没有金砖.我不能让你离婚.!
+close
+break
+;==============================================
+;离婚完成后的提示信息
+[@UnMarryEnd]
+#If
+#Act
+Messagebox 呵呵.你已经脱离苦海了..
+break

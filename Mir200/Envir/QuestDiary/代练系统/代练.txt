@@ -1,0 +1,522 @@
+[@系统代练]
+{
+<COLOR=clLime 官方代练有效取代脱机外挂升级、人工代练等非常规>\
+<COLOR=clLime 练级方式，为您解决没时间练级，不喜欢练级的烦恼>\
+<COLOR=clLime 相比其他的方式，官方代练更方便、更安全、更廉价>\
+<COLOR=clSkyBlue 开启代练后 人物无论是在线游戏 还是下线休息 都不受任何影响>\
+<COLOR=clSkyBlue 随时随地都可以领取已经完成的代练经验 非常方便>\ \
+≮   <[一级代练]/@一级>   -   <[二级代练]/@二级>   -   <[三级代练]/@三级>   ≯\ \
+　                      <[关闭]/@exit>
+
+[@一级]
+#if
+CHECK [602] 1
+#act
+messagebox 你已开启二级代练，请先取消
+break
+#if
+CHECK [603] 1
+#act
+messagebox 你已开启三级代练，请先取消
+break
+#if
+#act
+break
+#say
+　\
+<COLOR=clFuchsia 一级代练：每小时30000经验 消耗0.33元宝>\ \
+<[开启一级代练]/@1J>\ \
+<[领取代练经验]/@LQ1>\ \                
+<[取消当前代练]/@xiao01>\
+　                                           <[返回]/@系统代练>
+[@xiao01]
+请注意！！！\ \
+<取消一级代练，元宝不予退还，经验不予兑现，代练时间清零>\ \
+你确定取消一级代练吗？\ \
+<[确定]/@xiao11>          <[返回]/@一级>
+
+[@xiao11]
+#if
+CHECK [601] 1
+#act
+set [601] 0
+CALCVAR HUMAN 时长 = 0
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+close
+messagebox 当前代练取消成功
+break
+#elseact
+messagebox 你尚未开启当前代练，无法取消
+break
+
+[@1J]
+#if
+CHECK [601] 1
+CHECKVAR HUMAN 标识 < <$STR(G3)>
+CHECKVAR HUMAN 时长 > 0
+#say
+　\
+请先领取已经完成的代练经验\ \
+<[领取代练经验]/@LQ1>\ \
+<[返回]/@一级>
+#elsesay
+代练时间可叠加累计，可随时领取已经完成的代练经验！\ \
+<开启一级代练[3小时]/@k01>(180分钟)\ \
+<开启一级代练[1天]/@k02>(1440分钟)\ \
+<开启一级代练[1周]/@k03>(10080分钟)\ \
+<[返回]/@一级>
+
+[@k01]
+#IF
+CHECKGAMEGOLD > 0
+#act
+set [601] 1
+GAMEGOLD - 1
+CALCVAR HUMAN 时长 + 180
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：一级代练时间增加180分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@k02]
+#IF
+CHECKGAMEGOLD > 7
+#act
+set [601] 1
+GAMEGOLD - 8
+CALCVAR HUMAN 时长 + 1440
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：一级代练时间增加1440分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@k03]
+#IF
+CHECKGAMEGOLD > 55
+#act
+set [601] 1
+GAMEGOLD - 56
+CALCVAR HUMAN 时长 + 10080
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：一级代练时间增加10080分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@LQ1]
+#if
+CHECK [601] 0
+#act
+messagebox 您尚未开启一级代练
+break
+
+#if
+CHECKVAR HUMAN 时长 > 0
+#act
+MOV M51 <$STR(G3)>
+DEC M51 <$HUMAN(标识)>
+BREAK
+#SAY
+　\
+您的一级代练时间剩余：<$HUMAN(时长)> 分钟\ \
+当前系统已经为您完成：<$STR(M51)> 分钟\ \
+<[确定领取]/@LQ01>\ \
+<[返回]/@一级>
+#elseact
+messagebox 您的代练时间已经用完，请重新开启！
+break
+
+[@LQ01]
+#if
+EQUAL M51 0
+#ACT
+messagebox 系统代练正在进行中，请耐心等待。。。
+break
+
+#if
+CHECKVAR HUMAN 时长 > <$STR(M51)>
+#act
+close
+MOV M61 <$STR(M51)>
+MUL M61 500
+CHANGEEXP + <$STR(M61)>
+CALCVAR HUMAN 时长 - <$STR(M51)>
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：系统代练完成<$STR(M51)>分钟，获得<$STR(M61)>经验！
+messagebox [提示]：系统代练完成<$STR(M51)>分钟，获得<$STR(M61)>经验！
+MOV M51 0
+Gmexecute showeffect 75
+#elseact
+close
+MOV M61 <$HUMAN(时长)>
+MUL M61 500
+CHANGEEXP + <$STR(M61)>
+CALCVAR HUMAN 时长 = 0
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+set [601] 0
+sendmsg 7 [提示]：您的代练时间已经用完，最终获得<$STR(M61)>经验！
+messagebox 您的代练时间已经用完，请重新开启！
+MOV M51 0
+Gmexecute showeffect 75
+break
+
+[@二级]
+#if
+CHECKLEVELEX < 35
+#act
+messagebox 超过35级才可以使用二级代练
+break
+#if
+CHECK [601] 1
+#act
+messagebox 你已开启一级代练，请先取消
+break
+#if
+CHECK [603] 1
+#act
+messagebox 你已开启三级代练，请先取消
+break
+#if
+#act
+break
+#say
+　\
+<COLOR=clFuchsia 二级代练：每小时60000经验 消耗1元宝>\ \
+<[开启二级代练]/@2J>\ \
+<[领取代练经验]/@LQ2>\ \                
+<[取消当前代练]/@xiao02>\
+　                                           <[返回]/@系统代练>
+[@xiao02]
+请注意！！！\ \
+<取消二级代练，元宝不予退还，经验不予兑现，代练时间清零>\ \
+你确定取消二级代练吗？\ \
+<[确定]/@xiao22>          <[返回]/@二级>
+
+[@xiao22]
+#if
+CHECK [602] 1
+#act
+set [602] 0
+CALCVAR HUMAN 时长 = 0
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+close
+messagebox 当前代练取消成功
+break
+#elseact
+messagebox 你尚未开启当前代练，无法取消
+break
+
+[@2J]
+#if
+CHECK [602] 1
+CHECKVAR HUMAN 标识 < <$STR(G3)>
+CHECKVAR HUMAN 时长 > 0
+#say
+　\
+请先领取已经完成的代练经验\ \
+<[领取代练经验]/@LQ2>\ \
+<[返回]/@二级>
+#elsesay
+代练时间可叠加累计，可随时领取已经完成的代练经验！\ \
+<开启二级代练[3小时]/@kk01>(180分钟)\ \
+<开启二级代练[1天]/@kk02>(1440分钟)\ \
+<开启二级代练[1周]/@kk03>(10080分钟)\ \
+<[返回]/@二级>
+
+[@kk01]
+#IF
+CHECKGAMEGOLD > 2
+#act
+set [602] 1
+GAMEGOLD - 3
+CALCVAR HUMAN 时长 + 180
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：二级代练时间增加180分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@kk02]
+#IF
+CHECKGAMEGOLD > 23
+#act
+set [602] 1
+GAMEGOLD - 24
+CALCVAR HUMAN 时长 + 1440
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：二级代练时间增加1440分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@kk03]
+#IF
+CHECKGAMEGOLD > 167
+#act
+set [602] 1
+GAMEGOLD - 168
+CALCVAR HUMAN 时长 + 10080
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：二级代练时间增加10080分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@LQ2]
+#if
+CHECK [602] 0
+#act
+messagebox 您尚未开启二级代练
+break
+
+#if
+CHECKVAR HUMAN 时长 > 0
+#act
+MOV M52 <$STR(G3)>
+DEC M52 <$HUMAN(标识)>
+BREAK
+#SAY
+　\
+您的二级代练时间剩余：<$HUMAN(时长)> 分钟\ \
+当前系统已经为您完成：<$STR(M52)> 分钟\ \
+<[确定领取]/@LQ02>\ \
+<[返回]/@二级>
+#elseact
+messagebox 您的代练时间已经用完，请重新开启！
+break
+
+[@LQ02]
+#if
+EQUAL M52 0
+#ACT
+messagebox 系统代练正在进行中，请耐心等待。。。
+break
+
+#if
+CHECKVAR HUMAN 时长 > <$STR(M52)>
+#act
+close
+MOV M62 <$STR(M52)>
+MUL M62 1000
+CHANGEEXP + <$STR(M62)>
+CALCVAR HUMAN 时长 - <$STR(M52)>
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：系统代练完成<$STR(M52)>分钟，获得<$STR(M62)>经验！
+messagebox [提示]：系统代练完成<$STR(M52)>分钟，获得<$STR(M62)>经验！
+MOV M52 0
+Gmexecute showeffect 76
+#elseact
+close
+MOV M62 <$HUMAN(时长)>
+MUL M62 1000
+CHANGEEXP + <$STR(M62)>
+CALCVAR HUMAN 时长 = 0
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+set [602] 0
+sendmsg 7 [提示]：您的代练时间已经用完，最终获得<$STR(M62)>经验！
+messagebox 您的代练时间已经用完，请重新开启！
+MOV M52 0
+Gmexecute showeffect 76
+break
+
+[@三级]
+#if
+CHECKLEVELEX < 40
+#act
+messagebox 超过40级才可以使用三级代练
+break
+#if
+CHECK [601] 1
+#act
+messagebox 你已开启一级代练，请先取消
+break
+#if
+CHECK [602] 1
+#act
+messagebox 你已开启二级代练，请先取消
+break
+#if
+#act
+break
+#say
+　\
+<COLOR=clFuchsia 三级代练：每小时90000经验 消耗3元宝>\ \
+<[开启三级代练]/@3J>\ \
+<[领取代练经验]/@LQ3>\ \                
+<[取消当前代练]/@xiao03>\
+　                                           <[返回]/@系统代练>
+[@xiao03]
+请注意！！！\ \
+<取消三级代练，元宝不予退还，经验不予兑现，代练时间清零>\ \
+你确定取消三级代练吗？\ \
+<[确定]/@xiao33>          <[返回]/@三级>
+
+[@xiao33]
+#if
+CHECK [603] 1
+#act
+set [603] 0
+CALCVAR HUMAN 时长 = 0
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+close
+messagebox 当前代练取消成功
+break
+#elseact
+messagebox 你尚未开启当前代练，无法取消
+break
+
+[@3J]
+#if
+CHECK [603] 1
+CHECKVAR HUMAN 标识 < <$STR(G3)>
+CHECKVAR HUMAN 时长 > 0
+#say
+　\
+请先领取已经完成的代练经验\ \
+<[领取代练经验]/@LQ3>\ \
+<[返回]/@三级>
+#elsesay
+代练时间可叠加累计，可随时领取已经完成的代练经验！\ \
+<开启三级代练[3小时]/@kkk01>(180分钟)\ \
+<开启三级代练[1天]/@kkk02>(1440分钟)\ \
+<开启三级代练[1周]/@kkk03>(10080分钟)\ \
+<[返回]/@三级>
+
+[@kkk01]
+#IF
+CHECKGAMEGOLD > 8
+#act
+set [603] 1
+GAMEGOLD - 9
+CALCVAR HUMAN 时长 + 180
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：三级代练时间增加180分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@kkk02]
+#IF
+CHECKGAMEGOLD > 71
+#act
+set [603] 1
+GAMEGOLD - 72
+CALCVAR HUMAN 时长 + 1440
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：三级代练时间增加1440分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@kkk03]
+#IF
+CHECKGAMEGOLD > 503
+#act
+set [603] 1
+GAMEGOLD - 504
+CALCVAR HUMAN 时长 + 10080
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：三级代练时间增加10080分钟--总计：<$HUMAN(时长)>分钟
+break
+#elseact
+messagebox 元宝不足，请及时充值！
+break
+
+[@LQ3]
+#if
+CHECK [603] 0
+#act
+messagebox 您尚未开启三级代练
+break
+
+#if
+CHECKVAR HUMAN 时长 > 0
+#act
+MOV M53 <$STR(G3)>
+DEC M53 <$HUMAN(标识)>
+BREAK
+#SAY
+　\
+您的三级代练时间剩余：<$HUMAN(时长)> 分钟\ \
+当前系统已经为您完成：<$STR(M53)> 分钟\ \
+<[确定领取]/@LQ03>\ \
+<[返回]/@三级>
+#elseact
+messagebox 您的代练时间已经用完，请重新开启！
+break
+
+[@LQ03]
+#if
+EQUAL M53 0
+#ACT
+messagebox 系统代练正在进行中，请耐心等待。。。
+break
+
+#if
+CHECKVAR HUMAN 时长 > <$STR(M53)>
+#act
+close
+MOV M63 <$STR(M53)>
+MUL M63 1500
+CHANGEEXP + <$STR(M63)>
+CALCVAR HUMAN 时长 - <$STR(M53)>
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+sendmsg 7 [提示]：系统代练完成<$STR(M53)>分钟，获得<$STR(M63)>经验！
+messagebox [提示]：系统代练完成<$STR(M53)>分钟，获得<$STR(M63)>经验！
+MOV M53 0
+Gmexecute showeffect 77
+#elseact
+close
+MOV M63 <$HUMAN(时长)>
+MUL M63 1500
+CHANGEEXP + <$STR(M63)>
+CALCVAR HUMAN 时长 = 0
+SAVEVAR HUMAN 时长 ..\QuestDiary\代练系统\代练数据.txt
+CALCVAR HUMAN 标识 = <$STR(G3)>
+SAVEVAR HUMAN 标识 ..\QuestDiary\代练系统\代练数据.txt
+set [603] 0
+sendmsg 7 [提示]：您的代练时间已经用完，最终获得<$STR(M63)>经验！
+messagebox 您的代练时间已经用完，请重新开启！
+MOV M53 0
+Gmexecute showeffect 77
+break
+
+}

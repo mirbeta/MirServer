@@ -1,0 +1,124 @@
+(@s_repair)
+%200
++5
++6
+[@main]
+#IF
+LARGE M6 9
+CHECKBAGSIZE 1
+#act
+MOV M6 0
+set [106] 0
+MOVR D6 5
+goto @jiasx
+break
+#say
+　\
+你的<命运之刃>已经完成，请拿好哦！
+
+#IF
+check [106] 1
+#act
+INC M6 1
+break
+#say
+　\
+你的<命运之刃>正在努力打造中！请耐心等候……
+
+#IF
+checkitem 命运之书 1
+#act
+take 命运之书 1
+set [106] 1
+break
+#say
+　\
+<$USERNAME>，尊师傅之命，我将为你打造<命运之刃>\ \
+<当命运之刃第一次被你拿在手中，其属性将会发生变化>  <最高7点>\
+<至于如何变化，那就是你的命运了，也是这把刀的命运了！>\ \
+请给我几个小时时间，我来帮你打造这把<命运之刃>……
+
+#IF
+checkitem 介绍信 1
+#act
+break
+#say
+是戒指店老板让你来找我的吗？他怎么随便把这个秘密告诉你呢？\
+既然你已经知道了，说明你和这兵器有缘，我就对你指点一二吧！\
+这件兵器名字叫<命运之刃>，<COLOR=clYellow 基础属性：攻击12-16>\
+传说这件兵器可以左右命运，指引拥有者走向光明的未来！\
+目前我只能说这么多，更多的情况只有去问我的老恩师了\ \
+<铁匠的老恩师/@rw01>
+
+#IF
+#act
+break
+#say
+　\
+最初的无痕修理第一人就是在下，从此再也不需要担心装备持久\
+被慢慢磨光了！\ \
+<特殊修理/@s_repair>\ \
+<关 闭/@exit>
+
+[@rw01]
+#IF
+checkitem 介绍信 1
+#act
+take 介绍信 1
+give 佛牌 1
+break
+#say
+　\
+我的老恩师就是高级武士之家的〈高级武士〉，你去找他的\
+时候麻烦帮我把这<佛牌>带给他，他一定会很开心的！
+#elseact
+close
+break
+
+[@jiasx]
+#IF
+equal D6 0
+#act
+MOVR M6 5
+INC M6 1
+GIVE 命运之刃 1 0 <$STR(M6)>
+break
+
+#IF
+equal D6 1
+#act
+MOVR M6 7
+INC M6 1
+GIVE 命运之刃 1 1 <$STR(M6)>
+break
+
+#IF
+equal D6 2
+#act
+MOVR M6 7
+INC M6 1
+GIVE 命运之刃 1 2 <$STR(M6)>
+break
+
+#IF
+equal D6 3
+#act
+MOVR M6 5
+INC M6 1
+GIVE 命运之刃 1 3 <$STR(M6)>
+break
+
+#IF
+equal D6 4
+#act
+MOVR M6 5
+INC M6 1
+GIVE 命运之刃 1 5 <$STR(M6)>
+break
+
+[@s_repair]
+要修理武器吗？\ \
+<返 回/@main>
+[~@s_repair]
+已经修好了。\ \
+<返 回/@main>

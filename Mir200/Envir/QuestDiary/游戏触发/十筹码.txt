@@ -1,0 +1,455 @@
+[@十个码]
+{
+　\
+　\
+　※<一/@yina1>※              ※<二/@yina2>※              ※<三/@yina3>※\
+　\
+─────────────────────────\
+　\
+　※<四/@yina4>※              ※<五/@yina5>※              ※<六/@yina6>※
+
+[@yina6]
+#IF
+CHECKitem 筹码包 5
+#ACT
+take 筹码包 5
+movr d0 6 
+inc d0 1 
+playdice 1 @cubena6
+#SAY
+正在投骰子…………
+#ELSEACT
+MESSAGEBOX 请打开商铺兑换[筹码]后再来！
+break
+[@cubena6]
+#IF
+#SAY
+骰子的点数 ：<$STR(D0)>\ \
+<继续玩GO GO GO/@KAIz>\ \
+<不玩了/@exit>
+#ACT
+goto @next_cubena6
+break
+
+[@next_cubena6]
+#IF
+equal d0 1
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[1]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 2
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[2]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 3
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[3]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 4
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[4]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 5
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[5]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 6
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[6]--恭喜赢得25个筹码包
+SENDMSG 4 恭喜[%s]赢得【25个筹码包】
+give 筹码包 25
+inc G11 120
+batchmove 
+break
+[@yina5]
+#IF
+CHECKitem 筹码包 5
+#ACT
+take 筹码包 5
+movr d0 6 
+inc d0 1 
+playdice 1 @cubena5
+#SAY
+正在投骰子…………
+#ELSEACT
+MESSAGEBOX 请打开商铺兑换[筹码]后再来！
+break
+[@cubena5]
+#IF
+#SAY
+骰子的点数 ：<$STR(D0)>\ \
+<继续玩GO GO GO/@KAIz>\ \
+<不玩了/@exit>
+#ACT
+goto @next_cubena5
+break
+
+[@next_cubena5]
+#IF
+equal d0 1
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[1]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 2
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[2]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 3
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[3]--很遗憾！再接再厉哦！
+batchmove 
+break
+#IF
+equal d0 4
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[4]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 5
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[5]--恭喜赢得25个筹码包
+SENDMSG 4 恭喜[%s]赢得【25个筹码包】
+give 筹码包 25
+inc G11 120
+batchmove 
+break
+#IF
+equal d0 6
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[6]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+[@yina4]
+#IF
+CHECKitem 筹码包 5
+#ACT
+take 筹码包 5
+movr d0 6 
+inc d0 1 
+playdice 1 @cubena4
+#SAY
+正在投骰子…………
+#ELSEACT
+MESSAGEBOX 请打开商铺兑换[筹码]后再来！
+inc G12 30
+break
+[@cubena4]
+#IF
+#SAY
+骰子的点数 ：<$STR(D0)>\ \
+<继续玩GO GO GO/@KAIz>\ \
+<不玩了/@exit>
+#ACT
+goto @next_cubena4
+break
+
+[@next_cubena4]
+#IF
+equal d0 1
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[1]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 2
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[2]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 3
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[3]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 4
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[4]--恭喜赢得25个筹码包
+SENDMSG 4 恭喜[%s]赢得【25个筹码包】
+give 筹码包 25
+inc G11 120
+batchmove 
+break
+#IF
+equal d0 5
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[5]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 6
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[6]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+[@yina3]
+#IF
+CHECKitem 筹码包 5
+#ACT
+take 筹码包 5
+movr d0 6 
+inc d0 1 
+playdice 1 @cubena3
+#SAY
+正在投骰子…………
+#ELSEACT
+MESSAGEBOX 请打开商铺兑换[筹码]后再来！
+break
+[@cubena3]
+#IF
+#SAY
+骰子的点数 ：<$STR(D0)>\ \
+<继续玩GO GO GO/@KAIz>\ \
+<不玩了/@exit>
+#ACT
+goto @next_cubena3
+break
+
+[@next_cubena3]
+#IF
+equal d0 1
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[1]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 2
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[2]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 3
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[3]--恭喜赢得25个筹码包
+SENDMSG 4 恭喜[%s]赢得【25个筹码包】
+give 筹码包 25
+inc G11 120
+batchmove 
+break
+#IF
+equal d0 4
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[4]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 5
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[5]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 6
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[6]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+[@yina2]
+#IF
+CHECKitem 筹码包 5
+#ACT
+take 筹码包 5
+movr d0 6 
+inc d0 1 
+playdice 1 @cubena2
+#SAY
+正在投骰子…………
+#ELSEACT
+MESSAGEBOX 请打开商铺兑换[筹码]后再来！
+break
+[@cubena2]
+#IF
+#SAY
+骰子的点数 ：<$STR(D0)>\ \
+<继续玩GO GO GO/@KAIz>\ \
+<不玩了/@exit>
+#ACT
+goto @next_cubena2
+break
+
+[@next_cubena2]
+#IF
+equal d0 1
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[1]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 2
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[2]--恭喜赢得25个筹码包
+SENDMSG 4 恭喜[%s]赢得【25个筹码包】
+give 筹码包 25
+inc G11 120
+batchmove 
+break
+#IF
+equal d0 3
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[3]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 4
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[4]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 5
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[5]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 6
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[6]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+[@yina1]
+#IF
+CHECKitem 筹码包 5
+#ACT
+take 筹码包 5
+movr d0 6 
+inc d0 1 
+playdice 1 @cubena1
+#SAY
+正在投骰子…………
+#ELSEACT
+MESSAGEBOX 请打开商铺兑换[筹码]后再来！
+break
+[@cubena1]
+#IF
+#SAY
+骰子的点数 ：<$STR(D0)>\ \
+<继续玩GO GO GO/@KAIz>\ \
+<不玩了/@exit>
+#ACT
+goto @next_cubena1
+break
+
+[@next_cubena1]
+#IF
+equal d0 1
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[1]--恭喜赢得25个筹码包
+SENDMSG 4 恭喜[%s]赢得【25个筹码包】
+give 筹码包 25
+inc G11 120
+batchmove 
+break
+#IF
+equal d0 2
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[2]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 3
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[3]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 4
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[4]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 5
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[5]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+#IF
+equal d0 6
+#ACT
+batchDelay 1 
+SENDMSG 7 提示：[6]--很遗憾！再接再厉哦！
+inc G12 30
+batchmove 
+break
+}

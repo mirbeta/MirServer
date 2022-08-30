@@ -1,0 +1,62 @@
+[@main]
+#if
+checkitem 精灵头盔 1
+#act
+BreakTimeRecall
+break
+#say
+　\
+蛇毒已解，麻烦你帮我把这顶头盔送到我女儿那里保管\ \
+<你女儿是谁？/@rw03>\ \
+<我休息一会先/@exit>
+
+#if
+checkitem 蛇毒 1
+#say
+我有一顶<漂亮的精灵头盔>，被古墓的骷髅趁我睡着的时候偷走\
+那骷髅戴上这顶头盔竟然获得重生，披上了红色外衣，刀枪不入！\
+只有依靠蛇毒才能将头盔的威力暂时克制，借此打败红色骷髅\
+年轻人你愿意喝下蛇毒帮我去夺回<精灵头盔>吗？\ \
+<晚辈甘愿冒死为前辈夺回头盔/@rw01>\ \
+<啊？要喝下这瓶蛇毒？有没有搞错？/@exit2>
+#elsesay
+　\
+老夫长年隐居于此……
+
+[@exit2]
+#act
+messagebox 老夫对蛇毒颇有研究，有老夫在，不会有事的！
+break
+
+[@rw01]
+　\
+喝下蛇毒你有300秒时间来打败红色骷髅，不管是否成功\
+300秒后你必须回到这里解毒，不然将有生命危险！\ \
+<我准备好了/@rw02>\ \
+<我还没准备好/@exit>
+
+[@rw02]
+#if
+checkhum Q001 1
+#ACT
+MESSAGEBOX 有人正在挑战红色骷髅，请稍候……
+break
+
+#if
+checkitem 蛇毒 1
+#act
+take 蛇毒 1
+CLEARMAPMON Q001
+MONGENEX Q001 10 10 骷髅精灵5 2 1 1
+TimeRecall 5
+map Q001
+sendmsg 5 提示：你中了蛇毒！
+#elseact
+close
+messagebox 没时间跟你开玩笑！
+break
+
+[@rw03]
+　\
+我女儿就是在土城开客栈的〈林小姐〉啊！\ \
+<我晕/@exit>

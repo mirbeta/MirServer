@@ -1,0 +1,667 @@
+(@@InPutString @@useitemname)
+
+[@main]
+千里姻缘一线牵，万年修得共枕眠。\
+还有什么能比<COLOR=clRed 玫瑰花>更能表达你的爱意、证明你的真心呢？！\
+赶紧行动吧，赠送<COLOR=clRed 玫瑰花>全区逐条显示哦！\ \
+<赠送[玫瑰花]/@shua>          <使用[玫瑰花]/@yhua>\ \
+<进入[爱的小屋]/@jwu>        <[爱的印记]/@ke>        <[女性玩家认证]/@MM>\ \
+<回城/@back2>
+
+[@back2]
+#if
+check [168] 1
+#act
+mapmove 0 333 268
+break
+#elseact
+mapmove 3 330 330
+break
+
+[@jwu]
+　\
+通过<视频认证>的真正女性玩家可以直接传送到<爱的小屋>\
+男性玩家和人妖则需要通过<爱情长廊>才能到达\
+爱的小屋每三小时刷新一个<虹魔教主>，杀死虹魔教主就有可能获得\
+传说中的<爱情戒>：<COLOR=clFuchsia 攻击0-9 魔法0-9 道术0-9，超负载特性>\ \
+<直传[爱的小屋]/@jinwu>     <进入[爱情长廊]/@jinwu2>\ \
+<返回/@main>
+
+[@jinwu]
+#if
+CHECKRENEWLEVEL = 1
+#act
+mapMOVE F002 50 50
+#ELSEact
+mapMOVE M100A 286 281
+BREAK
+
+[@jinwu2]
+#if
+#act
+mapMOVE M100A 286 281
+BREAK
+
+[@ke]
+　\
+象征爱情的<爱情戒>、象征爱你一万年的<一万朵玫瑰>，拥有者可对其\
+重新命名，刻上独一无二的爱情印记，每次消耗9朵玫瑰！\ \
+<重新命名[爱情戒]/@@useitemname8>\ \
+<重新命名[壹万朵玫瑰]/@@useitemname2>\ \
+<返回/@main>
+
+[@@useitemname2]
+#if
+CheckItemw 壹萬朵玫瑰 1
+#ACT
+goto @ChangeName
+break
+#if
+CheckItemw 10000朵玫瑰 1
+#ACT
+goto @ChangeName
+break
+#if
+CheckItemw 一万朵玫瑰 1
+#ACT
+goto @ChangeName
+break
+#elseact
+messagebox 请先佩带壹万朵玫瑰
+break
+
+[@@useitemname8]
+#if
+CHECKUSEITEM 7
+#act
+messagebox 为防止重新命名出错请先将其他戒指摘掉\　\并将爱情戒佩带于拿刀一侧的戒指位置上
+break
+
+#if
+CheckItemw 爱情戒 1
+#ACT
+goto @ChangeName
+#elseact
+messagebox 请先将爱情戒佩带于拿刀一侧的戒指位置上
+break
+
+[@ChangeName]
+#if
+CHECKGAMEPOINT > 8
+#act
+GAMEPOINT - 9
+SETSCRIPTFLAG 1 1
+sendmsg 6 提示：重新命名成功！！！
+Close
+#elseact
+messagebox 重新命名需要消耗9朵玫瑰
+break
+
+[@MM]
+#ACT
+MESSAGEBOX 真正的女性玩家可联系客服进行视频认证\　\经过认证的女性玩家可以获得直达[爱的小屋]的权利\　\并且人物名字七彩变色
+break
+
+[@yhua]
+<COLOR=clRed 玫瑰花>不仅仅是爱的传达，还可以在我这里兑换各种个性服务哦！\ \
+<9朵兑换[一心一意]烟花/@9hua>      <9朵兑换[心心相印]烟花/@9xin>\ \
+<99朵兑换[求婚戒指]/@99jie>      <99朵更换[个性发型]/@99fa>\ \
+<999朵与勋章融合/@qu999>      <10000朵与勋章融合/@qu10000>     <1朵特修全身装备/@texiu>\ \
+您当前拥有<COLOR=clRed 玫瑰花>：<$GAMEPOINT>朵                              <返回/@main>
+
+[@texiu]
+#if
+CHECKGAMEPOINT > 0
+#act
+GAMEPOINT - 1
+RepairAll
+#elseact
+messagebox 玫瑰花数量不足！
+break
+
+[@qu10000]
+10000朵玫瑰可以与43、44、45号荣誉勋章进行100%镶嵌融合\ \
+镶嵌融合后，绑定人物，不可交易，永不爆出，可自主命名\ \
+属性(包括升级后属性)额外增加：攻击3-6 魔法3-6 道术3-6\ \
+<与43号勋章融合/@R43>    <与44号勋章融合/@R44>    <与45号勋章融合/@R45>\ \
+<返回/@yhua>                                   <融合时请注意包裹留空>
+
+[@R45]
+#if
+CHECKGAMEPOINT < 10000
+#act
+messagebox 玫瑰花数量不足！
+break
+
+#if
+CheckItemw 荣誉勋章45号 1
+#elseact
+messagebox 请先将45号勋章佩戴好！
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 0
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章45号 1
+give 一万朵玫瑰 1 4 3
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 1
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章45号 1
+give 一万朵玫瑰 1 4 4
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 2
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章45号 1
+give 一万朵玫瑰 1 4 5
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 3
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章45号 1
+give 一万朵玫瑰 1 4 6
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 4
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章45号 1
+give 一万朵玫瑰 1 4 7
+sendmsg 6 [提示]：融合完成!!!
+break
+
+[@R44]
+#if
+CHECKGAMEPOINT < 10000
+#act
+messagebox 玫瑰花数量不足！
+break
+
+#if
+CheckItemw 荣誉勋章44号 1
+#elseact
+messagebox 请先将44号勋章佩戴好！
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 0
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章44号 1
+give 10000朵玫瑰 1 3 3
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 1
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章44号 1
+give 10000朵玫瑰 1 3 4
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 2
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章44号 1
+give 10000朵玫瑰 1 3 5
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 3
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章44号 1
+give 10000朵玫瑰 1 3 6
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 4
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章44号 1
+give 10000朵玫瑰 1 3 7
+sendmsg 6 [提示]：融合完成!!!
+break
+
+[@R43]
+#if
+CHECKGAMEPOINT < 10000
+#act
+messagebox 玫瑰花数量不足！
+break
+
+#if
+CheckItemw 荣誉勋章43号 1
+#elseact
+messagebox 请先将43号勋章佩戴好！
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 0
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章43号 1
+give 壹萬朵玫瑰 1 2 3
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 1
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章43号 1
+give 壹萬朵玫瑰 1 2 4
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 2
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章43号 1
+give 壹萬朵玫瑰 1 2 5
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 3
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章43号 1
+give 壹萬朵玫瑰 1 2 6
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 4
+#act
+GAMEPOINT - 10000
+takew 荣誉勋章43号 1
+give 壹萬朵玫瑰 1 2 7
+sendmsg 6 [提示]：融合完成!!!
+break
+
+[@qu999]
+999朵玫瑰可以与43、44、45号荣誉勋章进行100%镶嵌融合\ \
+镶嵌融合后，不绑定人物，可以交易\ \
+除勋章原有属性(包括升级后属性)，额外增加：攻击1-3 魔法1-3 道术1-3\ \
+<与43号勋章融合/@Y43>    <与44号勋章融合/@Y44>    <与45号勋章融合/@Y45>\ \
+<返回/@yhua>                                   <融合时请注意包裹留空>
+
+[@Y45]
+#if
+CHECKGAMEPOINT < 999
+#act
+messagebox 玫瑰花数量不足！
+break
+
+#if
+CheckItemw 荣誉勋章45号 1
+#elseact
+messagebox 请先将45号勋章佩戴好！
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 0
+#act
+GAMEPOINT - 999
+takew 荣誉勋章45号 1
+give 九九九朵玫瑰 1 4 3
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 1
+#act
+GAMEPOINT - 999
+takew 荣誉勋章45号 1
+give 九九九朵玫瑰 1 4 4
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 2
+#act
+GAMEPOINT - 999
+takew 荣誉勋章45号 1
+give 九九九朵玫瑰 1 4 5
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 3
+#act
+GAMEPOINT - 999
+takew 荣誉勋章45号 1
+give 九九九朵玫瑰 1 4 6
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 4 = 4
+#act
+GAMEPOINT - 999
+takew 荣誉勋章45号 1
+give 九九九朵玫瑰 1 4 7
+sendmsg 6 [提示]：融合完成!!!
+break
+
+[@Y44]
+#if
+CHECKGAMEPOINT < 999
+#act
+messagebox 玫瑰花数量不足！
+break
+
+#if
+CheckItemw 荣誉勋章44号 1
+#elseact
+messagebox 请先将44号勋章佩戴好！
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 0
+#act
+GAMEPOINT - 999
+takew 荣誉勋章44号 1
+give 999朵玫瑰 1 3 3
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 1
+#act
+GAMEPOINT - 999
+takew 荣誉勋章44号 1
+give 999朵玫瑰 1 3 4
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 2
+#act
+GAMEPOINT - 999
+takew 荣誉勋章44号 1
+give 999朵玫瑰 1 3 5
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 3
+#act
+GAMEPOINT - 999
+takew 荣誉勋章44号 1
+give 999朵玫瑰 1 3 6
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 3 = 4
+#act
+GAMEPOINT - 999
+takew 荣誉勋章44号 1
+give 999朵玫瑰 1 3 7
+sendmsg 6 [提示]：融合完成!!!
+break
+
+[@Y43]
+#if
+CHECKGAMEPOINT < 999
+#act
+messagebox 玫瑰花数量不足！
+break
+
+#if
+CheckItemw 荣誉勋章43号 1
+#elseact
+messagebox 请先将43号勋章佩戴好！
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 0
+#act
+GAMEPOINT - 999
+takew 荣誉勋章43号 1
+give 玖玖玖朵玫瑰 1 2 3
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 1
+#act
+GAMEPOINT - 999
+takew 荣誉勋章43号 1
+give 玖玖玖朵玫瑰 1 2 4
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 2
+#act
+GAMEPOINT - 999
+takew 荣誉勋章43号 1
+give 玖玖玖朵玫瑰 1 2 5
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 3
+#act
+GAMEPOINT - 999
+takew 荣誉勋章43号 1
+give 玖玖玖朵玫瑰 1 2 6
+sendmsg 6 [提示]：融合完成!!!
+break
+
+#if
+CHECKITEMADDVALUE 2 2 = 4
+#act
+GAMEPOINT - 999
+takew 荣誉勋章43号 1
+give 玖玖玖朵玫瑰 1 2 7
+sendmsg 6 [提示]：融合完成!!!
+break
+
+[@99fa]
+#if
+CHECKGAMEPOINT > 89
+#act
+GAMEPOINT - 99
+HAIRSTYLE 0
+sendmsg 6 提示：您的发型已经改变！
+goto @yhua
+#elseact
+messagebox 玫瑰花数量不足！
+break
+
+[@99jie]
+#if
+CHECKGAMEPOINT > 89
+#act
+GAMEPOINT - 99
+give 求婚戒指 1
+sendmsg 6 提示：兑换成功！
+goto @yhua
+#elseact
+messagebox 玫瑰花数量不足！
+break
+
+[@9xin]
+#if
+CHECKGAMEPOINT > 8
+#act
+GAMEPOINT - 9
+give 心心相印包 1
+sendmsg 6 提示：兑换成功！
+goto @yhua
+#elseact
+messagebox 玫瑰花数量不足！
+break
+
+[@9hua]
+#if
+CHECKGAMEPOINT > 8
+#act
+GAMEPOINT - 9
+give 一心一意包 1
+sendmsg 6 提示：兑换成功！
+goto @yhua
+#elseact
+messagebox 玫瑰花数量不足！
+break
+
+[@shua]
+　\
+使用说明：先在输入框内输入<赠送对象名字>\ \
+<输入赠送对象名字/@@InPutString9>\ \
+<返回/@main>
+
+[@@InPutString9]
+#If
+#Act
+DelayGoto 1 ~InPutString9
+
+[~InPutString9]
+#if
+equal S9 <$USERNAME>
+#act
+MESSAGEBOX 禁止自己送给自己
+break
+
+#if
+CheckOnline <$STR(S9)>
+#act
+MOV M9 0
+break
+#SAY
+你想赠送给◆<$STR(S9)>◆多少朵<COLOR=clRed 玫瑰花>呢？999朵？一万朵？\ \
+<赠送1朵给/@1d>      <$STR(S9)>\
+<赠送10朵给/@10d>     <$STR(S9)>\
+<赠送100朵给/@100d>    <$STR(S9)>\
+<赠送1000朵给/@1000d>   <$STR(S9)>\
+<赠送10000朵给/@10000d>  <$STR(S9)>\ \
+注：<赠送玫瑰花数量会在全区逐条累计显示 每朵花9元宝>
+
+#ELSESAY
+　\
+很遗憾，<$STR(S9)> 不在线，赶紧联系一下TA吧！\ \
+<返回/@main>
+
+[@1d]
+#if
+CheckOnline <$STR(S9)>
+#ELSEACT
+sendmsg 5 <$STR(S9)>已经下线，无法赠送！
+close
+break
+
+#if
+CHECKGAMEGOLD > 8
+#act
+GAMEGOLD - 9
+INC M9 1
+sendmsg 0 玩家[%s]为[<$STR(S9)>]送上玫瑰花★<$STR(M9)>朵★
+<$STR(S9)>.GAMEPOINT + 1
+<$STR(S9)>.sendmsg 6 玫瑰花增加：1朵
+#elseact
+messagebox 元宝不足，无法赠送
+break
+
+[@10d]
+#if
+CheckOnline <$STR(S9)>
+#ELSEACT
+sendmsg 5 <$STR(S9)>已经下线，无法赠送！
+close
+break
+
+#if
+CHECKGAMEGOLD > 89
+#act
+GAMEGOLD - 90
+INC M9 10
+sendmsg 0 玩家[%s]为[<$STR(S9)>]送上玫瑰花★<$STR(M9)>朵★
+<$STR(S9)>.GAMEPOINT + 10
+<$STR(S9)>.sendmsg 6 玫瑰花增加：10朵
+#elseact
+messagebox 元宝不足，无法赠送
+break
+
+[@100d]
+#if
+CheckOnline <$STR(S9)>
+#ELSEACT
+sendmsg 5 <$STR(S9)>已经下线，无法赠送！
+close
+break
+
+#if
+CHECKGAMEGOLD > 899
+#act
+GAMEGOLD - 900
+INC M9 100
+sendmsg 0 玩家[%s]为[<$STR(S9)>]送上玫瑰花★<$STR(M9)>朵★
+<$STR(S9)>.GAMEPOINT + 100
+<$STR(S9)>.sendmsg 6 玫瑰花增加：100朵
+#elseact
+messagebox 元宝不足，无法赠送
+break
+
+[@1000d]
+#if
+CheckOnline <$STR(S9)>
+#ELSEACT
+sendmsg 5 <$STR(S9)>已经下线，无法赠送！
+close
+break
+
+#if
+CHECKGAMEGOLD > 8999
+#act
+GAMEGOLD - 9000
+INC M9 1000
+sendmsg 0 玩家[%s]为[<$STR(S9)>]送上玫瑰花★<$STR(M9)>朵★
+<$STR(S9)>.GAMEPOINT + 1000
+<$STR(S9)>.sendmsg 6 玫瑰花增加：1000朵
+#elseact
+messagebox 元宝不足，无法赠送
+break
+
+[@10000d]
+#if
+CheckOnline <$STR(S9)>
+#ELSEACT
+sendmsg 5 <$STR(S9)>已经下线，无法赠送！
+close
+break
+
+#if
+CHECKGAMEGOLD > 89999
+#act
+GAMEGOLD - 90000
+INC M9 10000
+sendmsg 0 玩家[%s]为[<$STR(S9)>]送上玫瑰花★<$STR(M9)>朵★
+<$STR(S9)>.GAMEPOINT + 10000
+<$STR(S9)>.sendmsg 6 玫瑰花增加：10000朵
+#elseact
+messagebox 元宝不足，无法赠送
+break

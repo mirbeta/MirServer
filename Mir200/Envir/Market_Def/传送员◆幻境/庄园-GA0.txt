@@ -1,0 +1,56 @@
+(@storage @getback @getnextpage @getPreviouspage)
+
+[@main]
+欢迎来到庄园，在这里你可以使用<摆摊>功能\ \
+<保管/@storage>东西\
+<找回/@getback>东西\ \
+<[返回玛法大陆]/@goback>\ \
+<A区(超级装备)/@A>   <B区(高级装备)/@B>   <C区(普通装备)/@C>   为方便交易\
+<D区(矿石药品)/@D>   <E区(元宝金币)/@E>   <F区(其他物品)/@F>   请分区摆摊
+
+[@storage]
+需要保管什么东西？\ \ \
+<返 回/@Main>
+[@getback]
+请看目录决定找什么东西。\ \ \
+<返 回/@Main>
+
+[@goback]
+#if
+check [168] 1
+#act
+mapmove 0 333 268
+break
+#elseact
+mapmove 3 330 330
+break
+
+[@A]
+#ACT
+MAPMOVE GA0 55 57
+BREAK
+
+[@B]
+#ACT
+MAPMOVE GA0 83 61
+BREAK
+
+[@C]
+#ACT
+MAPMOVE GA0 61 83
+BREAK
+
+[@D]
+#ACT
+MAPMOVE GA0 102 82
+BREAK
+
+[@E]
+#ACT
+MAPMOVE GA0 82 102
+BREAK
+
+[@F]
+#ACT
+MAPMOVE GA0 116 121
+BREAK
